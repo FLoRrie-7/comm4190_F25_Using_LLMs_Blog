@@ -11,7 +11,14 @@
     "href": "posts/Test_post/A new test post.html",
     "title": "Florrie’s Test",
     "section": "",
-    "text": "A visualization problem for LLMs Read the following and see if you can answer the question: There are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?"
+    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?"
+  },
+  {
+    "objectID": "posts/Test_post/A new test post.html#a-visualization-problem-for-llms",
+    "href": "posts/Test_post/A new test post.html#a-visualization-problem-for-llms",
+    "title": "Florrie’s Test",
+    "section": "",
+    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?"
   },
   {
     "objectID": "posts/000_test_post/index.html",
