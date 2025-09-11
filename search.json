@@ -4,7 +4,14 @@
     "href": "index.html",
     "title": "Fun time with my LLMs",
     "section": "",
-    "text": "A test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "How would your AI make suggestions that are right specifically for you?\n\n\n\nPersonalization\n\nHCI\n\nCognitive Sciences\n\n\n\nWhat you might not encounter in conversations with a human\n\n\n\n\n\nSep 4, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Test_post/A_new_post.html",
+    "href": "posts/Test_post/A_new_post.html",
+    "title": "How would your AI make suggestions that are right specifically for you?",
+    "section": "",
+    "text": "## My LLMs sometimes know more about me than I do\n\n&gt; It’s the beginning of another beautiful semester — and according to the syllabus of my communication course, we are required to pick a book from a list of seven on the topic of AI to read throughout the academic term.\n    \n&gt; Usually, I would let my large language model introduce each book to me to get a snapshot and then make a judgment myself. This time, I decided to take it a step further and treat the interaction as a small communicative experiment. I would ask the LLM to act as a consultant and actively suggest the best options for me.\n\n&gt; This should be a reasonable task for an LLM: I've been using this particular model mainly for school and work since 2023, so our interaction history forms a **rich data** of my academic and intellectual interests. Therefore, it should be able to generate tailored suggestions. However,I decided to make my intention clear in the ask:"
   },
   {
     "objectID": "posts/000_test_post/index.html",
