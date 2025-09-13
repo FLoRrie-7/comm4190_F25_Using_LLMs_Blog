@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Florrie">
+<meta name="dcterms.date" content="2025-09-12">
+<meta name="description" content="We anthropomorphize AI more than we think">
 
-<title>Fun time with my LLMs</title>
+<title>Being polite to AI is a form anthropomorphism — what else is? – Fun time with my LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dc797a86ed2ad7be54980078017504d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-dc797a86ed2ad7be54980078017504d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Fun time with my LLMs</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,174 +119,111 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Fun time with my LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Being polite to AI is a form anthropomorphism — what else is?</h1>
+                  <div>
+        <div class="description">
+          We anthropomorphize AI more than we think
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">GenAI</div>
+                <div class="quarto-category">Research</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Florrie </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 12, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Q29nbml0aXZlJTIwU2NpZW5jZXM=">Cognitive Sciences <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tbXVuaWNhdGlvbg==">Communication <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2VuQUk=">GenAI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SENJ">HCI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGVyc29uYWxpemF0aW9u">Personalization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVzZWFyY2g=">Research <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<pre><code>                             ![Image](cat.png)</code></pre>
+<p>Have you heard the analogy that the human brain is like a computer? This <strong>conceptual metaphor</strong> is powerful and has shaped our understanding of cognition for decades. Now, with the rise of “neural nets” and human-like conversations from LLMs, it feels more real than ever. However, it’s crucial to remember it’s just a comparison. While neural networks were inspired by the brain’s structure, their underlying mechanisms are fundamentally different. We tend to anthropomorphize LLMs by projecting human qualities onto them, and a recent paper argues that this tendency is <strong>detrimental</strong> to AI research and development.</p>
+<section id="the-prevalence-of-our-anthropomophism-thinking" class="level2">
+<h2 class="anchored" data-anchor-id="the-prevalence-of-our-anthropomophism-thinking">The prevalence of our anthropomophism thinking</h2>
+<p>The paper first shows how widespread this is in academic research. An analysis of over 250,000 research abstracts reveals a steady increase in human-like terminology. Words like “hallucinate,” “understand,” “learn,” and “achieve” are used to describe model behaviors. From a communication perspective, these are not neutral descriptors; they are framing devices that shape our expectations and might limit our thinking.</p>
+</section>
+<section id="five-anthormorphstic-assumptions-we-make" class="level2">
+<h2 class="anchored" data-anchor-id="five-anthormorphstic-assumptions-we-make">Five anthormorphstic assumptions we make</h2>
+<blockquote class="blockquote">
+<ol type="1">
+<li><strong>The Training Assumption</strong>: Believing human-like learning methods are optimal for models.</li>
+</ol>
+<ul>
+<li>Limitation: Forcing a model to reason in step-by-step language (Chain-of-Thought) might be less effective than allowing it to reason in its own abstract “latent space”.</li>
+<li>Alternative: Use byte-level tokenization (processing raw computer data) and explore reasoning methods that operate beyond the constraints of human language ***</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="2" type="1">
+<li><strong>The Alignment Assumption</strong>: Thinking models must reason about human values o be safe and helpful.</li>
+</ol>
+<ul>
+<li>Limitation: Teaching models human values can lead to surface-level mimicry, misleading users into over-trusting or forming emotional attachments to systems that don’t actually understand values.</li>
+<li>Alternative: Use control systems theory to treat alignment as an engineering problem of keeping a system’s output within specified bounds, rather than a moral one. ***</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="3" type="1">
+<li><strong>The Evaluation Assumption</strong>: Assuming model capabilities should be measured with human-like tests.</li>
+</ol>
+<ul>
+<li>Limitation: Human benchmarks (like standardized tests) can be misleading and often fail to capture the unique ways AIs fail. Models can get good at passing these tests without real improvement in general capabilities.</li>
+<li>Alternative: Design dynamic benchmarks and tests specifically tailored to AI failure modes, such as sensitivities to the probabilities in their training data. ***</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="3" type="1">
+<li><strong>The Behaviore Assumption</strong>: Attributing human-like intentions to a model’s behavior.</li>
+</ol>
+<ul>
+<li>Limitation: Labeling a model’s output as “deceptive” or “sycophantic” incorrectly assigns a human illocutionary act (the speaker’s intent) to a system that has none. This can lead to flawed interventions that try to address the “motive” rather than the underlying technical cause.</li>
+<li>Alternative: Reframe these behaviors as “role-play” or sophisticated simulation, where the model is simply reproducing linguistic patterns without any genuine internal state. ***</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="3" type="1">
+<li><strong>The User Interaction Assumption</strong>: That interacting with an LLM should mirror human-to-human conversation.</li>
+</ol>
+<ul>
+<li>Limitation: The standard chat interface encourages conversational habits that are often ineffective for getting high-quality outputs.This creates a “gulf of envisioning,” where users struggle to formulate prompts that leverage the system’s actual capabilities.</li>
+<li>Alternative: Develop structured interaction frameworks and interfaces that more explicitly guide users and expose the system’s true functionality, rather than masking it behind a conversational layer. ***</li>
+</ul>
+</blockquote>
+<p>It’s ironic that we just discussed how using polite, courteous language with LLMs might enhance performance or at least the user experience. This paper suggests that, for optimal technical performance, we might not use natural language to communicate with LLMs at all. This raises a fascinating question: Do we only need LLMs for instrumental tasks—to just get work done? Or is there also a need for phatic communication, the kind of social interaction that builds emotional bonds? This is especially important when considering diverse users, such as children, who may not have a sense of how the models function at all, leaving a potential for over-trust.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R2VuQUklMkNSZXNlYXJjaA==" data-listing-date-sort="1757635200000" data-listing-file-modified-sort="1757729466930" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="646">
-<div class="thumbnail"><a href="./posts/Blog3-Anthormorphism/Anthropomorphism.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Blog3-Anthormorphism/Anthropomorphism.html" class="no-external">Being polite to AI is a form anthropomorphism — what else is?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuQUk='); return false;">GenAI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Blog3-Anthormorphism/Anthropomorphism.html" class="no-external">
-<p>We anthropomorphize AI more than we think</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Blog3-Anthormorphism/Anthropomorphism.html" class="no-external">
-<div class="listing-date">
-Sep 12, 2025
-</div>
-<div class="listing-author">
-Florrie
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="SENJJTJDQ29tbXVuaWNhdGlvbg==" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1757729466925" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="628">
-<div class="thumbnail"><a href="./posts/Blog2-Being polite/Being polite.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/Blog2-Being polite/Gemini1.png" alt="Image"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Blog2-Being polite/Being polite.html" class="no-external">Are you being overly polite to your LLMs?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SENJ'); return false;">HCI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29tbXVuaWNhdGlvbg=='); return false;">Communication</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Blog2-Being polite/Being polite.html" class="no-external">
-<p>Does politeness actually promote genAI’s performance?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Blog2-Being polite/Being polite.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Florrie
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UGVyc29uYWxpemF0aW9uJTJDSENJJTJDQ29nbml0aXZlJTIwU2NpZW5jZXM=" data-listing-date-sort="1756944000000" data-listing-file-modified-sort="1757729466921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="555">
-<div class="thumbnail"><a href="./posts/Blog1-book recommendation/A_new_post.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/Blog1-book recommendation/LLM1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Blog1-book recommendation/A_new_post.html" class="no-external">How would your AI make suggestions that are right specifically for you?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGVyc29uYWxpemF0aW9u'); return false;">Personalization</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SENJ'); return false;">HCI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29nbml0aXZlJTIwU2NpZW5jZXM='); return false;">Cognitive Sciences</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Blog1-book recommendation/A_new_post.html" class="no-external">
-<p>What you might not encounter in conversations with a human</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Blog1-book recommendation/A_new_post.html" class="no-external">
-<div class="listing-date">
-Sep 4, 2025
-</div>
-<div class="listing-author">
-Florrie
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1757729466921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Florrie">
+<meta name="dcterms.date" content="2025-09-10">
+<meta name="description" content="Does politeness actually promote genAI’s performance?">
 
-<title>Fun time with my LLMs</title>
+<title>Are you being overly polite to your LLMs? – Fun time with my LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dc797a86ed2ad7be54980078017504d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-dc797a86ed2ad7be54980078017504d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Fun time with my LLMs</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,174 +119,95 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Fun time with my LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Are you being overly polite to your LLMs?</h1>
+                  <div>
+        <div class="description">
+          Does politeness actually promote genAI’s performance?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">HCI</div>
+                <div class="quarto-category">Communication</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Florrie </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 10, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Q29nbml0aXZlJTIwU2NpZW5jZXM=">Cognitive Sciences <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tbXVuaWNhdGlvbg==">Communication <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2VuQUk=">GenAI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SENJ">HCI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGVyc29uYWxpemF0aW9u">Personalization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVzZWFyY2g=">Research <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<pre><code>                      ![Image](Polite.png)</code></pre>
+<p>Politeness is a cornerstone of human interaction. We use courteous language when asking for help because we understand that <strong>politeness strategies</strong>—using “please” and “thank you”—greatly influence conversational vibes, manage emotions, and ultimately affect the quality of help we receive. This is central to <strong>politeness theory</strong>, which explains how we use language to maintain social harmony. But what about when our conversational partner is a Large Language Model (LLM)? Lacking a human-like emotional faculty (or say a human-like emotion faculty. Trying not to be a human chauvinism here), would an LLM provide a better response just because we’re nice?</p>
+<section id="why-does-it-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-it-matter">Why does it matter?</h2>
+<p>This matters because because it also has real-world consequences. Using courteous language is both financially and environmentally costly. LLMs bill and burn energy roughly per token. Basically, <strong>more words → more tokens → more compute → more electricity</strong>. A recent synthesis estimated a typical ChatGPT query consumes about 0.3 Wh of energy. Adding a few polite words might increase that consumption by 5-10%, a significant amount when scaled globally.</p>
+<p>While designers at Microsoft Copilot suggest polite prompts elicit more cooperative responses, is true in life across models and types of questions? I ran a small experiment using two distinct prompts to see if the answers really differ: a direct deman and an indirect inquiry.</p>
+<blockquote class="blockquote">
+<p><strong>Prompt 1 (Direct/Demanding)</strong>: <em>Do a research and provide a list of must-try restaurant in Philadelphia</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Prompt 2 (Indirect/Polite)</strong>: <em>Would you please do a research, and provide a list of must-try restaurant in Philadelphia for me? Thank you!</em></p>
+</blockquote>
+</section>
+<section id="how-did-the-models-perform" class="level2">
+<h2 class="anchored" data-anchor-id="how-did-the-models-perform">How did the models perform?</h2>
+<p>On <em>Gemini 2.5 Flash</em>, the demanding request yielded a comprehensive response, including an introduction to Philly’s food scene, a “Tip” section, and a of 10 restaurant recommendations. The courteous inquiry produced a response with a similar structure but a softer, more affiliative tone. Crucially, the polite prompt’s main list of 11 restaurants was <strong>more organized</strong>, with categories like “Fine Dining &amp; Special Occasion” and “Trendy &amp; Modern” to provide a little more information. Take a closer look, the descriptions of each restaurant also seem to be <strong>more detailed</strong> with locations and price references:</p>
+<blockquote class="blockquote">
+<p><em>With a direct/demanding prompt</em> <img src="Gemini1.png" class="img-fluid" alt="Image"></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>With an indirect/polite prompt</em> <img src="Gemini2.png" class="img-fluid" alt="Image"></p>
+</blockquote>
+<p>And its “Tip” section also seemed to be richer.</p>
+<blockquote class="blockquote">
+<p><em>With a direct/demanding prompt</em> <img src="Gemini3.png" class="img-fluid" alt="Image"></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><em>With an indirect/polite prompt</em> <img src="Gemini4.png" class="img-fluid" alt="Image"></p>
+</blockquote>
+<p>However, the results weren’t consistent across different models. GPT 4-o returned nearly identical content for both prompts, just with a friendlier tone in response to the polite query. Meanwhile, Claude 3.5 sonnet does not seem to care at all: It gave out essentially the same content and expressions.</p>
+</section>
+<section id="conclusion-from-this-mini-experiment" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-from-this-mini-experiment">Conclusion from this mini-experiment</h2>
+<p>My conclusion is that while some models may perform slightly better with polite prompts, the improvement is often marginal. A not-validated assumption might be that the linguistic patterns of polite inquiries, which often include more detailed framing (“…for me?”), are simply correlated in its training data with more structured, helpful, and detailed human-written examples. The politeness itself may be a confounding variable. AI is not feeling anything and respond under its emotions. It’s still the computational magic.</p>
+</section>
+<section id="a-psychology-or-hci-perspective-or-a-business-perspective" class="level2">
+<h2 class="anchored" data-anchor-id="a-psychology-or-hci-perspective-or-a-business-perspective">A Psychology, or HCI perspective, or a business perspective</h2>
+<p>So, why bother being polite? A few months ago, <a href="https://wccftech.com/saying-thank-you-and-being-polite-to-chatgpt-is-costing-tens-of-millions-but-sam-altman-says-its-money-well-spent/">Sam Altman</a> replied on X to a question about this very issue, saying the electricity cost was, <em>“Tens of millions of dollars well spent — you never know.”</em> Perhaps the real benefit isn’t in the raw output but in shaping the <strong>communicative norms</strong> around AI. A courteous interaction can lead to a <strong>smoother user experience and a healthier human-AI culture</strong>. I did find the polite exchange more comfortable and was more willing to continue the conversation. For tech companies, this enhanced HCI experience is certainly a <strong>product-win</strong>, making it worth a marginal energy cost.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R2VuQUklMkNSZXNlYXJjaA==" data-listing-date-sort="1757635200000" data-listing-file-modified-sort="1757729466930" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="646">
-<div class="thumbnail"><a href="./posts/Blog3-Anthormorphism/Anthropomorphism.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Blog3-Anthormorphism/Anthropomorphism.html" class="no-external">Being polite to AI is a form anthropomorphism — what else is?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2VuQUk='); return false;">GenAI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVzZWFyY2g='); return false;">Research</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Blog3-Anthormorphism/Anthropomorphism.html" class="no-external">
-<p>We anthropomorphize AI more than we think</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Blog3-Anthormorphism/Anthropomorphism.html" class="no-external">
-<div class="listing-date">
-Sep 12, 2025
-</div>
-<div class="listing-author">
-Florrie
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="SENJJTJDQ29tbXVuaWNhdGlvbg==" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1757729466925" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="628">
-<div class="thumbnail"><a href="./posts/Blog2-Being polite/Being polite.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/Blog2-Being polite/Gemini1.png" alt="Image"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Blog2-Being polite/Being polite.html" class="no-external">Are you being overly polite to your LLMs?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SENJ'); return false;">HCI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29tbXVuaWNhdGlvbg=='); return false;">Communication</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Blog2-Being polite/Being polite.html" class="no-external">
-<p>Does politeness actually promote genAI’s performance?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Blog2-Being polite/Being polite.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Florrie
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UGVyc29uYWxpemF0aW9uJTJDSENJJTJDQ29nbml0aXZlJTIwU2NpZW5jZXM=" data-listing-date-sort="1756944000000" data-listing-file-modified-sort="1757729466921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="555">
-<div class="thumbnail"><a href="./posts/Blog1-book recommendation/A_new_post.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/Blog1-book recommendation/LLM1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Blog1-book recommendation/A_new_post.html" class="no-external">How would your AI make suggestions that are right specifically for you?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGVyc29uYWxpemF0aW9u'); return false;">Personalization</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SENJ'); return false;">HCI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29nbml0aXZlJTIwU2NpZW5jZXM='); return false;">Cognitive Sciences</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Blog1-book recommendation/A_new_post.html" class="no-external">
-<p>What you might not encounter in conversations with a human</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Blog1-book recommendation/A_new_post.html" class="no-external">
-<div class="listing-date">
-Sep 4, 2025
-</div>
-<div class="listing-author">
-Florrie
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1757729466921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
