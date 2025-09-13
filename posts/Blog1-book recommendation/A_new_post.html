@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -70,14 +35,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-659c7feacb21ed7817736f79a2afe1a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dc797a86ed2ad7be54980078017504d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -117,6 +83,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Fun time with my LLMs</span>
     </a>
@@ -200,29 +168,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="my-llms-sometimes-know-more-about-me-than-i-do" class="level2">
 <h2 class="anchored" data-anchor-id="my-llms-sometimes-know-more-about-me-than-i-do">My LLMs sometimes know more about me than I do</h2>
-<blockquote class="blockquote">
 <p>It’s the beginning of another beautiful semester — and according to the syllabus of my communication course, we are required to pick a book from a list of seven on the topic of AI to read throughout the academic term.</p>
-</blockquote>
-<blockquote class="blockquote">
 <p>Usually, I would let my large language model introduce each book to me to get a snapshot and then make a judgment myself. This time, I decided to take it a step further and treat the interaction as a small communicative experiment. I would ask the LLM to act as a consultant and actively suggest the best options for me.</p>
-</blockquote>
-<blockquote class="blockquote">
 <p>This should be a reasonable task for an LLM: I’ve been using this particular model mainly for school and work since 2023, so our interaction history forms a <strong>rich data</strong> of my academic and intellectual interests. Therefore, it should be able to generate tailored suggestions. However,I decided to make my intention clear in the ask, because I don’t assume it will automatically take my background into account, which a human would probably do:</p>
-</blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://commjhub.asc.upenn.edu/hub/user-redirect/lab/tree/comm4190_F25/comm4190_F25_Using_LLMs_Blog/posts/Test_post/LLM1.png" class="img-fluid figure-img"></p>
+<p><img src="LLM1.png" class="img-fluid figure-img"></p>
 <figcaption>Image</figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
 <p>Here, instead of merely paraphrasing the assignment, I included the full text from the syllabus. From a pragmatics perspective, this provides the LLM with <strong>maximum context</strong> for the current exchange (Shhh, not because I was too lazy).</p>
-</blockquote>
-<div id="c2a90276-2f3c-409d-ab1a-5d839b85c49b" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> After <span class="dv">42</span> seconds, the model returned a <span class="bu">long</span> response structured <span class="kw">in</span> a very deliberate way:</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">*</span> An opening comment on the assignment. </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">*</span> My top <span class="dv">3</span> picks <span class="cf">with</span> rationales.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>After 42 seconds, the model returned a long response structured in a very deliberate way: * An opening comment on the assignment. * His top 3 picks with rationales.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="LLM2.png" class="img-fluid figure-img"></p>
+<figcaption>Image</figcaption>
+</figure>
 </div>
+<ul>
+<li>A parting line, then a short introduction for each book.</li>
+<li>Another parting line, then ideas for how the books could be incorporated into my existing work.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="LLM3.png" class="img-fluid figure-img"></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<ul>
+<li>A final parting line, the suggested ranking list</li>
+<li>Tips for the assignment and, finally, a follow-up question to invite more interaction.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="LLM4.png" class="img-fluid figure-img"></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<p>The response was comprehensive, seemingly designed to anticipate and address all my potential questions.</p>
+<p>While I found the response useful, it was excessively lengthy, especially considering the computational energy LLMs consume. I often have the sense that they favor <strong>exhaustiveness</strong> over the brevity we often value in human conversation, because talking is energy-consuming.</p>
+<p>But here are the <strong>things I truly appreciated</strong>: 1. <em>It provided a ready-to-use ranked list. The LLM correctly parsed the prompt’s explicit instructions (“rank your preferences”) and structured its primary output to meet that specific need.</em></p>
+<ol start="2" type="1">
+<li><p><em>It provided rationales connecting to my past work, which allowed me to critically evaluate the rationales and re-weigh my current prioritization.</em></p></li>
+<li><p><em>It suggested practical applications. The ideas for incorporating the book’s content into my other projects were genuinely insightful.</em></p></li>
+</ol>
+<p>Interestingly, this final point highlights a key difference between human and AI communication. It’s difficult to imagine a human expert spontaneously generating such a detailed list of potential operational connections of each book with my past experience in a casual conversation. The tips for class would also be cognitively exausive to provide. While the <strong>cognitive load</strong> requried for these content would be too high for a human talker, they are easy-peasy for a LLM.</p>
+<p>So, although the tones and expressions look humane, GPT’s very ability to perform this <strong>low-cost, high-output analysis in a causal converstion</strong> is actually inhuman, or unatural. It doesn’t rely on the same <strong>mental shortcuts</strong> as human do. To him, generating these chunks of tasks have no different from the other chunks, computationally.</p>
 
 
 </section>
@@ -279,13 +270,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
