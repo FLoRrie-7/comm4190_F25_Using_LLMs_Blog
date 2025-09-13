@@ -11,7 +11,7 @@
     "href": "posts/Blog1-book recommendation/A_new_post.html",
     "title": "How would your AI make suggestions that are right specifically for you?",
     "section": "",
-    "text": "![Image](Personalization.png)"
+    "text": "Image"
   },
   {
     "objectID": "posts/Blog1-book recommendation/A_new_post.html#my-llms-sometimes-know-more-about-me-than-i-do",
@@ -35,11 +35,11 @@
     "text": "But here are the things I truly appreciated:\n\nIt provided a ready-to-use ranked list. The LLM correctly parsed the prompt’s explicit instructions (“rank your preferences”) and structured its primary output to meet that specific need.\nIt provided rationales connecting to my past work, which allowed me to critically evaluate the rationales and re-weigh my current prioritization.\nIt suggested practical applications. The ideas for incorporating the book’s content into my other projects were genuinely insightful.\n\nInterestingly, this final point highlights a key difference between human and AI communication. It’s difficult to imagine a human expert spontaneously generating such a detailed list of potential operational connections of each book with my past experience in a casual conversation. The tips for class would also be cognitively exausive to provide. While the cognitive load requried for these content would be too high for a human talker, they are easy-peasy for a LLM."
   },
   {
-    "objectID": "posts/Blog1-book recommendation/A_new_post.html#different-mental-manipulations-make-llms-seem",
-    "href": "posts/Blog1-book recommendation/A_new_post.html#different-mental-manipulations-make-llms-seem",
+    "objectID": "posts/Blog1-book recommendation/A_new_post.html#different-mental-manipulation-mechanisms",
+    "href": "posts/Blog1-book recommendation/A_new_post.html#different-mental-manipulation-mechanisms",
     "title": "How would your AI make suggestions that are right specifically for you?",
-    "section": "Different mental manipulations make LLMs seem",
-    "text": "Different mental manipulations make LLMs seem\nSo, although the tones and expressions look humane, GPT’s very ability to perform this low-cost, high-output analysis in a causal converstion is actually inhuman, or unatural. It doesn’t rely on the same mental shortcuts as human do. To him, generating these chunks of tasks have no different from the other chunks, computationally."
+    "section": "Different mental manipulation mechanisms",
+    "text": "Different mental manipulation mechanisms\nSo, although the tones and expressions look humane, GPT’s very ability to perform this low-cost, high-output analysis in a causal converstion is actually inhuman, or unatural. It doesn’t rely on the same mental shortcuts as human do. To him, generating these chunks of tasks have no different from the other chunks, computationally."
   },
   {
     "objectID": "posts/000_test_post/index.html",
@@ -67,7 +67,14 @@
     "href": "posts/Blog2-Being polite/Being polite.html#why-does-it-matter",
     "title": "Are you being overly polite to your LLMs?",
     "section": "Why does it matter?",
-    "text": "Why does it matter?\nThis matters because because it also has real-world consequences. Using courteous language is both financially and environmentally costly. LLMs bill and burn energy roughly per token. Basically, more words → more tokens → more compute → more electricity. A recent synthesis estimated a typical ChatGPT query consumes about 0.3 Wh of energy. Adding a few polite words might increase that consumption by 5-10%, a significant amount when scaled globally.\nWhile designers at Microsoft Copilot suggest polite prompts elicit more cooperative responses, is true in life across models and types of questions? I ran a small experiment using two distinct prompts to see if the answers really differ: a direct deman and an indirect inquiry.\n\nPrompt 1 (Direct/Demanding): Do a research and provide a list of must-try restaurant in Philadelphia\n\n\nPrompt 2 (Indirect/Polite): Would you please do a research, and provide a list of must-try restaurant in Philadelphia for me? Thank you!"
+    "text": "Why does it matter?\nThis matters because because it also has real-world consequences. Using courteous language is both financially and environmentally costly. LLMs bill and burn energy roughly per token. Basically, more words → more tokens → more compute → more electricity. A recent synthesis estimated a typical ChatGPT query consumes about 0.3 Wh of energy. Adding a few polite words might increase that consumption by 5-10%, a significant amount when scaled globally."
+  },
+  {
+    "objectID": "posts/Blog2-Being polite/Being polite.html#an-experiment",
+    "href": "posts/Blog2-Being polite/Being polite.html#an-experiment",
+    "title": "Are you being overly polite to your LLMs?",
+    "section": "An experiment",
+    "text": "An experiment\nWhile designers at Microsoft Copilot suggest polite prompts elicit more cooperative responses, is true in life across models and types of questions? I ran a small experiment using two distinct prompts to see if the answers really differ: a direct deman and an indirect inquiry.\n\nPrompt 1 (Direct/Demanding): Do a research and provide a list of must-try restaurant in Philadelphia\n\n\nPrompt 2 (Indirect/Polite): Would you please do a research, and provide a list of must-try restaurant in Philadelphia for me? Thank you!"
   },
   {
     "objectID": "posts/Blog2-Being polite/Being polite.html#how-did-the-models-perform",
