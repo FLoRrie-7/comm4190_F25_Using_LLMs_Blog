@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florrie">
-<meta name="dcterms.date" content="2025-09-18">
-<meta name="description" content="Interviewing Gemini is more fun than I expected">
+<meta name="dcterms.date" content="2025-09-19">
+<meta name="description" content="Is role-playing prompting really effective? A little dig into the research papers">
 
-<title>The LLM as a Drama Queen – Fun time with my LLMs</title>
+<title>When should we consider using role-playing prompting? – Fun time with my LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,14 +120,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">The LLM as a Drama Queen</h1>
+      <h1 class="title">When should we consider using role-playing prompting?</h1>
                   <div>
         <div class="description">
-          Interviewing Gemini is more fun than I expected
+          Is role-playing prompting really effective? A little dig into the research papers
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">Role-playing</div>
+                <div class="quarto-category">Prompting</div>
               </div>
                   </div>
   </div>
@@ -145,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 18, 2025</p>
+        <p class="date">September 19, 2025</p>
       </div>
     </div>
     
@@ -166,49 +167,59 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Interview.png" class="img-fluid figure-img"></p>
-<figcaption>Interview with an LLM</figcaption>
+<p><img src="Pretend_play.png" class="img-fluid figure-img"></p>
+<figcaption>children’s pretend play</figcaption>
 </figure>
 </div>
-<section id="gemini-as-my-potential-user" class="level2">
-<h2 class="anchored" data-anchor-id="gemini-as-my-potential-user">Gemini as my potential user</h2>
-<p>My Product Management course tasked us with conducting a User <strong>Empathy Interview</strong> with ChatGPT. Specifically, we had to conceive a product, identify potential user personas, design interview questions to understand user needs and behaviors, and then have the LLM role-play the persona while we conducted the interview.</p>
-<p>I ultimately chose the <strong>Gemini 2.5 Pro</strong> model, believing it can <strong>“mimic”</strong> human communicative behaviors and langauge better than other models, because Google as a company has got massive real user data to train their models.</p>
-<p>My product is an AI-powered learning tool aimed at enhancing class engagement. I identified my first potential user persona as a high school student:</p>
+<p>My interview with Gemini last time was fun, feeling much like a childhood pretend play. The language it adopted as a high schooler felt authentic, and its subsequent role as a teacher demonstrated a truly “pedagogical” voice and mannerisms. This made me wonder: Beyond merely affecting tone, does assigning a specific persona to an LLM truly enhance its task performance? And if so, in what ways?</p>
+<p>Conducting a thorough experiment myself would be challenging, so I turned to the resesarch papers for a comprehensive and validated answer. Here’s what I found:</p>
+<section id="assigning-a-persona-to-an-llm-can-have-a-multifaceted-impact" class="level2">
+<h2 class="anchored" data-anchor-id="assigning-a-persona-to-an-llm-can-have-a-multifaceted-impact">Assigning a persona to an LLM can have a multifaceted impact</h2>
+<p><strong>On Reasoning Ability:</strong> - <strong>Benefits:</strong> A 2023 study found that role-play prompting can act as an implicit, as well as a better “Chain-of-Thought” (CoT) trigger than CoT instruction alone. It <strong>guides the model to break down complex problems into a series of intermediate reasoning steps, which can lead to more accurate and logical conclusions</strong> (Kong et al., 2023). Other work shows role-play can boost task reasoning (e.g., arithmetic/commonsense) by helping the model adopt a problem-solving stance (Zhao, et al., 2024). For example, embodying a “math teacher” persona encourages the LLM to adopt a more structured and explanatory approach to solving problems (Kong et al., 2023).*</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Reasoning.png" class="img-fluid figure-img"></p>
+<figcaption>Reasoning as a math teacher</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Caveats:</strong> However, the introduction of personas has risks. Research has shown that while role-playing can improve reasoning, it can also <strong>amplify inherent biases present in the training data</strong>. Multiple studies report that role-play can amplify bias, toxicity, and unsafe outputs, especially when personas encode social attributes such as occupation, gender, race or religion (Shen et al., 2024).</li>
+</ul>
+<p><strong>On Factual Accuracy:</strong> - While the results are mixed (sometimes task accuracy improves due to enhanced reasoning), larger studies and meta-analyses generally indicate that <strong>adding a persona usually does not improve factual accuracy and can even slightly diminish it on average</strong> (Zheng et al., 2024). The effects of personas are also highly unpredictable; the same role might assist on one item but hinder another, and simple strategies for selecting “the best role” perform almost randomly. - A Particular Caveat: A 2024 study investigated how role-playing different social identities affects ChatGPT’s ability to <strong>classify misinformation</strong>. The findings were stark: including social identities in prompts significantly reduced average detection accuracy from 68.1% (with no identity) to as low as 19.2% (with a political identity). This suggests that when a model adopts a persona with inherent biases or worldviews, its <strong>capacity to objectively evaluate information for accuracy can be severely compromised</strong> (Harris, 2024).</p>
+</section>
+<section id="do-the-effects-differ-cross-domains" class="level2">
+<h2 class="anchored" data-anchor-id="do-the-effects-differ-cross-domains">Do the effects differ cross domains?</h2>
+<p>In specialized fields, context matters. For instance, in <strong>medicine</strong>, assigning an expert persona can improve the accuracy and comprehensiveness of patient-facing information (Li et al., 2024). Furthermore, a modeling approach called REGA (Wang et al., 2024) shows that when models are fine-tuned using role prompts in fields like law, medicine, or finance, and then used with a generalist role, their performance improves across these domains compared to baselines. This highlights a more integrated <strong>training strategy — not a user-level prompt though</strong>(Wang et al., 2024).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="doctor.png" class="img-fluid figure-img"></p>
+<figcaption>LLM playing a medicine specialist</figcaption>
+</figure>
+</div>
+</section>
+<section id="a-short-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="a-short-conclusion">A short conclusion</h2>
+<p>It appear that, in general, role-play prompting does not lead to better task outcomes/accuracy. Even if it does, it’s typically through improved <strong>domain-structured reasoning</strong> (e.g., clinical reasoning prompts), or by adopting a specific framework of thinking and reasoning in the particular field. But be careful — this could also lead to <strong>enhanced bias</strong> embedded in the training data.</p>
+<p><strong>When to Consider Using Role-Play Prompting</strong> - <strong><em>When You Need Structured, Domain-Specific Reasoning</em></strong>: As mentioned, a relevant persona can better guide the model to adopt a particular domain-specific reasoning framework, accessing and applying specialized knowledge. - <strong><em>When Tasks Are Subjective, Personal, or Creative</em></strong>: Persona prompts truly excel in interpretive or creative tasks where a particular viewpoint, communication style, or emotional resonance is desired.</p>
+<p><strong>Avoid Role-Play Prompting</strong> - <strong><em>When Seeking Factual Information</em></strong>: Introducing a persona can reduce factual accuracy, making it less suitable for tasks requiring strict objectivity(we shouldn’t rely on LLMs for exact factual knowledge anyways). - <strong><em>When Concerned About Bias</em></strong>: If the output’s fairness, neutrality, or safety is paramount, assigning a persona, especially one with social attributes, risks amplifying problematic elements from the training data.</p>
+<p><strong>References</strong> &gt;Harris, J. K. (2024). Evaluating the influence of role-playing prompts on ChatGPT’s misinformation detection accuracy: Quantitative study. JMIR Infodemiology. Advance online publication.</p>
 <blockquote class="blockquote">
-<p><em>You are a 14-year-old high school student in a US public high school, who is afraid of in-class discussion because she either feels having nothing to say about the content, or the discussion focus was often irrelevant to her thoughts and she couldn’t catch up. From now, I will be conducting a user interview with you regarding an education product.</em></p>
+<p>Kong, A., Zhao, S., Chen, H., Li, Q., Qin, Y., Sun, R., … &amp; Dong, X. (2023). Better zero-shot reasoning with role-play prompting. arXiv. https://arxiv.org/abs/2308.07702</p>
 </blockquote>
-</section>
-<section id="an-compelling-but-unatural-act" class="level2">
-<h2 class="anchored" data-anchor-id="an-compelling-but-unatural-act">An compelling but unatural act</h2>
-<p>Gemini immediately adopted the persona, even including <strong>paralanguage</strong> in the form of action annotations: &gt;<em>(adjusts in my chair, pulls the sleeves of my hoodie over my hands) Oh, okay. Hi. Um, yeah, I’m ready whenever you are. Is it okay if I’m, like, a little nervous? I’m not really used to stuff like this. (looks around the room for a second) So… you’re just gonna ask me questions about school and stuff? Okay. Cool. Yeah, ask away, I guess.</em></p>
-<p>My initial instinct was to tell Gemini to omit the actions, but I recalled my professor’s point that in-person interviews offer additional insights from <strong>non-verbal cues</strong>. Curious about this simulated multimodal communication, I decided to continue: &gt;<em>Can you walk me through the last time you had a class discussion about an article you had to read or a video you had to watch? What was that experience like for you?</em></p>
-<p>“Her” response was remarkably detailed: &gt;<em>Okay, um, yeah. Let’s see… the last time was probably on Tuesday, in my English class. We have Ms.&nbsp;Davis. We had to read this really short, kinda creepy story called “The Lottery” for homework the night before. I read it, and I thought it was… wow, like, really messed up. So…<strong>(Anotehr 300 words of vivid description here)</strong>…I just sat there and listened. It feels… I dunno, frustrating? You feel really small and kinda stupid, even when you did the reading and you think you understand it. My heart just beats really fast the whole time, hoping she doesn’t call on me.</em></p>
-<p>It’s unusual for a real human to provide such a structured and detailed recollection of an experience. Human memories are often <strong>disorganized, emotionally charged, and filled with subjective highlights</strong>. This response, while compelling, felt almost <strong>too logical and rich</strong> to be a genuine human recall. If it’s an interrogation of suspect, such a coherent narrative would be seen as rehearsed.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="student.png" class="img-fluid figure-img"></p>
-<figcaption>A struggling student</figcaption>
-</figure>
-</div>
-</section>
-<section id="my-own-communicative-strategy-also-changed-with-an-llm" class="level2">
-<h2 class="anchored" data-anchor-id="my-own-communicative-strategy-also-changed-with-an-llm">My own communicative strategy also changed with an LLM</h2>
-<p>I also identified the flaws in my own quesioning.I asked too many questions at once, assuming the LLM could address them all in a single reply. This is a common pitfall when shifting from human to AI interaction, as humans typically process and respond to questions sequentially within a shorter turn-taking framework: &gt;<em>I understand that. How do your group discussions typically start? When a teacher provides a specific question to start your group’s conversation, what makes a question effective or ineffective for you personally? Can you remember an example of a prompt that made it easy to talk?</em></p>
-<p>As expected, it did answer all questions together. Unexpectedly, it culminated in a sudden ending: &gt;*(Looks at the clock on the wall, getting a little antsy) Okay, so when we get into our little groups, there’s usually this super awkward moment of silence after we move the desks. Everyone just kinda looks at each other, and then someone will finally be like…(<strong>Another 400 words of vivid description here</strong>) It didn’t feel like I was going to get a bad grade if my opinion was “wrong.” I talked a lot in that discussion. (BRRRRRING!) Oh, that’s the final bell. I have to run or I’ll miss my bus. Um, it was nice talking to you. I hope that was helpful. Bye! (quickly gathers my stuff and heads for the door)</p>
-<p>I had two more questions prepared, but didn’t get a chance to ask – “she” had to leave! This unexpected conclusion, a simulated abrupt exit, felt as chaotic and unpredictable as a real-life interview. I found this “out-of-control” situation quite amusing.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Runaway.png" class="img-fluid figure-img"></p>
-<figcaption>She left</figcaption>
-</figure>
-</div>
-</section>
-<section id="llms-as-useful-tools-to-conduct-user-interviews" class="level2">
-<h2 class="anchored" data-anchor-id="llms-as-useful-tools-to-conduct-user-interviews">LLMs as useful tools to conduct user interviews</h2>
-<p>In conclusion, despite some of the conversational structures feeling unnatural, interviewing an LLM proved to be a surprisingly helpful way to conduct user research. They are much more “knowledgeable” and elaborative than a human subject, and thus can provide richer details and insights for the product, as reported in my homework:</p>
 <blockquote class="blockquote">
-<p><em><strong>Key insights &amp; informed product design from User A</strong>: <strong>Prioritize Humanities Subjects</strong>: Initial product development should focus on discussion-heavy subjects like English and History. These fields present a clear opportunity, as students often find it challenging to participate in discussions that require subjective interpretation and personal reflection. Generate Accessible Prompts: The AI product’s core function should be to generate opening discussion prompts that are personal, opinion-based, and directly relevant to students’ lived experiences. To encourage participation, the system must prioritize accessible questions over abstract, academic language that can intimidate hesitant speakers.</em></p>
+<p>Pei, J., Tang, R., &amp; Fu, K. W. (2024). When “a helpful assistant” is not really helpful: Personas in system prompts do not improve performances of large language models. arXiv. https://arxiv.org/abs/2311.10054</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Shen, Y., et al.&nbsp;(2024). Role-play paradox in large language models: Reasoning performance gains and ethical dilemmas. arXiv. https://arxiv.org/abs/2402.08352</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Wang, R., Mi, F., Chen, Y., Xue, B., Wang, H., Zhu, Q., … &amp; Xu, R. (2024). Role prompting guided domain adaptation with general capability preserve for large language models. arXiv. https://arxiv.org/abs/2403.02756</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Zhao, J., et al.&nbsp;(2024). Role-play paradox in large language models: Reasoning performance gains and ethical dilemmas. arXiv. https://arxiv.org/abs/2409.13979</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Zheng, M., Pei, J., Logeswaran, L., Lee, M., &amp; Jurgens, D. (2024, November). When “a helpful assistant” is not really helpful: Personas in system prompts do not improve performances of large language models. In Findings of the Association for Computational Linguistics: EMNLP 2024 (pp.&nbsp;15126–15154). Association for Computational Linguistics.</p>
 </blockquote>
 
 
