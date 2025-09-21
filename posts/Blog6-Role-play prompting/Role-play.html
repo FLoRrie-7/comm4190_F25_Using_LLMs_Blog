@@ -175,7 +175,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Conducting a thorough experiment myself would be challenging, so I turned to the resesarch papers for a comprehensive and validated answer. Here’s what I found:</p>
 <section id="assigning-a-persona-to-an-llm-can-have-a-multifaceted-impact" class="level2">
 <h2 class="anchored" data-anchor-id="assigning-a-persona-to-an-llm-can-have-a-multifaceted-impact">Assigning a persona to an LLM can have a multifaceted impact</h2>
-<p><strong>On Reasoning Ability:</strong> - <strong>Benefits:</strong> A 2023 study found that role-play prompting can act as an implicit, as well as a better “Chain-of-Thought” (CoT) trigger than CoT instruction alone. It <strong>guides the model to break down complex problems into a series of intermediate reasoning steps, which can lead to more accurate and logical conclusions</strong> (Kong et al., 2023). Other work shows role-play can boost task reasoning (e.g., arithmetic/commonsense) by helping the model adopt a problem-solving stance (Zhao, et al., 2024). For example, embodying a “math teacher” persona encourages the LLM to adopt a more structured and explanatory approach to solving problems (Kong et al., 2023).*</p>
+<p><strong>On Reasoning Ability:</strong></p>
+<ul>
+<li><strong>Benefits:</strong> A 2023 study found that role-play prompting can act as an implicit, as well as a better “Chain-of-Thought” (CoT) trigger than CoT instruction alone. It <strong>guides the model to break down complex problems into a series of intermediate reasoning steps, which can lead to more accurate and logical conclusions</strong> (Kong et al., 2023). Other work shows role-play can boost task reasoning (e.g., arithmetic/commonsense) by helping the model adopt a problem-solving stance (Zhao, et al., 2024). For example, embodying a “math teacher” persona encourages the LLM to adopt a more structured and explanatory approach to solving problems (Kong et al., 2023).</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Reasoning.png" class="img-fluid figure-img"></p>
@@ -185,11 +188,15 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Caveats:</strong> However, the introduction of personas has risks. Research has shown that while role-playing can improve reasoning, it can also <strong>amplify inherent biases present in the training data</strong>. Multiple studies report that role-play can amplify bias, toxicity, and unsafe outputs, especially when personas encode social attributes such as occupation, gender, race or religion (Shen et al., 2024).</li>
 </ul>
-<p><strong>On Factual Accuracy:</strong> - While the results are mixed (sometimes task accuracy improves due to enhanced reasoning), larger studies and meta-analyses generally indicate that <strong>adding a persona usually does not improve factual accuracy and can even slightly diminish it on average</strong> (Zheng et al., 2024). The effects of personas are also highly unpredictable; the same role might assist on one item but hinder another, and simple strategies for selecting “the best role” perform almost randomly. - A Particular Caveat: A 2024 study investigated how role-playing different social identities affects ChatGPT’s ability to <strong>classify misinformation</strong>. The findings were stark: including social identities in prompts significantly reduced average detection accuracy from 68.1% (with no identity) to as low as 19.2% (with a political identity). This suggests that when a model adopts a persona with inherent biases or worldviews, its <strong>capacity to objectively evaluate information for accuracy can be severely compromised</strong> (Harris, 2024).</p>
+<p><strong>On Factual Accuracy:</strong> - While the results are mixed (sometimes task accuracy improves due to enhanced reasoning), larger studies and meta-analyses generally indicate that <strong>adding a persona usually does not improve factual accuracy and can even slightly diminish it on average</strong> (Zheng et al., 2024). The effects of personas are also highly unpredictable; the same role might assist on one item but hinder another, and simple strategies for selecting “the best role” perform almost randomly.</p>
+<ul>
+<li>A Particular Caveat: A 2024 study investigated how role-playing different social identities affects ChatGPT’s ability to <strong>classify misinformation</strong>. The findings were stark: including social identities in prompts significantly reduced average detection accuracy from 68.1% (with no identity) to as low as 19.2% (with a political identity). This suggests that when a model adopts a persona with inherent biases or worldviews, its <strong>capacity to objectively evaluate information for accuracy can be severely compromised</strong> (Harris, 2024).</li>
+</ul>
 </section>
 <section id="do-the-effects-differ-cross-domains" class="level2">
 <h2 class="anchored" data-anchor-id="do-the-effects-differ-cross-domains">Do the effects differ cross domains?</h2>
-<p>In specialized fields, context matters. For instance, in <strong>medicine</strong>, assigning an expert persona can improve the accuracy and comprehensiveness of patient-facing information (Li et al., 2024). Furthermore, a modeling approach called REGA (Wang et al., 2024) shows that when models are fine-tuned using role prompts in fields like law, medicine, or finance, and then used with a generalist role, their performance improves across these domains compared to baselines. This highlights a more integrated <strong>training strategy — not a user-level prompt though</strong>(Wang et al., 2024).</p>
+<p>In specialized fields, context matters. For instance, in <strong>medicine</strong>, assigning an expert persona can improve the accuracy and comprehensiveness of patient-facing information (Li et al., 2024).</p>
+<p>Furthermore, a modeling approach called REGA (Wang et al., 2024) shows that when models are fine-tuned using role prompts in fields like law, medicine, or finance, and then used with a generalist role, their performance improves across these domains compared to baselines. This highlights a more integrated <strong>training strategy — not a user-level prompt though</strong>(Wang et al., 2024).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="doctor.png" class="img-fluid figure-img"></p>
@@ -200,9 +207,22 @@ ul.task-list li input[type="checkbox"] {
 <section id="a-short-conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="a-short-conclusion">A short conclusion</h2>
 <p>It appear that, in general, role-play prompting does not lead to better task outcomes/accuracy. Even if it does, it’s typically through improved <strong>domain-structured reasoning</strong> (e.g., clinical reasoning prompts), or by adopting a specific framework of thinking and reasoning in the particular field. But be careful — this could also lead to <strong>enhanced bias</strong> embedded in the training data.</p>
-<p><strong>When to Consider Using Role-Play Prompting</strong> - <strong><em>When You Need Structured, Domain-Specific Reasoning</em></strong>: As mentioned, a relevant persona can better guide the model to adopt a particular domain-specific reasoning framework, accessing and applying specialized knowledge. - <strong><em>When Tasks Are Subjective, Personal, or Creative</em></strong>: Persona prompts truly excel in interpretive or creative tasks where a particular viewpoint, communication style, or emotional resonance is desired.</p>
-<p><strong>Avoid Role-Play Prompting</strong> - <strong><em>When Seeking Factual Information</em></strong>: Introducing a persona can reduce factual accuracy, making it less suitable for tasks requiring strict objectivity(we shouldn’t rely on LLMs for exact factual knowledge anyways). - <strong><em>When Concerned About Bias</em></strong>: If the output’s fairness, neutrality, or safety is paramount, assigning a persona, especially one with social attributes, risks amplifying problematic elements from the training data.</p>
-<p><strong>References</strong> &gt;Harris, J. K. (2024). Evaluating the influence of role-playing prompts on ChatGPT’s misinformation detection accuracy: Quantitative study. JMIR Infodemiology. Advance online publication.</p>
+<p><strong>When to Consider Using Role-Play Prompting</strong></p>
+<ul>
+<li><p><strong><em>When You Need Structured, Domain-Specific Reasoning</em></strong>: As mentioned, a relevant persona can better guide the model to adopt a particular domain-specific reasoning framework, accessing and applying specialized knowledge.</p></li>
+<li><p><strong><em>When Tasks Are Subjective, Personal, or Creative</em></strong>: Persona prompts truly excel in interpretive or creative tasks where a particular viewpoint, communication style, or emotional resonance is desired.</p></li>
+</ul>
+<p><strong>Avoid Role-Play Prompting</strong></p>
+<ul>
+<li><p><strong><em>When Seeking Factual Information</em></strong>: Introducing a persona can reduce factual accuracy, making it less suitable for tasks requiring strict objectivity(we shouldn’t rely on LLMs for exact factual knowledge anyways).</p></li>
+<li><p><strong><em>When Concerned About Bias</em></strong>: If the output’s fairness, neutrality, or safety is paramount, assigning a persona, especially one with social attributes, risks amplifying problematic elements from the training data.</p></li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>References</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Harris, J. K. (2024). Evaluating the influence of role-playing prompts on ChatGPT’s misinformation detection accuracy: Quantitative study. JMIR Infodemiology. Advance online publication.</p>
+</blockquote>
 <blockquote class="blockquote">
 <p>Kong, A., Zhao, S., Chen, H., Li, Q., Qin, Y., Sun, R., … &amp; Dong, X. (2023). Better zero-shot reasoning with role-play prompting. arXiv. https://arxiv.org/abs/2308.07702</p>
 </blockquote>
