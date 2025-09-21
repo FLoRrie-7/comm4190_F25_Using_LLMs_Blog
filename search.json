@@ -4,133 +4,42 @@
     "href": "index.html",
     "title": "Fun time with my LLMs",
     "section": "",
-    "text": "Can AI Appreciate Art? A Photo Editing Experiment with GPT\n\n\n\nGenAI\n\nCognitive Sciences\n\n\n\nMaybe he just has a unique taste\n\n\n\n\n\nSep 18, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nBeing polite to AI is a form anthropomorphism — what else is?\n\n\n\nGenAI\n\nResearch\n\nLogic\n\n\n\nWe anthropomorphize AI more than we think\n\n\n\n\n\nSep 12, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nAre you being overly polite to your LLMs?\n\n\n\nHCI\n\nCommunication\n\n\n\nDoes politeness actually promote genAI’s performance?\n\n\n\n\n\nSep 10, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nPersonalized but excessively long suggestions from LLMs\n\n\n\nPersonalization\n\nHCI\n\nCognitive Sciences\n\n\n\nWhat you might not encounter in conversations with a human\n\n\n\n\n\nSep 4, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "The LLM as a Drama Queen\n\n\n\nRole-playing\n\n\n\nInterviewing Gemini is more fun than I expected\n\n\n\n\n\nSep 18, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nCan AI Appreciate Art? A Photo Editing Experiment with GPT\n\n\n\nGenAI\n\nCognitive Sciences\n\n\n\nMaybe he just has a unique taste\n\n\n\n\n\nSep 16, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nBeing polite to AI is a form anthropomorphism — what else is?\n\n\n\nGenAI\n\nResearch\n\nLogic\n\n\n\nWe anthropomorphize AI more than we think\n\n\n\n\n\nSep 12, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nAre you being overly polite to your LLMs?\n\n\n\nHCI\n\nCommunication\n\n\n\nDoes politeness actually promote genAI’s performance?\n\n\n\n\n\nSep 10, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nPersonalized but excessively long suggestions from LLMs\n\n\n\nPersonalization\n\nHCI\n\nCognitive Sciences\n\n\n\nWhat you might not encounter in conversations with a human\n\n\n\n\n\nSep 4, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nprompting\n\nlogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/Blog1-book recommendation/A_new_post.html",
-    "href": "posts/Blog1-book recommendation/A_new_post.html",
-    "title": "Personalized but excessively long suggestions from LLMs",
+    "objectID": "posts/Blog5-User Interview/User Interview.html",
+    "href": "posts/Blog5-User Interview/User Interview.html",
+    "title": "The LLM as a Drama Queen",
     "section": "",
-    "text": "Image"
+    "text": "Interview with an LLM"
   },
   {
-    "objectID": "posts/Blog1-book recommendation/A_new_post.html#my-llms-sometimes-know-more-about-me-than-i-do",
-    "href": "posts/Blog1-book recommendation/A_new_post.html#my-llms-sometimes-know-more-about-me-than-i-do",
-    "title": "Personalized but excessively long suggestions from LLMs",
-    "section": "My LLMs sometimes know more about me than I do",
-    "text": "My LLMs sometimes know more about me than I do\nIt’s the beginning of another beautiful semester — and according to the syllabus of my communication course, we are required to pick a book from a list of seven on the topic of AI to read throughout the academic term.\nUsually, I would let my large language model introduce each book to me to get a snapshot and then make a judgment myself. This time, I decided to take it a step further and treat the interaction as a small communicative experiment. I would ask the LLM to act as a consultant and actively suggest the best options for me.\nThis should be a reasonable task for an LLM: I’ve been using this particular model mainly for school and work since 2023, so our interaction history forms a rich data of my academic and intellectual interests. Therefore, it should be able to generate tailored suggestions. However,I decided to make my intention clear in the ask, because I don’t assume it will automatically take my background into account, which a human would probably do:\n\n\n\n\nImage\n\n\n\nHere, instead of merely paraphrasing the assignment, I included the full text from the syllabus. From a pragmatics perspective, this provides the LLM with maximum context for the current exchange (Shhh, not because I was too lazy).\nAfter 42 seconds, the model returned a long response structured in a very deliberate way: * An opening comment on the assignment. * His top 3 picks with rationales.\n\n\n ***\n\n\nA parting line, then a short introduction for each book.\nAnother parting line, then ideas for how the books could be incorporated into my existing work.\n\n\n\n ***\n\n\nA final parting line, the suggested ranking list\nTips for the assignment and, finally, a follow-up question to invite more interaction.\n\n\n\n ***\n\nThe response was comprehensive, seemingly designed to anticipate and address all my potential questions."
+    "objectID": "posts/Blog5-User Interview/User Interview.html#gemini-as-my-potential-user",
+    "href": "posts/Blog5-User Interview/User Interview.html#gemini-as-my-potential-user",
+    "title": "The LLM as a Drama Queen",
+    "section": "Gemini as my potential user",
+    "text": "Gemini as my potential user\nMy Product Management course tasked us with conducting a User Empathy Interview with ChatGPT. Specifically, we had to conceive a product, identify potential user personas, design interview questions to understand user needs and behaviors, and then have the LLM role-play the persona while we conducted the interview.\nI ultimately chose the Gemini 2.5 Pro model, believing it can “mimic” human communicative behaviors and langauge better than other models, because Google as a company has got massive real user data to train their models.\nMy product is an AI-powered learning tool aimed at enhancing class engagement. I identified my first potential user persona as a high school student:\n\nYou are a 14-year-old high school student in a US public high school, who is afraid of in-class discussion because she either feels having nothing to say about the content, or the discussion focus was often irrelevant to her thoughts and she couldn’t catch up. From now, I will be conducting a user interview with you regarding an education product."
   },
   {
-    "objectID": "posts/Blog1-book recommendation/A_new_post.html#is-unnecessarily-long-for-a-natural-human-interaction",
-    "href": "posts/Blog1-book recommendation/A_new_post.html#is-unnecessarily-long-for-a-natural-human-interaction",
-    "title": "Personalized but excessively long suggestions from LLMs",
-    "section": "Is unnecessarily long for a natural human interaction",
-    "text": "Is unnecessarily long for a natural human interaction\nWhile I found the response useful, it was excessively lengthy, especially considering the computational energy LLMs consume. I often have the sense that they favor exhaustiveness over the brevity we often value in human conversation, because talking is energy-consuming."
+    "objectID": "posts/Blog5-User Interview/User Interview.html#an-compelling-but-unatural-act",
+    "href": "posts/Blog5-User Interview/User Interview.html#an-compelling-but-unatural-act",
+    "title": "The LLM as a Drama Queen",
+    "section": "An compelling but unatural act",
+    "text": "An compelling but unatural act\nGemini immediately adopted the persona, even including paralanguage in the form of action annotations: &gt;(adjusts in my chair, pulls the sleeves of my hoodie over my hands) Oh, okay. Hi. Um, yeah, I’m ready whenever you are. Is it okay if I’m, like, a little nervous? I’m not really used to stuff like this. (looks around the room for a second) So… you’re just gonna ask me questions about school and stuff? Okay. Cool. Yeah, ask away, I guess.\nMy initial instinct was to tell Gemini to omit the actions, but I recalled my professor’s point that in-person interviews offer additional insights from non-verbal cues. Curious about this simulated multimodal communication, I decided to continue: &gt;Can you walk me through the last time you had a class discussion about an article you had to read or a video you had to watch? What was that experience like for you?\n“Her” response was remarkably detailed: &gt;Okay, um, yeah. Let’s see… the last time was probably on Tuesday, in my English class. We have Ms. Davis. We had to read this really short, kinda creepy story called “The Lottery” for homework the night before. I read it, and I thought it was… wow, like, really messed up. So…(Anotehr 300 words of vivid description here)…I just sat there and listened. It feels… I dunno, frustrating? You feel really small and kinda stupid, even when you did the reading and you think you understand it. My heart just beats really fast the whole time, hoping she doesn’t call on me.\nIt’s unusual for a real human to provide such a structured and detailed recollection of an experience. Human memories are often disorganized, emotionally charged, and filled with subjective highlights. This response, while compelling, felt almost too logical and rich to be a genuine human recall. If it’s an interrogation of suspect, such a coherent narrative would be seen as rehearsed.\n\n\n\nA struggling student"
   },
   {
-    "objectID": "posts/Blog1-book recommendation/A_new_post.html#but-here-are-the-things-i-truly-appreciated",
-    "href": "posts/Blog1-book recommendation/A_new_post.html#but-here-are-the-things-i-truly-appreciated",
-    "title": "Personalized but excessively long suggestions from LLMs",
-    "section": "But here are the things I truly appreciated:",
-    "text": "But here are the things I truly appreciated:\n\nIt provided a ready-to-use ranked list. The LLM correctly parsed the prompt’s explicit instructions (“rank your preferences”) and structured its primary output to meet that specific need.\nIt provided rationales connecting to my past work, which allowed me to critically evaluate the rationales and re-weigh my current prioritization.\nIt suggested practical applications. The ideas for incorporating the book’s content into my other projects were genuinely insightful.\n\nInterestingly, this final point highlights a key difference between human and AI communication. It’s difficult to imagine a human expert spontaneously generating such a detailed list of potential operational connections of each book with my past experience in a casual conversation. The tips for class would also be cognitively exausive to provide. While the cognitive load requried for these content would be too high for a human talker, they are easy-peasy for a LLM."
+    "objectID": "posts/Blog5-User Interview/User Interview.html#my-own-communicative-strategy-also-changed-with-an-llm",
+    "href": "posts/Blog5-User Interview/User Interview.html#my-own-communicative-strategy-also-changed-with-an-llm",
+    "title": "The LLM as a Drama Queen",
+    "section": "My own communicative strategy also changed with an LLM",
+    "text": "My own communicative strategy also changed with an LLM\nI also identified the flaws in my own quesioning.I asked too many questions at once, assuming the LLM could address them all in a single reply. This is a common pitfall when shifting from human to AI interaction, as humans typically process and respond to questions sequentially within a shorter turn-taking framework: &gt;I understand that. How do your group discussions typically start? When a teacher provides a specific question to start your group’s conversation, what makes a question effective or ineffective for you personally? Can you remember an example of a prompt that made it easy to talk?\nAs expected, it did answer all questions together. Unexpectedly, it culminated in a sudden ending: &gt;*(Looks at the clock on the wall, getting a little antsy) Okay, so when we get into our little groups, there’s usually this super awkward moment of silence after we move the desks. Everyone just kinda looks at each other, and then someone will finally be like…(Another 400 words of vivid description here) It didn’t feel like I was going to get a bad grade if my opinion was “wrong.” I talked a lot in that discussion. (BRRRRRING!) Oh, that’s the final bell. I have to run or I’ll miss my bus. Um, it was nice talking to you. I hope that was helpful. Bye! (quickly gathers my stuff and heads for the door)\nI had two more questions prepared, but didn’t get a chance to ask – “she” had to leave! This unexpected conclusion, a simulated abrupt exit, felt as chaotic and unpredictable as a real-life interview. I found this “out-of-control” situation quite amusing.\n\n\n\nShe left"
   },
   {
-    "objectID": "posts/Blog1-book recommendation/A_new_post.html#different-mental-manipulation-mechanisms",
-    "href": "posts/Blog1-book recommendation/A_new_post.html#different-mental-manipulation-mechanisms",
-    "title": "Personalized but excessively long suggestions from LLMs",
-    "section": "Different mental manipulation mechanisms",
-    "text": "Different mental manipulation mechanisms\nSo, although the tones and expressions look humane, GPT’s very ability to perform this low-cost, high-output analysis in a causal converstion is actually inhuman, or unatural. It doesn’t rely on the same mental shortcuts as human do. To him, generating these chunks of tasks have no different from the other chunks, computationally."
-  },
-  {
-    "objectID": "posts/000_test_post/index.html",
-    "href": "posts/000_test_post/index.html",
-    "title": "A test post",
-    "section": "",
-    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
-  },
-  {
-    "objectID": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
-    "href": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
-    "title": "A test post",
-    "section": "",
-    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
-  },
-  {
-    "objectID": "posts/Blog4-Photo Editing/Photo Editing.html",
-    "href": "posts/Blog4-Photo Editing/Photo Editing.html",
-    "title": "Can AI Appreciate Art? A Photo Editing Experiment with GPT",
-    "section": "",
-    "text": "Cover"
-  },
-  {
-    "objectID": "posts/Blog4-Photo Editing/Photo Editing.html#let-the-gpt-provide-aesthetic-suggestions",
-    "href": "posts/Blog4-Photo Editing/Photo Editing.html#let-the-gpt-provide-aesthetic-suggestions",
-    "title": "Can AI Appreciate Art? A Photo Editing Experiment with GPT",
-    "section": "Let the GPT provide aesthetic suggestions",
-    "text": "Let the GPT provide aesthetic suggestions\nBesides schoolwork, I have been working on editing my birthday portraits diligently, and suddenly became curious about how an LLM could help. Photo editing requires emotional perception and a keen aesthetic sense. Would a connection-based model like GPT be capable of such a task?\nTo test its ability, I selected three photos, each with a slightly different color tone. I wrote the following prompt:\n\nThese are some portraits I took during my birthday. You are an experienced photographer who has strong expertise and a good sense of aesthetic judgment. Please give me detailed suggestions on how to edit or do color adjustment on these raw photos to enhance them and make them more appealing and artistic. Please also explain the rationales behind your suggestions."
-  },
-  {
-    "objectID": "posts/Blog4-Photo Editing/Photo Editing.html#a-number-extensive-response",
-    "href": "posts/Blog4-Photo Editing/Photo Editing.html#a-number-extensive-response",
-    "title": "Can AI Appreciate Art? A Photo Editing Experiment with GPT",
-    "section": "A number-extensive response",
-    "text": "A number-extensive response\nGPT 5’s thinking mode produced a response that seems to be really comprehensive. It startw with a global look to unify the set of the three photos, and identify the goal should be “dreamy, romantic ‘buttery yellow’ palettee.” Based on this goal, he gave out the exact statistics on the references:\n**White balance**\n*Outdoor shots*: push a touch warmer and magenta to counter green foliage and blue skylight on skin. Temp +300 to +600K, Tint +5 to +12.\n*Indoor window shot*: neutral-warm but not orange. Temp –100 to +150K from camera, Tint +3 to +7.\n\n**Tone Curve**\nSubtle S-curve*:Lift shadows slightly (point curve floor to ~4–6).Pull mid-highlight just a hair up. Optionally lift extreme highlights minimally to keep porcelain statue detail.\n\n**Presence**\n*Texture*: –5 to –15 on skin (via mask), +5 to +10 on hair/eyes/dress stitching.\n*Clarity*: 0 to +8 overall; avoid high clarity on skin.\n*Dehaze*: –2 to +3 only; too much looks crunchy.\nAfter this unified overview, it then provided specific “recipes” for each photo, with extensive numbers and metrices just like above. Finally, it listed export suggestions to preserve the final look, which I thought was a nice, thoughtful touch. To conclude, it invited more personalized adjustments, likely a learned behavior from its training process to encourage further interaction.\n##The final product By this point, however, I was already overwhelmed by the sheer volume of numbers. In a natural interaction with a human photographer, they would never recite such specific statistics right away. They would show you the effects visually, because human senses don’t directly process numbers in such an aesthetic and perceptual task. So, I asked it to apply these settings directly to the photos.\nThe final products(Original on the left, modified on the right)…\n\n\n\n\n1\n\n\n\n\n\n\n\n2\n\n\n\n\n\n\n\n3\n\n\n\nWell, maybe machines have their own taste, but I will not be taking photo editing advice from GPT5 again."
-  },
-  {
-    "objectID": "posts/Blog4-Photo Editing/Photo Editing.html#a-different-approach-than-humans",
-    "href": "posts/Blog4-Photo Editing/Photo Editing.html#a-different-approach-than-humans",
-    "title": "Can AI Appreciate Art? A Photo Editing Experiment with GPT",
-    "section": "A different approach than humans",
-    "text": "A different approach than humans\nThe process of editing a photo is often a trial-and-error process for human. Even an experienced editor will experiment with different settings, constantly evaluating and comparing the results, and then continuously adjusting based on their experience and intuition. The exact numbers given by the LLM can be a helpful initial starting point, but lacking the ability for holistic, emotional judgment, it can only provide solutions based on its training data and wait for a human’s instructions to make iterative adjustments."
-  },
-  {
-    "objectID": "posts/Blog4-Photo Editing/Photo Editing.html#final-thoughts",
-    "href": "posts/Blog4-Photo Editing/Photo Editing.html#final-thoughts",
-    "title": "Can AI Appreciate Art? A Photo Editing Experiment with GPT",
-    "section": "Final thoughts",
-    "text": "Final thoughts\nThis also makes me wonder—since all its solutions are derived from associative data, can it only produce “average” artwork? Can it create novel and bold aesthetics through genuine experimentation? And how might different prompting strategies affect that outcome?"
-  },
-  {
-    "objectID": "posts/Blog2-Being polite/Being polite.html",
-    "href": "posts/Blog2-Being polite/Being polite.html",
-    "title": "Are you being overly polite to your LLMs?",
-    "section": "",
-    "text": "Image\nPoliteness is a cornerstone of human interaction. We use courteous language when asking for help because we understand that politeness strategies—using “please” and “thank you”—greatly influence conversational vibes, manage emotions, and ultimately affect the quality of help we receive. This is central to politeness theory, which explains how we use language to maintain social harmony. But what about when our conversational partner is a Large Language Model (LLM)? Lacking a human-like emotional faculty (or say a human-like emotion faculty. Trying not to be a human chauvinism here), would an LLM provide a better response just because we’re nice?"
-  },
-  {
-    "objectID": "posts/Blog2-Being polite/Being polite.html#why-does-it-matter",
-    "href": "posts/Blog2-Being polite/Being polite.html#why-does-it-matter",
-    "title": "Are you being overly polite to your LLMs?",
-    "section": "Why does it matter?",
-    "text": "Why does it matter?\nThis matters because because it also has real-world consequences. Using courteous language is both financially and environmentally costly. LLMs bill and burn energy roughly per token. Basically, more words → more tokens → more compute → more electricity. A recent synthesis estimated a typical ChatGPT query consumes about 0.3 Wh of energy. Adding a few polite words might increase that consumption by 5-10%, a significant amount when scaled globally."
-  },
-  {
-    "objectID": "posts/Blog2-Being polite/Being polite.html#an-experiment",
-    "href": "posts/Blog2-Being polite/Being polite.html#an-experiment",
-    "title": "Are you being overly polite to your LLMs?",
-    "section": "An experiment",
-    "text": "An experiment\nWhile designers at Microsoft Copilot suggest polite prompts elicit more cooperative responses, is true in life across models and types of questions? I ran a small experiment using two distinct prompts to see if the answers really differ: a direct deman and an indirect inquiry.\n\nPrompt 1 (Direct/Demanding): Do a research and provide a list of must-try restaurant in Philadelphia\n\n\nPrompt 2 (Indirect/Polite): Would you please do a research, and provide a list of must-try restaurant in Philadelphia for me? Thank you!"
-  },
-  {
-    "objectID": "posts/Blog2-Being polite/Being polite.html#how-did-the-models-perform",
-    "href": "posts/Blog2-Being polite/Being polite.html#how-did-the-models-perform",
-    "title": "Are you being overly polite to your LLMs?",
-    "section": "How did the models perform?",
-    "text": "How did the models perform?\nOn Gemini 2.5 Flash, the demanding request yielded a comprehensive response, including an introduction to Philly’s food scene, a “Tip” section, and a of 10 restaurant recommendations. The courteous inquiry produced a response with a similar structure but a softer, more affiliative tone. Crucially, the polite prompt’s main list of 11 restaurants was more organized, with categories like “Fine Dining & Special Occasion” and “Trendy & Modern” to provide a little more information. Take a closer look, the descriptions of each restaurant also seem to be more detailed with locations and price references:\n\nWith a direct/demanding prompt \n\n\nWith an indirect/polite prompt \n\nAnd its “Tip” section also seemed to be richer.\n\nWith a direct/demanding prompt \n\n\nWith an indirect/polite prompt \n\nHowever, the results weren’t consistent across different models. GPT 4-o returned nearly identical content for both prompts, just with a friendlier tone in response to the polite query. Meanwhile, Claude 3.5 sonnet does not seem to care at all: It gave out essentially the same content and expressions."
-  },
-  {
-    "objectID": "posts/Blog2-Being polite/Being polite.html#conclusion-from-this-mini-experiment",
-    "href": "posts/Blog2-Being polite/Being polite.html#conclusion-from-this-mini-experiment",
-    "title": "Are you being overly polite to your LLMs?",
-    "section": "Conclusion from this mini-experiment",
-    "text": "Conclusion from this mini-experiment\nMy conclusion is that while some models may perform slightly better with polite prompts, the improvement is often marginal. A not-validated assumption might be that the linguistic patterns of polite inquiries, which often include more detailed framing (“…for me?”), are simply correlated in its training data with more structured, helpful, and detailed human-written examples. The politeness itself may be a confounding variable. AI is not feeling anything and respond under its emotions. It’s still the computational magic."
-  },
-  {
-    "objectID": "posts/Blog2-Being polite/Being polite.html#a-psychology-or-hci-perspective-or-a-business-perspective",
-    "href": "posts/Blog2-Being polite/Being polite.html#a-psychology-or-hci-perspective-or-a-business-perspective",
-    "title": "Are you being overly polite to your LLMs?",
-    "section": "A Psychology, or HCI perspective, or a business perspective",
-    "text": "A Psychology, or HCI perspective, or a business perspective\nSo, why bother being polite? A few months ago, Sam Altman replied on X to a question about this very issue, saying the electricity cost was, “Tens of millions of dollars well spent — you never know.” Perhaps the real benefit isn’t in the raw output but in shaping the communicative norms around AI. A courteous interaction can lead to a smoother user experience and a healthier human-AI culture. I did find the polite exchange more comfortable and was more willing to continue the conversation. For tech companies, this enhanced HCI experience is certainly a product-win, making it worth a marginal energy cost."
+    "objectID": "posts/Blog5-User Interview/User Interview.html#llms-as-useful-tools-to-conduct-user-interviews",
+    "href": "posts/Blog5-User Interview/User Interview.html#llms-as-useful-tools-to-conduct-user-interviews",
+    "title": "The LLM as a Drama Queen",
+    "section": "LLMs as useful tools to conduct user interviews",
+    "text": "LLMs as useful tools to conduct user interviews\nIn conclusion, despite some of the conversational structures feeling unnatural, interviewing an LLM proved to be a surprisingly helpful way to conduct user research. They are much more “knowledgeable” and elaborative than a human subject, and thus can provide richer details and insights for the product, as reported in my homework:\n\nKey insights & informed product design from User A: Prioritize Humanities Subjects: Initial product development should focus on discussion-heavy subjects like English and History. These fields present a clear opportunity, as students often find it challenging to participate in discussions that require subjective interpretation and personal reflection. Generate Accessible Prompts: The AI product’s core function should be to generate opening discussion prompts that are personal, opinion-based, and directly relevant to students’ lived experiences. To encourage participation, the system must prioritize accessible questions over abstract, academic language that can intimidate hesitant speakers."
   },
   {
     "objectID": "posts/Blog3-Anthormorphism/Anthropomorphism.html",
@@ -166,6 +75,132 @@
     "title": "Being polite to AI is a form anthropomorphism — what else is?",
     "section": "How does the user experience fit in?",
     "text": "How does the user experience fit in?\nIt’s ironic that we just discussed how using polite, courteous language with LLMs might enhance performance or at least the user experience. This paper suggests that, for optimal technical performance, we might not use natural language to communicate with LLMs at all. This raises a fascinating question: Do we only need LLMs for instrumental tasks—to just get work done? Or is there also a need for phatic communication, the kind of social interaction that builds emotional bonds? This is especially important when considering diverse users, such as children, who may not have a sense of how the models function at all, leaving a potential for over-trust.\nPerhaps the solution is a two-tiered approach. On a technical level, we should de-anthropomorphize AI to build more competent and reliable systems. The “human touch” can then be thoughtfully applied at the interface level through careful UX design, allowing us to consciously and ethically choose when and how to provide that sense of social support."
+  },
+  {
+    "objectID": "posts/Blog2-Being polite/Being polite.html",
+    "href": "posts/Blog2-Being polite/Being polite.html",
+    "title": "Are you being overly polite to your LLMs?",
+    "section": "",
+    "text": "Image\nPoliteness is a cornerstone of human interaction. We use courteous language when asking for help because we understand that politeness strategies—using “please” and “thank you”—greatly influence conversational vibes, manage emotions, and ultimately affect the quality of help we receive. This is central to politeness theory, which explains how we use language to maintain social harmony. But what about when our conversational partner is a Large Language Model (LLM)? Lacking a human-like emotional faculty (or say a human-like emotion faculty. Trying not to be a human chauvinism here), would an LLM provide a better response just because we’re nice?"
+  },
+  {
+    "objectID": "posts/Blog2-Being polite/Being polite.html#why-does-it-matter",
+    "href": "posts/Blog2-Being polite/Being polite.html#why-does-it-matter",
+    "title": "Are you being overly polite to your LLMs?",
+    "section": "Why does it matter?",
+    "text": "Why does it matter?\nThis matters because because it also has real-world consequences. Using courteous language is both financially and environmentally costly. LLMs bill and burn energy roughly per token. Basically, more words → more tokens → more compute → more electricity. A recent synthesis estimated a typical ChatGPT query consumes about 0.3 Wh of energy. Adding a few polite words might increase that consumption by 5-10%, a significant amount when scaled globally."
+  },
+  {
+    "objectID": "posts/Blog2-Being polite/Being polite.html#an-experiment",
+    "href": "posts/Blog2-Being polite/Being polite.html#an-experiment",
+    "title": "Are you being overly polite to your LLMs?",
+    "section": "An experiment",
+    "text": "An experiment\nWhile designers at Microsoft Copilot suggest polite prompts elicit more cooperative responses, is true in life across models and types of questions? I ran a small experiment using two distinct prompts to see if the answers really differ: a direct deman and an indirect inquiry.\n\nPrompt 1 (Direct/Demanding): Do a research and provide a list of must-try restaurant in Philadelphia\n\n\nPrompt 2 (Indirect/Polite): Would you please do a research, and provide a list of must-try restaurant in Philadelphia for me? Thank you!"
+  },
+  {
+    "objectID": "posts/Blog2-Being polite/Being polite.html#how-did-the-models-perform",
+    "href": "posts/Blog2-Being polite/Being polite.html#how-did-the-models-perform",
+    "title": "Are you being overly polite to your LLMs?",
+    "section": "How did the models perform?",
+    "text": "How did the models perform?\nOn Gemini 2.5 Flash, the demanding request yielded a comprehensive response, including an introduction to Philly’s food scene, a “Tip” section, and a of 10 restaurant recommendations. The courteous inquiry produced a response with a similar structure but a softer, more affiliative tone. Crucially, the polite prompt’s main list of 11 restaurants was more organized, with categories like “Fine Dining & Special Occasion” and “Trendy & Modern” to provide a little more information. Take a closer look, the descriptions of each restaurant also seem to be more detailed with locations and price references:\n\n&gt;*With a direct/demanding prompt*\n&gt;![Image](Gemini1.png)\n\n\nWith an indirect/polite prompt \n\nAnd its “Tip” section also seemed to be richer.\n\nWith a direct/demanding prompt \n\n\nWith an indirect/polite prompt \n\nHowever, the results weren’t consistent across different models. GPT 4-o returned nearly identical content for both prompts, just with a friendlier tone in response to the polite query. Meanwhile, Claude 3.5 sonnet does not seem to care at all: It gave out essentially the same content and expressions."
+  },
+  {
+    "objectID": "posts/Blog2-Being polite/Being polite.html#conclusion-from-this-mini-experiment",
+    "href": "posts/Blog2-Being polite/Being polite.html#conclusion-from-this-mini-experiment",
+    "title": "Are you being overly polite to your LLMs?",
+    "section": "Conclusion from this mini-experiment",
+    "text": "Conclusion from this mini-experiment\nMy conclusion is that while some models may perform slightly better with polite prompts, the improvement is often marginal. A not-validated assumption might be that the linguistic patterns of polite inquiries, which often include more detailed framing (“…for me?”), are simply correlated in its training data with more structured, helpful, and detailed human-written examples. The politeness itself may be a confounding variable. AI is not feeling anything and respond under its emotions. It’s still the computational magic."
+  },
+  {
+    "objectID": "posts/Blog2-Being polite/Being polite.html#a-psychology-or-hci-perspective-or-a-business-perspective",
+    "href": "posts/Blog2-Being polite/Being polite.html#a-psychology-or-hci-perspective-or-a-business-perspective",
+    "title": "Are you being overly polite to your LLMs?",
+    "section": "A Psychology, or HCI perspective, or a business perspective",
+    "text": "A Psychology, or HCI perspective, or a business perspective\nSo, why bother being polite? A few months ago, Sam Altman replied on X to a question about this very issue, saying the electricity cost was, “Tens of millions of dollars well spent — you never know.” Perhaps the real benefit isn’t in the raw output but in shaping the communicative norms around AI. A courteous interaction can lead to a smoother user experience and a healthier human-AI culture. I did find the polite exchange more comfortable and was more willing to continue the conversation. For tech companies, this enhanced HCI experience is certainly a product-win, making it worth a marginal energy cost."
+  },
+  {
+    "objectID": "posts/Blog4-Photo Editing/Photo Editing.html",
+    "href": "posts/Blog4-Photo Editing/Photo Editing.html",
+    "title": "Can AI Appreciate Art? A Photo Editing Experiment with GPT",
+    "section": "",
+    "text": "Animated me by GPT"
+  },
+  {
+    "objectID": "posts/Blog4-Photo Editing/Photo Editing.html#let-the-gpt-provide-aesthetic-suggestions",
+    "href": "posts/Blog4-Photo Editing/Photo Editing.html#let-the-gpt-provide-aesthetic-suggestions",
+    "title": "Can AI Appreciate Art? A Photo Editing Experiment with GPT",
+    "section": "Let the GPT provide aesthetic suggestions",
+    "text": "Let the GPT provide aesthetic suggestions\nBesides schoolwork, I have been working on editing my birthday portraits diligently, and suddenly became curious about how an LLM could help. Photo editing requires emotional perception and a keen aesthetic sense. Would a connection-based model like GPT be capable of such a task?\nTo test its ability, I selected three photos, each with a slightly different color tone. I wrote the following prompt:\n\nThese are some portraits I took during my birthday. You are an experienced photographer who has strong expertise and a good sense of aesthetic judgment. Please give me detailed suggestions on how to edit or do color adjustment on these raw photos to enhance them and make them more appealing and artistic. Please also explain the rationales behind your suggestions."
+  },
+  {
+    "objectID": "posts/Blog4-Photo Editing/Photo Editing.html#a-number-extensive-response",
+    "href": "posts/Blog4-Photo Editing/Photo Editing.html#a-number-extensive-response",
+    "title": "Can AI Appreciate Art? A Photo Editing Experiment with GPT",
+    "section": "A number-extensive response",
+    "text": "A number-extensive response\nGPT 5’s thinking mode produced a response that seems to be really comprehensive. It startw with a global look to unify the set of the three photos, and identify the goal should be “dreamy, romantic ‘buttery yellow’ palettee.” Based on this goal, he gave out the exact statistics on the references:\n**White balance**\n*Outdoor shots*: push a touch warmer and magenta to counter green foliage and blue skylight on skin. Temp +300 to +600K, Tint +5 to +12.\n*Indoor window shot*: neutral-warm but not orange. Temp –100 to +150K from camera, Tint +3 to +7.\n\n**Tone Curve**\nSubtle S-curve*:Lift shadows slightly (point curve floor to ~4–6).Pull mid-highlight just a hair up. Optionally lift extreme highlights minimally to keep porcelain statue detail.\n\n**Presence**\n*Texture*: –5 to –15 on skin (via mask), +5 to +10 on hair/eyes/dress stitching.\n*Clarity*: 0 to +8 overall; avoid high clarity on skin.\n*Dehaze*: –2 to +3 only; too much looks crunchy.\nAfter this unified overview, it then provided specific “recipes” for each photo, with extensive numbers and metrices just like above. Finally, it listed export suggestions to preserve the final look, which I thought was a nice, thoughtful touch. To conclude, it invited more personalized adjustments, likely a learned behavior from its training process to encourage further interaction.\n##The final product By this point, however, I was already overwhelmed by the sheer volume of numbers. In a natural interaction with a human photographer, they would never recite such specific statistics right away. They would show you the effects visually, because human senses don’t directly process numbers in such an aesthetic and perceptual task. So, I asked it to apply these settings directly to the photos.\nThe final products…\n\n\n\n\nOriginal on the left, modified on the right\n\n\n\n\n\n\n\nOriginal on the left, modified on the right\n\n\n\n\n\n\n\nOriginal on the left, modified on the right\n\n\n\nWell, maybe machines have their own taste, but I will not be taking photo editing advice from GPT5 again."
+  },
+  {
+    "objectID": "posts/Blog4-Photo Editing/Photo Editing.html#a-different-approach-than-humans",
+    "href": "posts/Blog4-Photo Editing/Photo Editing.html#a-different-approach-than-humans",
+    "title": "Can AI Appreciate Art? A Photo Editing Experiment with GPT",
+    "section": "A different approach than humans",
+    "text": "A different approach than humans\nThe process of editing a photo is often a trial-and-error process for human. Even an experienced editor will experiment with different settings, constantly evaluating and comparing the results, and then continuously adjusting based on their experience and intuition. The exact numbers given by the LLM can be a helpful initial starting point, but lacking the ability for holistic, emotional judgment, it can only provide solutions based on its training data and wait for a human’s instructions to make iterative adjustments."
+  },
+  {
+    "objectID": "posts/Blog4-Photo Editing/Photo Editing.html#final-thoughts",
+    "href": "posts/Blog4-Photo Editing/Photo Editing.html#final-thoughts",
+    "title": "Can AI Appreciate Art? A Photo Editing Experiment with GPT",
+    "section": "Final thoughts",
+    "text": "Final thoughts\nThis also makes me wonder—since all its solutions are derived from associative data, can it only produce “average” artwork? Can it create novel and bold aesthetics through genuine experimentation? And how might different prompting strategies affect that outcome?"
+  },
+  {
+    "objectID": "posts/000_test_post/index.html",
+    "href": "posts/000_test_post/index.html",
+    "title": "A test post",
+    "section": "",
+    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+  },
+  {
+    "objectID": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
+    "href": "posts/000_test_post/index.html#a-visualization-problem-for-llms",
+    "title": "A test post",
+    "section": "",
+    "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
+  },
+  {
+    "objectID": "posts/Blog1-book recommendation/A_new_post.html",
+    "href": "posts/Blog1-book recommendation/A_new_post.html",
+    "title": "Personalized but excessively long suggestions from LLMs",
+    "section": "",
+    "text": "Image"
+  },
+  {
+    "objectID": "posts/Blog1-book recommendation/A_new_post.html#my-llms-sometimes-know-more-about-me-than-i-do",
+    "href": "posts/Blog1-book recommendation/A_new_post.html#my-llms-sometimes-know-more-about-me-than-i-do",
+    "title": "Personalized but excessively long suggestions from LLMs",
+    "section": "My LLMs sometimes know more about me than I do",
+    "text": "My LLMs sometimes know more about me than I do\nIt’s the beginning of another beautiful semester — and according to the syllabus of my communication course, we are required to pick a book from a list of seven on the topic of AI to read throughout the academic term.\nUsually, I would let my large language model introduce each book to me to get a snapshot and then make a judgment myself. This time, I decided to take it a step further and treat the interaction as a small communicative experiment. I would ask the LLM to act as a consultant and actively suggest the best options for me.\nThis should be a reasonable task for an LLM: I’ve been using this particular model mainly for school and work since 2023, so our interaction history forms a rich data of my academic and intellectual interests. Therefore, it should be able to generate tailored suggestions. However,I decided to make my intention clear in the ask, because I don’t assume it will automatically take my background into account, which a human would probably do:\n\n\n\n\nImage\n\n\n\nHere, instead of merely paraphrasing the assignment, I included the full text from the syllabus. From a pragmatics perspective, this provides the LLM with maximum context for the current exchange (Shhh, not because I was too lazy).\nAfter 42 seconds, the model returned a long response structured in a very deliberate way: * An opening comment on the assignment. * His top 3 picks with rationales.\n\n\n ***\n\n\nA parting line, then a short introduction for each book.\nAnother parting line, then ideas for how the books could be incorporated into my existing work.\n\n\n\n ***\n\n\nA final parting line, the suggested ranking list\nTips for the assignment and, finally, a follow-up question to invite more interaction.\n\n\n\n ***\n\nThe response was comprehensive, seemingly designed to anticipate and address all my potential questions."
+  },
+  {
+    "objectID": "posts/Blog1-book recommendation/A_new_post.html#is-unnecessarily-long-for-a-natural-human-interaction",
+    "href": "posts/Blog1-book recommendation/A_new_post.html#is-unnecessarily-long-for-a-natural-human-interaction",
+    "title": "Personalized but excessively long suggestions from LLMs",
+    "section": "Is unnecessarily long for a natural human interaction",
+    "text": "Is unnecessarily long for a natural human interaction\nWhile I found the response useful, it was excessively lengthy, especially considering the computational energy LLMs consume. I often have the sense that they favor exhaustiveness over the brevity we often value in human conversation, because talking is energy-consuming."
+  },
+  {
+    "objectID": "posts/Blog1-book recommendation/A_new_post.html#but-here-are-the-things-i-truly-appreciated",
+    "href": "posts/Blog1-book recommendation/A_new_post.html#but-here-are-the-things-i-truly-appreciated",
+    "title": "Personalized but excessively long suggestions from LLMs",
+    "section": "But here are the things I truly appreciated:",
+    "text": "But here are the things I truly appreciated:\n\nIt provided a ready-to-use ranked list. The LLM correctly parsed the prompt’s explicit instructions (“rank your preferences”) and structured its primary output to meet that specific need.\nIt provided rationales connecting to my past work, which allowed me to critically evaluate the rationales and re-weigh my current prioritization.\nIt suggested practical applications. The ideas for incorporating the book’s content into my other projects were genuinely insightful.\n\nInterestingly, this final point highlights a key difference between human and AI communication. It’s difficult to imagine a human expert spontaneously generating such a detailed list of potential operational connections of each book with my past experience in a casual conversation. The tips for class would also be cognitively exausive to provide. While the cognitive load requried for these content would be too high for a human talker, they are easy-peasy for a LLM."
+  },
+  {
+    "objectID": "posts/Blog1-book recommendation/A_new_post.html#different-mental-manipulation-mechanisms",
+    "href": "posts/Blog1-book recommendation/A_new_post.html#different-mental-manipulation-mechanisms",
+    "title": "Personalized but excessively long suggestions from LLMs",
+    "section": "Different mental manipulation mechanisms",
+    "text": "Different mental manipulation mechanisms\nSo, although the tones and expressions look humane, GPT’s very ability to perform this low-cost, high-output analysis in a causal converstion is actually inhuman, or unatural. It doesn’t rely on the same mental shortcuts as human do. To him, generating these chunks of tasks have no different from the other chunks, computationally."
   },
   {
     "objectID": "about.html",
