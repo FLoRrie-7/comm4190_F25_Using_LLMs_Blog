@@ -144,7 +144,7 @@
     "href": "posts/Blog7-Creativity/blog7-creativity.html",
     "title": "Is there an incompatibility of token prediction and creativity?",
     "section": "",
-    "text": "![AI exercising their creativity](painting.png)"
+    "text": "AI exercising their creativity"
   },
   {
     "objectID": "posts/Blog7-Creativity/blog7-creativity.html#the-affective-component-of-creativity---ai-lacks-this-faculty",
@@ -172,14 +172,14 @@
     "href": "posts/Blog7-Creativity/blog7-creativity.html#using-llms-for-creative-process-facilitation",
     "title": "Is there an incompatibility of token prediction and creativity?",
     "section": "Using LLMs for creative process facilitation",
-    "text": "Using LLMs for creative process facilitation\nYet, arguably, we can still utilize LLMs for creative production, or at least for facilitation. The instantaneous creativity discussed in the paper represents only one form of improvised creativity. Other important creative processes, such as continuous iterations and development on creative ideas, can certainly lead to highly novel outputs. These can often be achieved through strategic prompting. As the paper suggests, we should view LLMs as a co-creative infrastructure designed to support and enhance human ingenuity.\n\n![Let AI spark human creativity](facilitation.png)"
+    "text": "Using LLMs for creative process facilitation\nYet, arguably, we can still utilize LLMs for creative production, or at least for facilitation. The instantaneous creativity discussed in the paper represents only one form of improvised creativity. Other important creative processes, such as continuous iterations and development on creative ideas, can certainly lead to highly novel outputs. These can often be achieved through strategic prompting. As the paper suggests, we should view LLMs as a co-creative infrastructure designed to support and enhance human ingenuity.\n\n\n\nLet AI spark human creativity"
   },
   {
     "objectID": "posts/Blog7-Creativity/blog7-creativity.html#final-thoughts",
     "href": "posts/Blog7-Creativity/blog7-creativity.html#final-thoughts",
     "title": "Is there an incompatibility of token prediction and creativity?",
     "section": "Final thoughts",
-    "text": "Final thoughts\nSo, if that’s the case, perhaps **role-playing prompts could be effective in promoting LLM’s creative production, as they attempt to inject a unique perspective and simulate an “experience”?"
+    "text": "Final thoughts\nSo, if that’s the case, perhaps role-playing prompts could be effective in promoting LLM’s creative production, as they attempt to inject a unique perspective and simulate an “experience”?"
   },
   {
     "objectID": "posts/Blog1-book recommendation/A_new_post.html",
