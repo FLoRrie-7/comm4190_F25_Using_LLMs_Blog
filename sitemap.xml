@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-09-21T18:41:49.304Z</lastmod>
+    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/about.html</loc>
+    <lastmod>2025-09-27T15:05:11.481Z</lastmod>
   </url>
   <url>
     <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/Blog5-User Interview/User Interview.html</loc>
-    <lastmod>2025-09-21T18:41:49.344Z</lastmod>
-  </url>
-  <url>
-    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/Blog6-Role-play prompting/Role-play.html</loc>
-    <lastmod>2025-09-21T18:41:49.347Z</lastmod>
-  </url>
-  <url>
-    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-09-21T18:41:49.305Z</lastmod>
-  </url>
-  <url>
-    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/Blog4-Photo Editing/Photo Editing.html</loc>
-    <lastmod>2025-09-21T18:41:49.342Z</lastmod>
+    <lastmod>2025-09-27T15:05:11.519Z</lastmod>
   </url>
   <url>
     <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/Blog2-Being polite/Being polite.html</loc>
-    <lastmod>2025-09-21T18:41:49.312Z</lastmod>
+    <lastmod>2025-09-27T15:05:11.489Z</lastmod>
   </url>
   <url>
     <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/Blog3-Anthormorphism/Anthropomorphism.html</loc>
-    <lastmod>2025-09-21T18:41:49.316Z</lastmod>
+    <lastmod>2025-09-27T15:05:11.493Z</lastmod>
+  </url>
+  <url>
+    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
+    <lastmod>2025-09-27T15:05:11.482Z</lastmod>
+  </url>
+  <url>
+    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/index.html</loc>
+    <lastmod>2025-09-27T15:05:11.481Z</lastmod>
+  </url>
+  <url>
+    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/Blog7-Creativity/blog7-creativity.html</loc>
+    <lastmod>2025-09-27T15:05:11.530Z</lastmod>
   </url>
   <url>
     <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/Blog1-book recommendation/A_new_post.html</loc>
-    <lastmod>2025-09-21T18:41:49.305Z</lastmod>
+    <lastmod>2025-09-27T15:05:11.483Z</lastmod>
   </url>
   <url>
-    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-09-21T18:41:49.304Z</lastmod>
+    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/Blog6-Role-play prompting/Role-play.html</loc>
+    <lastmod>2025-09-27T15:05:11.523Z</lastmod>
+  </url>
+  <url>
+    <loc>https://FLoRrie-7.github.io/comm4190_F25_Using_LLMs_Blog/posts/Blog4-Photo Editing/Photo Editing.html</loc>
+    <lastmod>2025-09-27T15:05:11.517Z</lastmod>
   </url>
 </urlset>
