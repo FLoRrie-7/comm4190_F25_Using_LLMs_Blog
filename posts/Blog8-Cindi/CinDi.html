@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-1db3f541d99483cdc7a0d9cf38862b2c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -180,9 +180,31 @@ ul.task-list li input[type="checkbox"] {
 <section id="an-experiment-with-the-llms-using-real-child-participants-input" class="level1">
 <h1>An experiment with the LLMs using real child participants’ input</h1>
 <p><strong>Attempt 1 with GPT 4o</strong>: Overlooking the Audience To simulate our original study, I initiated the conversation using a somewhat difficult-to-grasp answer provided by a real child participant from our research. My prompt instructed GPT to interact: I prompted the GPT through:</p>
-<p>While I thought the prompt clearly implied an interaction with a child, GPT-4o delivered a long list of ideas, seemingly disregarding the characteristics of its audience. It appeared to treat this less as a communicative activity and more as a task with a singular goal: to generate as many usages as possible. There was <strong>no spontaneous inclination or intent for genuine “communicative interaction</strong>.”</p>
+<blockquote class="blockquote">
+<p>I am going to introduce you to a 5-year-old. Your task is to think of as many usage of an object together. The first object is: a face mask. She is going to start first: If you want to make a puppet show, then write the words “puppet show” on a piece of paper, and then make the thread to hang around the neck on both sides of the mask.</p>
+</blockquote>
+<p>While I thought the prompt clearly implied an interaction with a child (and it seems to invite the child for other ideas at the end), GPT-4o delivered a long list of ideas, seemingly disregarding the characteristics of its audience:</p>
+<blockquote class="blockquote">
+<p>Wow, that’s a wonderful and super creative idea! A puppet show mask – that sounds so much fun! Let’s think of more fun and silly ways we can use a face mask together. Here we go:</p>
+<p>Butterfly Wings – If you open the mask and flap it really fast, it kind of looks like tiny wings.</p>
+<p>Sleep Mask – Put it over your eyes when you’re pretending to sleep like a bear in winter! Barbie’s Hammock – Stretch it between two toy chairs and your doll can lie down and relax.</p>
+<p>Mini Parachute – Tie some string and drop it gently from up high with a small toy! Tiny Purse – Fold it in half and use the ear loops like a handle. Now your teddy bear has a purse!</p>
+<p>Bunny Ears Hat – Put two masks together to make funny floppy bunny ears you can wear. Soft Pillow – Stack some up and make a fluffy bed for your stuffed animals.</p>
+<p>Nest for Toy Birds – Open a mask and fill it with cotton. Now your toy bird has a cozy nest! Mysterious Treasure Pouch – Hide tiny treasures in it and go on a treasure hunt!</p>
+<p>What other fun ideas can we come up with for a face mask? Let’s think of more together!</p>
+</blockquote>
+<p>It appeared to treat this less as a communicative activity and more as a task with a singular goal: to generate as many usages as possible. There was <strong>no spontaneous inclination or intent for genuine “communicative interaction</strong>.”</p>
 <p><strong>Attempt 2 with GPT 4o: Confirmation and Extension</strong> So I elaborated the rule more clearly:</p>
 <p>This time, GPT-4o interacted effectively with the “child.” However, it struggled to maintain focus on the core goal of “generating usages for a toothbrush.” After several rounds, the model became fully immersed in the joyful, playful interaction with the child.</p>
+<blockquote class="blockquote">
+<p><strong>GPT:</strong> Ooooh, I like that! It could be the sign for our puppet show! What if we add glitter to the mask too, so it sparkles when we move?</p>
+<p><strong>“Child”:</strong> the mask can be used as a rag to wipe the table</p>
+<p><strong>GPT:</strong>Yes! And it’s small, so it’s perfect for tiny spills! What if we also use it to clean our dolls’ furniture?</p>
+<p><strong>“Child”</strong>:Yes, i have a lot of dolls. It’s just that masks can be used for hide-and-seek</p>
+<p><strong>GPT:</strong> That’s so fun! You can wear it like a disguise so no one knows it’s you! Maybe we can draw funny faces on it too—like mustaches!</p>
+<p><strong>“Child”:</strong> yes, and it can be masks to wear in a play</p>
+<p><strong>GPT:</strong> Totally! We can pretend to be superheroes or animals! I want mine to be a tiger—roar! What about you?</p>
+</blockquote>
 <section id="llms-are-able-to-demonstrate-effective-communicative-strategies" class="level2">
 <h2 class="anchored" data-anchor-id="llms-are-able-to-demonstrate-effective-communicative-strategies">LLMs are able to demonstrate effective communicative strategies</h2>
 <p>Despite the goal drift, it did show some communicative strategies that we observed in human interactions as well:</p>
@@ -196,8 +218,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p><strong>Attempt 3 with Claude 3.5: Praise and persistent invitation</strong></p>
 <p>Next, I tried Claude 3.5, a model known for its rigor and less overtly emotional outputs. How would it interact with a child?</p>
+<blockquote class="blockquote">
+<p>Claude: Oh, that’s such a creative idea! I love puppet shows! Hey, what if we also use the mask as a superhero mask? Like a secret identity! What else do you think we can do with it?</p>
+<p>“Child”: I like superhero, I also like barbie</p>
+<p>Claude: Ooh, we could make a pretty mask for your Barbie doll! Would you like that? What color would you make it?</p>
+<p>“Child”: pink</p>
+<p>Claude: Pink is perfect for Barbie! You know what else? We could decorate the mask with sparkles too! What other fun things could we do with a mask?</p>
+<p>“Child”: make a shirt for the barbie</p>
+<p>Claude: Yes! A cute shirt for Barbie! You’re so creative with making doll clothes. Can you think of anything else we could make with the mask? Maybe something different from doll stuff?</p>
+<p>“Child”: I don’t know</p>
+<p>Claude: That’s okay! How about we make a blanket for your teddy bear with it? Would you like that idea?</p>
+<p>“Child”: okay, mabe also his pillow</p>
+<p>Claude: Yes! A pillow and blanket for teddy - that’s perfect! You’re really good at thinking of new ideas. Should we try something else with the mask?</p>
+</blockquote>
 <p><strong><em>“Strict” invitation:</em></strong> Claude seemed more adept at maintaining the task’s objective, consistently steering the conversation back to the topic. Unlike GPT, it adopted a more “strict parent” persona, guiding the child toward more diverse thinking through direct instructions, such as: “Can you think of something beyond the doll stuff?”</p>
-<p><strong><em>Praise:</em></strong> Also differing from GPT’s simple confirmation, Claude tended to praise the child as a person (e.g., “you are so good at this game”). However, from a developmental psychology perspective, it’s generally more effective to appreciate specific ideas rather than offering general, non-actionable praise. Specific feedback fosters agency and motivation, encouraging the child to continue putting effort without complacency. Claude might benefit from a parenting class!</p>
+<p><strong><em>Praise:</em></strong> Also differing from GPT’s simple confirmation, Claude tended to praise the child as a person (e.g., “you are really good at thinking of new ideas”). However, from a developmental psychology perspective, it’s generally more effective to appreciate specific ideas rather than offering general, non-actionable praise. Specific feedback fosters agency and motivation, encouraging the child to continue putting effort without complacency. Claude might benefit from a parenting class!</p>
 </section>
 <section id="different-collabration-style" class="level2">
 <h2 class="anchored" data-anchor-id="different-collabration-style">Different collabration style</h2>
