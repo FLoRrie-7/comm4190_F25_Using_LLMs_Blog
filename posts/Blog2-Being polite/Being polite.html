@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -224,10 +189,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="how-did-the-models-perform" class="level2">
 <h2 class="anchored" data-anchor-id="how-did-the-models-perform">How did the models perform?</h2>
 <p>On <em>Gemini 2.5 Flash</em>, the demanding request yielded a comprehensive response, including an introduction to Philly’s food scene, a “Tip” section, and a of 10 restaurant recommendations. The courteous inquiry produced a response with a similar structure but a softer, more affiliative tone. Crucially, the polite prompt’s main list of 11 restaurants was <strong>more organized</strong>, with categories like “Fine Dining &amp; Special Occasion” and “Trendy &amp; Modern” to provide a little more information. Take a closer look, the descriptions of each restaurant also seem to be <strong>more detailed</strong> with locations and price references:</p>
-<div id="1b0a4aa5-c7ec-4717-8502-94e0ad006fef" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;*</span>With a direct<span class="op">/</span>demanding prompt<span class="op">*</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;!</span>[Image](Gemini1.png)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<blockquote class="blockquote">
+<p><em>With a direct/demanding prompt</em> <img src="Gemini1.png" class="img-fluid" alt="Image"></p>
+</blockquote>
 <blockquote class="blockquote">
 <p><em>With an indirect/polite prompt</em> <img src="Gemini2.png" class="img-fluid" alt="Image"></p>
 </blockquote>
@@ -244,8 +208,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="conclusion-from-this-mini-experiment">Conclusion from this mini-experiment</h2>
 <p>My conclusion is that while some models may perform slightly better with polite prompts, <strong>the improvement is often marginal</strong>. A not-validated assumption might be that the linguistic patterns of polite inquiries, which often include more detailed framing (“…for me?”), are simply correlated in its training data with more structured, helpful, and detailed human-written examples. The politeness itself may be a <strong>confounding variable</strong>. AI is not feeling anything and respond under its emotions. It’s still the computational magic.</p>
 </section>
-<section id="a-psychology-or-hci-perspective-or-a-business-perspective" class="level2">
-<h2 class="anchored" data-anchor-id="a-psychology-or-hci-perspective-or-a-business-perspective">A Psychology, or HCI perspective, or a business perspective</h2>
+<section id="a-psychology-or-hci-or-business-perspective" class="level2">
+<h2 class="anchored" data-anchor-id="a-psychology-or-hci-or-business-perspective">A Psychology, or HCI, or business perspective</h2>
 <p>So, why bother being polite? A few months ago, <a href="https://wccftech.com/saying-thank-you-and-being-polite-to-chatgpt-is-costing-tens-of-millions-but-sam-altman-says-its-money-well-spent/">Sam Altman</a> replied on X to a question about this very issue, saying the electricity cost was, <em>“Tens of millions of dollars well spent — you never know.”</em> Perhaps the real benefit isn’t in the raw output but in shaping the <strong>communicative norms</strong> around AI. A courteous interaction can lead to a <strong>smoother user experience and a healthier human-AI culture</strong>. I did find the polite exchange more comfortable and was more willing to continue the conversation. For tech companies, this enhanced HCI experience is certainly a <strong>product-win</strong>, making it worth a marginal energy cost.</p>
 
 
