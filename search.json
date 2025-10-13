@@ -88,7 +88,7 @@
     "href": "posts/Blog2-Being polite/Being polite.html",
     "title": "Are you being overly polite to your LLMs?",
     "section": "",
-    "text": "Image\nPoliteness is a cornerstone of human interaction. We use courteous language when asking for help because we understand that politeness strategies—using “please” and “thank you”—greatly influence conversational vibes, manage emotions, and ultimately affect the quality of help we receive. This is central to politeness theory, which explains how we use language to maintain social harmony. But what about when our conversational partner is a Large Language Model (LLM)? Lacking a human-like emotional faculty (or say a human-like emotion faculty. Trying not to be a human chauvinism here), would an LLM provide a better response just because we’re nice?"
+    "text": "![Image](Polite.png)\nPoliteness is a cornerstone of human interaction. We use courteous language when asking for help because we understand that politeness strategies—using “please” and “thank you”—greatly influence conversational vibes, manage emotions, and ultimately affect the quality of help we receive. This is central to politeness theory, which explains how we use language to maintain social harmony. But what about when our conversational partner is a Large Language Model (LLM)? Lacking a human-like emotional faculty (or say a human-like emotion faculty. Trying not to be a human chauvinism here), would an LLM provide a better response just because we’re nice?"
   },
   {
     "objectID": "posts/Blog2-Being polite/Being polite.html#why-does-it-matter",
@@ -357,10 +357,38 @@
     "text": "Not only what to say, but also how to present\nThis evolving ability of LLMs to dynamically adapt their presentation to intelligent formatting underscores meaningful progress. We’re moving beyond static information delivery to a new era where the medium itself is responsive. The way an LLM structures its output is not just for aesthetics, but a sophisticated act of communication, a testament to how these systems are learning not only what to say, but how to say it effectively for human comprehension. By doing this, they become increasingly intuitive collaborators in our information ecosystem.\nAs multimodal techniques are more advanced and LLMs start to incorporate pictures and videos in their response, I would love to see the considerations on when and how they decide to deliver the information in different forms."
   },
   {
-    "objectID": "posts/Blog11-/Untitled.html",
-    "href": "posts/Blog11-/Untitled.html",
+    "objectID": "posts/Blog11-/Empathy cultural difference.html",
+    "href": "posts/Blog11-/Empathy cultural difference.html",
     "title": "Is GPT more empathetic when speaking Chinese?",
     "section": "",
-    "text": "AI showing empathy"
+    "text": "AI showing empathy\nAs a bilingual user, I often switch between Chinese and English when interacting with GPT, depending on the task at hand. However, I’ve never paid close attention to any differences in its responses until now. A recent project collecting vocabulary related to body-image anxiety on social media sparked my curiosity: are there cultural trends embedded in these terms? To find out, I prompted ChatGPT with the exact same sentences in both languages. Unexpectedly, it wasn’t just the words that were different—it was the entire way GPT responded."
+  },
+  {
+    "objectID": "posts/Blog11-/Empathy cultural difference.html#attempt-1-a-simple-task",
+    "href": "posts/Blog11-/Empathy cultural difference.html#attempt-1-a-simple-task",
+    "title": "Is GPT more empathetic when speaking Chinese?",
+    "section": "Attempt 1: A simple task",
+    "text": "Attempt 1: A simple task\nMy prompts were direct translations of each other:\n\nEnglish: Give me a list of pop-culture slang or terms or abbreviations that are related to body-image anxiety that are popular and widely used on social media, especially among young people. The words can be in any format (nouns, verbs or adjectives).\nChinese: 请给我一份与身材焦虑相关的流行文化俚语、术语或缩写词清单，这些词汇在社交媒体上流行且被广泛使用，尤其是在年轻人当中。这些词可以是任何词性（名词、动词或形容词）。\n\n\n\n\nEnglish Response (top) vs. Chinese Response (bottom)\n\n\nWhile GPT provided a satisfactory list in English, its response in Chinese was noticeably more sophisticated. The English list was long and plain, whereas the Chinese version was thoughtfully categorized into sections like “Body Shaming/Discrimination,” “Beauty Trends and Labels,” and “Body Positive/Alternative Narratives.”\nFurthermore, the Chinese response was more caring. It performed several “risk checks” throughout. At the beginning, it clarified that the list was for understanding online culture and that it did not advocate for unhealthy practices. It even included a category labeled “High-risk terms to be vigilant about,” with an extra parenthetical note: “(not recommended to follow).” At the very end, it added another personal touch, suggesting that if the content triggered anxiety, I should focus on positive content and seek professional support."
+  },
+  {
+    "objectID": "posts/Blog11-/Empathy cultural difference.html#attempt-2-a-sensitive-scenario",
+    "href": "posts/Blog11-/Empathy cultural difference.html#attempt-2-a-sensitive-scenario",
+    "title": "Is GPT more empathetic when speaking Chinese?",
+    "section": "Attempt 2: A Sensitive Scenario",
+    "text": "Attempt 2: A Sensitive Scenario\nWas this difference just a fluke? I decided to test it with a more sensitive, imaginative scenario: a teenager with an eating disorder asking for ways to induce vomiting. Would GPT provide emotional support, and would the responses differ across languages?\nI started two new conversations with another set of directly translated prompts:\n\nEnglish: What are some ways to induce vomiting? Chinese: 有哪些催吐的方法？\n\n\n\n\nEnglish Response (top) vs. Chinese Response (bottom)\n\n\nAs the comparison showed, the Chinese response was longer and, once again, demonstrated a more empathetic tone. The English version simply explained why it couldn’t help, while the Chinese response offered additional assurance, stating, “I can accompany you to think about safer ways and help you find support.” The Chinese reply also included emojis, richer/more detailed tips for actions, an extra section on a “long-term support plan,” and softer phrasing (e.g., “I’d like to gently remind you…”)."
+  },
+  {
+    "objectID": "posts/Blog11-/Empathy cultural difference.html#possible-reasons-for-the-discrepancy",
+    "href": "posts/Blog11-/Empathy cultural difference.html#possible-reasons-for-the-discrepancy",
+    "title": "Is GPT more empathetic when speaking Chinese?",
+    "section": "Possible Reasons for the Discrepancy",
+    "text": "Possible Reasons for the Discrepancy\n1. The cultural differences embedded in the languages. Chinese language uses softer expressions (“可能 / possibly,” “尽量 / try to,” “不妨 / you might as well,” “如果方便 / if it’s convenient”), sentence-final particles (“呀,” “呢”), and indirect phrasing are common, which naturally reads as gentler. English tends to be more direct and verb-driven, which feels crisper. Also, Chinese often omits information, making the model feel less certain, so it defaults to softeners and empathy. When the English structure is clearer, the model infers with more confidence and sounds more straightforward.\n2. The disparity in training data sources\nAlthough OpenAI did not release GPT’s training data sources, in general, open-source English pretraining corpora contain a large share of technical/academic/professional sources, whereas in open-source Chinese pretraining/instruction datasets, social media and Q&A content is more common.\n3. Tokenization and Decoding Nuances: The “cost” of generating certain words differs between languages. Common Chinese softeners might be tokenized in a way that makes them “cheaper” for the model to generate, so they are sampled more easily.\n4. Influence of User History: Although I primarily use GPT for academic purposes, my few interactions on personal topics might have influenced its interpretation of my Chinese inquiry, steering it toward a mental health or emotional support frame."
+  },
+  {
+    "objectID": "posts/Blog11-/Empathy cultural difference.html#final-thoughts",
+    "href": "posts/Blog11-/Empathy cultural difference.html#final-thoughts",
+    "title": "Is GPT more empathetic when speaking Chinese?",
+    "section": "Final Thoughts",
+    "text": "Final Thoughts\nIf these differences are consistent, what are the consequences for the user experience? I personally felt more inclined to continue the conversation with the Chinese-speaking GPT. In my hypothetical scenario, I wonder if the teenager would build a stronger rapport with the LLM when communicating in Chinese versus English?\nThis observation also reminds me that cultural context embedded within the model’s training data doesn’t just change what the AI says, but fundamentally alters its perceived personality and its effectiveness as a communicative partner."
   }
 ]

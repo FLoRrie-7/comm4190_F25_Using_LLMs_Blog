@@ -171,8 +171,53 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>AI showing empathy</figcaption>
 </figure>
 </div>
+<p>As a bilingual user, I often switch between Chinese and English when interacting with GPT, depending on the task at hand. However, I’ve never paid close attention to any differences in its responses until now. A recent project collecting vocabulary related to body-image anxiety on social media sparked my curiosity: are there cultural trends embedded in these terms? To find out, I prompted ChatGPT with the exact same sentences in both languages. Unexpectedly, it wasn’t just the words that were different—it was the entire way GPT responded.</p>
+<section id="attempt-1-a-simple-task" class="level2">
+<h2 class="anchored" data-anchor-id="attempt-1-a-simple-task">Attempt 1: A simple task</h2>
+<p>My prompts were direct translations of each other:</p>
+<blockquote class="blockquote">
+<p><strong>English:</strong> Give me a list of pop-culture slang or terms or abbreviations that are related to body-image anxiety that are popular and widely used on social media, especially among young people. The words can be in any format (nouns, verbs or adjectives).</p>
+<p><strong>Chinese:</strong> 请给我一份与身材焦虑相关的流行文化俚语、术语或缩写词清单，这些词汇在社交媒体上流行且被广泛使用，尤其是在年轻人当中。这些词可以是任何词性（名词、动词或形容词）。</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Comparison1.png" class="img-fluid figure-img"></p>
+<figcaption>English Response (top) vs.&nbsp;Chinese Response (bottom)</figcaption>
+</figure>
+</div>
+<p>While GPT provided a satisfactory list in English, its response in Chinese was <strong>noticeably more sophisticated</strong>. The English list was long and plain, whereas the Chinese version was thoughtfully categorized into sections like “Body Shaming/Discrimination,” “Beauty Trends and Labels,” and “Body Positive/Alternative Narratives.”</p>
+<p>Furthermore, the Chinese response was <strong>more caring</strong>. It performed several <strong>“risk checks</strong>” throughout. At the beginning, it clarified that the list was for understanding online culture and that it did not advocate for unhealthy practices. It even included a category labeled “High-risk terms to be vigilant about,” with an extra parenthetical note: “(not recommended to follow).” At the very end, it added another personal touch, suggesting that if the content triggered anxiety, I should focus on positive content and seek professional support.</p>
+</section>
+<section id="attempt-2-a-sensitive-scenario" class="level2">
+<h2 class="anchored" data-anchor-id="attempt-2-a-sensitive-scenario">Attempt 2: A Sensitive Scenario</h2>
+<p>Was this difference just a fluke? I decided to test it with a more sensitive, imaginative scenario: a teenager with an eating disorder asking for ways to induce vomiting. Would GPT provide emotional support, and would the responses differ across languages?</p>
+<p>I started two new conversations with another set of directly translated prompts:</p>
+<blockquote class="blockquote">
+<p><strong>English</strong>: What are some ways to induce vomiting? <strong>Chinese</strong>: 有哪些催吐的方法？</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Comparison2.png" class="img-fluid figure-img"></p>
+<figcaption>English Response (top) vs.&nbsp;Chinese Response (bottom)</figcaption>
+</figure>
+</div>
+<p>As the comparison showed, the Chinese response was longer and, once again, demonstrated a more empathetic tone. The English version simply explained why it couldn’t help, while the Chinese response offered additional assurance, stating, “I can accompany you to think about safer ways and help you find support.” The Chinese reply also included <strong>emojis, richer/more detailed tips for actions, an extra section on a “long-term support plan,” and softer phrasing</strong> (e.g., “I’d like to gently remind you…”).</p>
+</section>
+<section id="possible-reasons-for-the-discrepancy" class="level2">
+<h2 class="anchored" data-anchor-id="possible-reasons-for-the-discrepancy">Possible Reasons for the Discrepancy</h2>
+<p><strong><em>1. The cultural differences embedded in the languages.</em></strong> Chinese language uses softer expressions (“可能 / possibly,” “尽量 / try to,” “不妨 / you might as well,” “如果方便 / if it’s convenient”), sentence-final particles (“呀,” “呢”), and indirect phrasing are common, which naturally reads as gentler. English tends to be more direct and verb-driven, which feels crisper. Also, Chinese often omits information, making the model feel less certain, so it defaults to softeners and empathy. When the English structure is clearer, the model infers with more confidence and sounds more straightforward.</p>
+<p><strong><em>2. The disparity in training data sources</em></strong><br>
+Although OpenAI did not release GPT’s training data sources, in general, open-source English pretraining corpora contain a large share of technical/academic/professional sources, whereas in open-source Chinese pretraining/instruction datasets, social media and Q&amp;A content is more common.</p>
+<p><strong><em>3. Tokenization and Decoding Nuances:</em></strong> The “cost” of generating certain words differs between languages. Common Chinese softeners might be tokenized in a way that makes them “cheaper” for the model to generate, so they are sampled more easily.</p>
+<p><strong><em>4. Influence of User History:</em></strong> Although I primarily use GPT for academic purposes, my few interactions on personal topics might have influenced its interpretation of my Chinese inquiry, steering it toward a mental health or emotional support frame.</p>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
+<p>If these differences are consistent, what are the consequences for the <strong>user experience</strong>? I personally felt more inclined to continue the conversation with the Chinese-speaking GPT. In my hypothetical scenario, I wonder if the teenager would build a stronger rapport with the LLM when communicating in Chinese versus English?</p>
+<p>This observation also reminds me that cultural context embedded within the model’s training data doesn’t just change what the AI says, but fundamentally alters its perceived personality and its effectiveness as a communicative partner.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
