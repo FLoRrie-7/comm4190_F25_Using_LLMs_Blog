@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florrie">
-<meta name="dcterms.date" content="2025-11-01">
-<meta name="description" content="A Philosophical Look at ’Truth‘">
+<meta name="dcterms.date" content="2025-11-08">
+<meta name="description" content="How cognitive principles in human can be mapped to AI’s reasoning behaviors">
 
-<title>Are Machine Learning Models Fundamentally Biased? – Fun time with my LLMs</title>
+<title>A wrong answer is better than no answer? Verification first increases LLM’s logical reasoning performance – Fun time with my LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,15 +118,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Are Machine Learning Models Fundamentally Biased?</h1>
+      <h1 class="title">A wrong answer is better than no answer? Verification first increases LLM’s logical reasoning performance</h1>
                   <div>
         <div class="description">
-          A Philosophical Look at ’Truth‘
+          How cognitive principles in human can be mapped to AI’s reasoning behaviors
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Book</div>
-                <div class="quarto-category">Logic</div>
+                <div class="quarto-category">Cognitive Sciences</div>
+                <div class="quarto-category">Research</div>
+                <div class="quarto-category">Prompting</div>
               </div>
                   </div>
   </div>
@@ -144,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 1, 2025</p>
+        <p class="date">November 8, 2025</p>
       </div>
     </div>
     
@@ -165,36 +166,41 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Truth.png" class="img-fluid figure-img"></p>
-<figcaption>AI is a mirror of Human Bias</figcaption>
+<p><img src="Examine.png" class="img-fluid figure-img"></p>
+<figcaption>AI examining a random answer</figcaption>
 </figure>
 </div>
-<p>We often talk about Artificial Intelligence as if it were a neutral arbiter—a cold, calculating machine that spits out objective facts. We feed it data, it learns the patterns, and it gives us the “truth.” But reading Chapter 10, “Arbiter of Truth,” in Unmasking AI stopped me in my tracks and forced me to ask a more fundamental question: <strong>Is the very act of training an AI an act of bias?</strong></p>
-<p>The author argues that training a machine learning model is, at its core, an exercise in setting standards. We are trying to teach a machine to recognize “ground truth.” But as the book eloquently points out, truth is a slippery thing. It evolves. It shifts. And crucially, it never escapes the gravity of human prejudice.</p>
-<section id="the-myth-of-the-objective-label" class="level2">
-<h2 class="anchored" data-anchor-id="the-myth-of-the-objective-label">The Myth of the “Objective” Label</h2>
-<p>To understand this, we have to look at the mundane task of model training. Before a model can recognize a “spam email” or a “qualified job candidate,” either a human has to sit down and tell it what those things look like (supervised learning), or humans define what “success” looks like mathematically (deep learning). Usually, success means “minimizing error” across the majority of the data.</p>
-<p>By doing these, they are codifying their own perspective, or freezing a specific moment of cultural consensus (or lack thereof) into a mathematical standard. If I label a resume as “high potential,” I am using my definition of potential, shaped by my background, my biases, and my blind spots. When we aggregate these labels, we aren’t creating a “universal truth”, but are creating a statistical average of our collective subjectivities.</p>
+<p>The Chain-of-Thought (CoT) prompting has been a popular technique to improve LLMs’ performance on complex tasks by instructing the model to “think step by step.” However, because LLMs work through token predictions that prioritize fluency over logic, they are easily influenced by the context and follow an initial but potentially flawed reasoning path.</p>
+<section id="an-effective-new-prompting-technique" class="level2">
+<h2 class="anchored" data-anchor-id="an-effective-new-prompting-technique">An effective New Prompting Technique</h2>
+<p>In the paper “<em>Asking LLMs to Verify First is Almost Free Lunch</em>,” the research team at Tsinghua University introduced a new and low-cost strategy called <strong>Verification-First (VF)</strong>. Instead of just asking the model to solve a problem, researchers provided it with a candidate answer (even a random or trivial one) and prompt the model to verify that answer first before generating its own solution. They tested across mathematical, scientific, and coding benchmarks using a variety of models, and VF consistently outperforms standard CoT prompting. For example, on GSM8K and MATH500, simply asking the model to <strong>verify a random answer like “1” before solving significantly boosted accuracy</strong>. The strategy works even on “thought-hidden” commercial models (like the cited GPT-5 services) where users cannot access the model’s internal reasoning process.</p>
 </section>
-<section id="truth-is-a-moving-target" class="level2">
-<h2 class="anchored" data-anchor-id="truth-is-a-moving-target">“Truth” is a Moving Target</h2>
-<p>The book makes a compelling philosophical point: <strong>“Truth” is not static.</strong> What we considered a medical “truth” fifty years ago might be considered malpractice today. What was considered a social “norm” a decade ago might be unacceptable now. When we train an AI on historical data, we are essentially trapping it in the past. We are asking it to predict the future using the “truths” of yesterday—truths that might have been discriminatory, incomplete, or flat-out wrong. If we treat these models as objective authorities, we risk calcifying those old prejudices, giving them a veneer of scientific legitimacy they no longer deserve.</p>
+<section id="a-cognitive-science-approach" class="level2">
+<h2 class="anchored" data-anchor-id="a-cognitive-science-approach">A Cognitive Science Approach</h2>
+<p>What is more interested is the auhors’ interpretations on the results from a Cognitive Science perspective. They explained that the improvements can be explained by two principles:</p>
+<ul>
+<li><p><strong><em>Reverse Reasoning:</em></strong> Psychologically, verifying an answer (working backward from conclusion to premises) is often easier than generating one from scratch. Even if the provided answer is wrong (e.g., a random guess), verifying it <strong>forces the model to identify the necessary constraints and logic, creating a “scaffold” for the correct solution</strong>.</p></li>
+<li><p><strong><em>Critical Thinking vs.&nbsp;Egocentrism</em></strong>: Piaget brought up the concept of “Egocentrism bias” decades ago, pointing out how a reasoner often struggles with stepping outside their own thought process to evaluate it objectively. Similarly, when a model generates a solution from scratch, it often “hallucinates” to maintain consistency with its own previous tokens. <strong>Asking it to critique an external answer (even a dummy one) forces it into a “critic” mode, invoking critical thinking skills that are otherwise dormant</strong>.</p></li>
+</ul>
+<p>Although we do not want to anthropormophize AI, this perspective highlights the potential that classical theories of human pedagogy might be able to help optimize artificial intelligence.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Target.png" class="img-fluid figure-img"></p>
-<figcaption>Data reflects the past</figcaption>
+<p><img src="maze.png" class="img-fluid figure-img"></p>
+<figcaption>AI trying to figure out a reasoning task. A random answer can help highlight the logic and constriants</figcaption>
 </figure>
 </div>
 </section>
-<section id="re-thinking-the-goal" class="level2">
-<h2 class="anchored" data-anchor-id="re-thinking-the-goal">Re-thinking the Goal</h2>
-<p>So, where does this leave us? If the decision-making process can never be truly “objective” because the inputs are soaked in human perspective, should we give up? I don’t think so. <strong>But the public needs to stop looking at AI as a “Truth Machine.” Instead, we should view it as a mirror.</strong> It reflects our current standards, our current definitions, and yes, our current biases. The implications of this are practical and urgent:</p>
+<section id="practical-implications" class="level2">
+<h2 class="anchored" data-anchor-id="practical-implications">Practical Implications</h2>
+<p>If you are building AI applications or prompting models for complex tasks, this paper suggests several immediate actions:</p>
 <ol type="1">
-<li><strong><em>Transparency in the “Standard-Setting”:</em></strong> We need to stop hiding the labeling process. We need “Datasheets for Datasets” that disclose who labeled the data, what instructions they were given, and what demographic perspectives were included. We need to know whose version of “truth” the model was taught.</li>
-<li><strong><em>Model Expiration Dates:</em></strong> Since social truth evolves, AI models should not be permanent. A model trained on 2020 social data might be dangerously outdated by 2025. We need protocols that force models to be “sun-setted” or retrained to reflect shifting social norms and new knowledge.</li>
-<li><strong><em>The Right to Contest:</em></strong> If an AI is enforcing a subjective standard—like “creditworthiness” or “employability”—subjectivity implies the possibility of error. Therefore, individuals must have a robust “right to contest” an AI’s decision. We cannot hide behind the “black box” excuse; if the machine’s “truth” hurts a human, the human must have the power to challenge that truth.</li>
+<li><strong><em>Modify Your Prompts using the “One-Step” Fix</em></strong>: For logic or math tasks, you can likely improve performance instantly by injecting a dummy answer into your prompt.
+<ul>
+<li><em>Standard</em>: “Solve this math problem, think step by step.”</li>
+<li><em>VF Strategy</em>: “I have a guess that the answer is 1. Please verify if this guess is correct, and then find the actual correct answer.”</li>
+</ul></li>
+<li><strong><em>Cost-Effective Agent Loops</em></strong>: If you are building an autonomous agent (e.g., for coding), do not feed the agent its entire history of failed attempts. Instead, <strong>simply feed its last output back to it as a “proposed solution” and ask it to verify that specific solution</strong>. This saves token costs and improves accuracy.</li>
 </ol>
-<p>The danger isn’t that models are biased but assuming they aren’t. Once we accept that machine learning is fundamentally a process of subjective standard-setting, we can stop asking “Is this AI right?” and start asking the deeper question: “Whose truth is this AI enforcing, and is that a truth we still want to live by?”</p>
 
 
 </section>

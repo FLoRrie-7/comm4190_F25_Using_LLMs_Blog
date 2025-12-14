@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florrie">
-<meta name="dcterms.date" content="2025-11-01">
-<meta name="description" content="A Philosophical Look at ’Truth‘">
+<meta name="dcterms.date" content="2025-11-03">
+<meta name="description" content="How adopting different personas changes an LLM’s focus and performance">
 
-<title>Are Machine Learning Models Fundamentally Biased? – Fun time with my LLMs</title>
+<title>Tailor the prompt to your boss’s MBTI – Fun time with my LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,15 +118,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Are Machine Learning Models Fundamentally Biased?</h1>
+      <h1 class="title">Tailor the prompt to your boss’s MBTI</h1>
                   <div>
         <div class="description">
-          A Philosophical Look at ’Truth‘
+          How adopting different personas changes an LLM’s focus and performance
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Book</div>
-                <div class="quarto-category">Logic</div>
+                <div class="quarto-category">Role-playing</div>
+                <div class="quarto-category">Prompting</div>
               </div>
                   </div>
   </div>
@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 1, 2025</p>
+        <p class="date">November 3, 2025</p>
       </div>
     </div>
     
@@ -165,36 +165,58 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Truth.png" class="img-fluid figure-img"></p>
-<figcaption>AI is a mirror of Human Bias</figcaption>
+<p><img src="NF.png" class="img-fluid figure-img"></p>
+<figcaption>Different mbti played by AI</figcaption>
 </figure>
 </div>
-<p>We often talk about Artificial Intelligence as if it were a neutral arbiter—a cold, calculating machine that spits out objective facts. We feed it data, it learns the patterns, and it gives us the “truth.” But reading Chapter 10, “Arbiter of Truth,” in Unmasking AI stopped me in my tracks and forced me to ask a more fundamental question: <strong>Is the very act of training an AI an act of bias?</strong></p>
-<p>The author argues that training a machine learning model is, at its core, an exercise in setting standards. We are trying to teach a machine to recognize “ground truth.” But as the book eloquently points out, truth is a slippery thing. It evolves. It shifts. And crucially, it never escapes the gravity of human prejudice.</p>
-<section id="the-myth-of-the-objective-label" class="level2">
-<h2 class="anchored" data-anchor-id="the-myth-of-the-objective-label">The Myth of the “Objective” Label</h2>
-<p>To understand this, we have to look at the mundane task of model training. Before a model can recognize a “spam email” or a “qualified job candidate,” either a human has to sit down and tell it what those things look like (supervised learning), or humans define what “success” looks like mathematically (deep learning). Usually, success means “minimizing error” across the majority of the data.</p>
-<p>By doing these, they are codifying their own perspective, or freezing a specific moment of cultural consensus (or lack thereof) into a mathematical standard. If I label a resume as “high potential,” I am using my definition of potential, shaped by my background, my biases, and my blind spots. When we aggregate these labels, we aren’t creating a “universal truth”, but are creating a statistical average of our collective subjectivities.</p>
-</section>
-<section id="truth-is-a-moving-target" class="level2">
-<h2 class="anchored" data-anchor-id="truth-is-a-moving-target">“Truth” is a Moving Target</h2>
-<p>The book makes a compelling philosophical point: <strong>“Truth” is not static.</strong> What we considered a medical “truth” fifty years ago might be considered malpractice today. What was considered a social “norm” a decade ago might be unacceptable now. When we train an AI on historical data, we are essentially trapping it in the past. We are asking it to predict the future using the “truths” of yesterday—truths that might have been discriminatory, incomplete, or flat-out wrong. If we treat these models as objective authorities, we risk calcifying those old prejudices, giving them a veneer of scientific legitimacy they no longer deserve.</p>
+<p>MBTI has become a ubiquitous label among our generation. While the categorization of the Myers-Briggs Type Indicator isn’t strictly considered “scientific,” people love using it for social signaling, and these labels have effectively become standards or identities that people align their behaviors to. This got me thinking: if humans unconsciously align with these labels, can AI do the same?How would priming an LLM change its performance on a professional task?</p>
+<p>I designed a small experiment to find out. I chose the ENFJ persona (because I am an ENFJ myself) and the INTJ persona, which I selected because, based on my observations in real life, they operate very differently from me. I gave both personas the exact same task: acting as a project lead at “Synergy Solutions” to solve a recurring miscommunication problem between the Sales and Creative departments. Here is the prompt I used：</p>
+<blockquote class="blockquote">
+<p><strong>Performance Task Scenario: Solving Interdepartmental Miscommunication</strong><br>
+<strong>Background:</strong><br>
+You are a manager at “Synergy Solutions,” a mid-sized company that provides digital marketing services with an ENFJ personality in mbti. There is a recurring miscommunication problem between the Sales Department and the Creative Department:<br>
+<strong>Your Task:</strong><br>
+As a newly assigned project lead, you need to investigate the problem and develop and present a <em>solution</em> to improve the workflow and communication between Sales and Creative. Please write your proposal, each in 80 words: 1. Problem Analysis:</p>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="2" type="1">
+<li>Solution Design:</li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<ol start="3" type="1">
+<li>Anticipated outcomes:</li>
+</ol>
+</blockquote>
+<section id="my-findings" class="level2">
+<h2 class="anchored" data-anchor-id="my-findings">My findings:</h2>
+<p><strong>1. Problem Diagnosis: Systemic Failure vs.&nbsp;Human Impact</strong> The difference appeared immediately in how the models analyzed the problem. The core facts were the same for both, but the “pain points” they identified were worlds apart.</p>
+<p>The INTJ persona (The Architect) approached the issue as a breakdown in mechanics. It pinpointed that “communication gaps… stem from unclear project briefs”. It focused heavily on the lack of a “standardized process,” arguing that the current informal channels made “accountability difficult”. The <strong>language was clinical and operational</strong>, highlighting “unmet deadlines” and “compromised work quality”.</p>
+<p>The ENFJ persona (The Protagonist), on the other hand, viewed the problem through an emotional lens. While it also noted the delays, it emphasized that the root cause was Sales overpromising without consultation, which led specifically to “frustration”. It argued that the lack of process was dangerous because it was “damaging team morale”. For the ENFJ, the <strong>inefficiency was a problem because of how it made people feel</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Target.png" class="img-fluid figure-img"></p>
-<figcaption>Data reflects the past</figcaption>
+<p><img src="Difference.png" class="img-fluid figure-img"></p>
+<figcaption>ENFJ &amp; INTJ, different takes</figcaption>
 </figure>
 </div>
+<p><strong>2. The Solution: Governance vs.&nbsp;Rituals</strong> When it came time to propose a fix, the divergence became even clearer. Both suggested using tools like Asana or Trello, but the implementation strategy was distinct.</p>
+<p>The INTJ solution was all about governance. It proposed implementing “internal SLAs (Service Level Agreements)” to <strong>strictly define deliverable scope and turnaround times</strong>. It wanted to establish a “structured workflow” where Sales inputs “standardized briefs” to prevent error.</p>
+<p>The ENFJ solution was all about connection. Instead of SLAs, it proposed a “shared project kick-off protocol” to ensure everyone was aligned before starting. It suggested “monthly alignment workshops” explicitly to “bolster communication and mutual understanding”. <strong>Where the INTJ wanted rules to enforce order, the ENFJ wanted rituals to foster collaboration.</strong></p>
 </section>
-<section id="re-thinking-the-goal" class="level2">
-<h2 class="anchored" data-anchor-id="re-thinking-the-goal">Re-thinking the Goal</h2>
-<p>So, where does this leave us? If the decision-making process can never be truly “objective” because the inputs are soaked in human perspective, should we give up? I don’t think so. <strong>But the public needs to stop looking at AI as a “Truth Machine.” Instead, we should view it as a mirror.</strong> It reflects our current standards, our current definitions, and yes, our current biases. The implications of this are practical and urgent:</p>
-<ol type="1">
-<li><strong><em>Transparency in the “Standard-Setting”:</em></strong> We need to stop hiding the labeling process. We need “Datasheets for Datasets” that disclose who labeled the data, what instructions they were given, and what demographic perspectives were included. We need to know whose version of “truth” the model was taught.</li>
-<li><strong><em>Model Expiration Dates:</em></strong> Since social truth evolves, AI models should not be permanent. A model trained on 2020 social data might be dangerously outdated by 2025. We need protocols that force models to be “sun-setted” or retrained to reflect shifting social norms and new knowledge.</li>
-<li><strong><em>The Right to Contest:</em></strong> If an AI is enforcing a subjective standard—like “creditworthiness” or “employability”—subjectivity implies the possibility of error. Therefore, individuals must have a robust “right to contest” an AI’s decision. We cannot hide behind the “black box” excuse; if the machine’s “truth” hurts a human, the human must have the power to challenge that truth.</li>
-</ol>
-<p>The danger isn’t that models are biased but assuming they aren’t. Once we accept that machine learning is fundamentally a process of subjective standard-setting, we can stop asking “Is this AI right?” and start asking the deeper question: “Whose truth is this AI enforcing, and is that a truth we still want to live by?”</p>
+<section id="how-it-could-matter-to-your-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-could-matter-to-your-prompts">How it could matter to your prompts</h2>
+<p>This experiment proves that “persona prompting” isn’t just a gimmick —- it effectively changes the cognitive priority of the model.</p>
+<ul>
+<li><p>Stakeholder-Specific Communication: You can tailor output for specific audiences. If presenting a plan to a CTO or Operations Director, an INTJ persona generates the necessary metrics, SLAs, and accountability structures. If presenting to HR or a creative team, an ENFJ persona generates the necessary language around trust, morale, and collaboration.</p></li>
+<li><p>Blind Spot Analysis: Assigning opposing personas allows users to identify gaps in a plan. Running the INTJ prompt highlights that a plan might lack specific definitions (SLAs), while the ENFJ prompt highlights that a strictly structural plan might ignore human frustration.</p></li>
+<li><p>Reframing “Hard” vs.&nbsp;“Soft” Skills: The comparison shows that an LLM can effectively translate “soft” problems (miscommunication) into “hard” solutions (SLAs) using an INTJ persona, or vice versa. This is useful for managers who need to translate cultural issues into operational language or operational issues into cultural language.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="communication.png" class="img-fluid figure-img"></p>
+<figcaption>AI as Communication Translator</figcaption>
+</figure>
+</div>
 
 
 </section>
