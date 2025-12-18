@@ -84,6 +84,41 @@
     "text": "LLMs as useful tools to conduct user interviews\nIn conclusion, despite some of the conversational structures feeling unnatural, interviewing an LLM proved to be a surprisingly helpful way to conduct user research. They are much more “knowledgeable” and elaborative than a human subject, and thus can provide richer details and insights for the product, as reported in my homework:\n\nKey insights & informed product design from User A:\n\n\nPrioritize Humanities Subjects: Initial product development should focus on discussion-heavy subjects like English and History. These fields present a clear opportunity, as students often find it challenging to participate in discussions that require subjective interpretation and personal reflection.\n\n\nGenerate Accessible Prompts: The AI product’s core function should be to generate opening discussion prompts that are personal, opinion-based, and directly relevant to students’ lived experiences. To encourage participation, the system must prioritize accessible questions over abstract, academic language that can intimidate hesitant speakers."
   },
   {
+    "objectID": "posts/Blog21-OCR/DeepSeekOCR.html",
+    "href": "posts/Blog21-OCR/DeepSeekOCR.html",
+    "title": "A Picture Worth 10x Fewer Tokens?",
+    "section": "",
+    "text": "AI reads through images\nWhen I saw DeepSeek released DeepSeek-OCR as a small 3-billion-parameter model, I was wondering why a team of top-tier AI talent would spend their energy on OCR (Optical Character Recognition), which has been a “solved” problem for ages? But it turned out the depth iscertainly hidden from the average eye."
+  },
+  {
+    "objectID": "posts/Blog21-OCR/DeepSeekOCR.html#challenging-ais-unit-of-cost-the-token",
+    "href": "posts/Blog21-OCR/DeepSeekOCR.html#challenging-ais-unit-of-cost-the-token",
+    "title": "A Picture Worth 10x Fewer Tokens?",
+    "section": "Challenging AI’s Unit of Cost: The Token",
+    "text": "Challenging AI’s Unit of Cost: The Token\nTo understand, we need a quick refresher on the AI’s “unit of payment”: the Token. You can think of the Token as the basic “food” or computational cost for the AI. One Chinese character is about 1–2 Tokens, and an English word might be 1–3. Every Token processed costs money, slows down speed, and consumes resources. Therefore, the core challenge of the AI era is how to convey maximum information with minimum Token count.\nWe often say, “A picture is worth a thousand words,” but DeepSeek-OCR decided to prove it with hard data. They aren’t building a better scanner but investigating the question: How much effort does AI save by “looking at a picture” versus “reading text”?"
+  },
+  {
+    "objectID": "posts/Blog21-OCR/DeepSeekOCR.html#the-10x-compression-data",
+    "href": "posts/Blog21-OCR/DeepSeekOCR.html#the-10x-compression-data",
+    "title": "A Picture Worth 10x Fewer Tokens?",
+    "section": "The 10x Compression Data",
+    "text": "The 10x Compression Data\nThrough their experiments, they discovered an efficiency gap: A document containing roughly 1,000 text tokens for text processing, but when processed by visual comprehension it requires only 100 visual Tokens, while achieving 97% accuracy. This is a 10x compression with virtually no information loss. Even pushing the compression ratio to 20x, accuracy remains at about 60%, which is impressive. Just as the human brain has different processing channels (sound for music, sight for charts), AI models found that encoding and compressing text-heavy documents through a visual model is far more efficient than traditional text-only processing."
+  },
+  {
+    "objectID": "posts/Blog21-OCR/DeepSeekOCR.html#the-core-secret-deepencoders-three-step-process",
+    "href": "posts/Blog21-OCR/DeepSeekOCR.html#the-core-secret-deepencoders-three-step-process",
+    "title": "A Picture Worth 10x Fewer Tokens?",
+    "section": "The Core Secret: DeepEncoder’s Three-Step Process",
+    "text": "The Core Secret: DeepEncoder’s Three-Step Process\nThis massive efficiency gain is thanks to a custom-designed encoder called the DeepEncoder. Its workflow is systematic and effective:\n\nWindow Attention (Local Observation): First, the DeepEncoder scans the content piece by piece, similar to the human eye.\nCompression Module (Information Distillation): It then compresses the local information by 16x, retaining only key features.\nGlobal Attention (Core Extraction): Finally, it extracts the truly useful core knowledge, ensuring full comprehension.\n\nThe results speak for themselves. A highly-rated OCR model like MinerU2.0 uses over 6,000 Tokens to process one page. DeepSeek-OCR uses less than 800 Tokens and achieves superior results."
+  },
+  {
+    "objectID": "posts/Blog21-OCR/DeepSeekOCR.html#real-world-utility-and-industry-impact",
+    "href": "posts/Blog21-OCR/DeepSeekOCR.html#real-world-utility-and-industry-impact",
+    "title": "A Picture Worth 10x Fewer Tokens?",
+    "section": "Real-World Utility and Industry Impact",
+    "text": "Real-World Utility and Industry Impact\nThe practical value of this model can be immense. A single A100 GPU can process 200,000 document pages per day. This means massive, low-cost conversion of PDF documents into structured data for training larger language models. DeepSeek can process several times the amount of data compared to others using the same compute resources.\nFormer OpenAI co-founder Andrej Karpathy reflected this disruptive potential, commenting on X: “Maybe it is more reasonable that all inputs to LLMs should be images. Even if you have pure text input, you should render it first, and then input it.”\nI would say this work is an exploration into the essence of AI information processing. DeepSeek shows us that the future of AI is not defined by infinite computing power, but by smarter encoding."
+  },
+  {
     "objectID": "posts/Blog13-Multi-axis/multi-axis.html",
     "href": "posts/Blog13-Multi-axis/multi-axis.html",
     "title": "Beyond the ‘Overall’ Score: AI’s Intersectional Blind Spot",
@@ -145,6 +180,34 @@
     "title": "When should we consider using role-playing prompting?",
     "section": "A short conclusion",
     "text": "A short conclusion\nIt appear that, in general, role-play prompting does not lead to better task outcomes/accuracy. Even if it does, it’s typically through improved domain-structured reasoning (e.g., clinical reasoning prompts), or by adopting a specific framework of thinking and reasoning in the particular field. But be careful — this could also lead to enhanced bias embedded in the training data.\nWhen to Consider Using Role-Play Prompting\n\nWhen You Need Structured, Domain-Specific Reasoning: As mentioned, a relevant persona can better guide the model to adopt a particular domain-specific reasoning framework, accessing and applying specialized knowledge.\nWhen Tasks Are Subjective, Personal, or Creative: Persona prompts truly excel in interpretive or creative tasks where a particular viewpoint, communication style, or emotional resonance is desired.\n\nAvoid Role-Play Prompting\n\nWhen Seeking Factual Information: Introducing a persona can reduce factual accuracy, making it less suitable for tasks requiring strict objectivity(we shouldn’t rely on LLMs for exact factual knowledge anyways).\nWhen Concerned About Bias: If the output’s fairness, neutrality, or safety is paramount, assigning a persona, especially one with social attributes, risks amplifying problematic elements from the training data.\n\n\nReferences\n\n\nHarris, J. K. (2024). Evaluating the influence of role-playing prompts on ChatGPT’s misinformation detection accuracy: Quantitative study. JMIR Infodemiology. Advance online publication.\n\n\nKong, A., Zhao, S., Chen, H., Li, Q., Qin, Y., Sun, R., … & Dong, X. (2023). Better zero-shot reasoning with role-play prompting. arXiv. https://arxiv.org/abs/2308.07702\n\n\nPei, J., Tang, R., & Fu, K. W. (2024). When “a helpful assistant” is not really helpful: Personas in system prompts do not improve performances of large language models. arXiv. https://arxiv.org/abs/2311.10054\n\n\nShen, Y., et al. (2024). Role-play paradox in large language models: Reasoning performance gains and ethical dilemmas. arXiv. https://arxiv.org/abs/2402.08352\n\n\nWang, R., Mi, F., Chen, Y., Xue, B., Wang, H., Zhu, Q., … & Xu, R. (2024). Role prompting guided domain adaptation with general capability preserve for large language models. arXiv. https://arxiv.org/abs/2403.02756\n\n\nZhao, J., et al. (2024). Role-play paradox in large language models: Reasoning performance gains and ethical dilemmas. arXiv. https://arxiv.org/abs/2409.13979\n\n\nZheng, M., Pei, J., Logeswaran, L., Lee, M., & Jurgens, D. (2024, November). When “a helpful assistant” is not really helpful: Personas in system prompts do not improve performances of large language models. In Findings of the Association for Computational Linguistics: EMNLP 2024 (pp. 15126–15154). Association for Computational Linguistics."
+  },
+  {
+    "objectID": "posts/Blog25-Tool and mentor mode/tool&mentor.html",
+    "href": "posts/Blog25-Tool and mentor mode/tool&mentor.html",
+    "title": "Stop Asking AI to ‘Do Things’ — Ask It to Teach You Instead",
+    "section": "",
+    "text": "Tool v.s. Tutoring Modes\nIn the rush to integrate AI into daily workflows, many users default to treating it like a high-tech vending machine: input a request, get an output. This “Tool-mode” approach—prompts like “Write this email for me”—prioritizes speed and automation, echoing an industrial-era focus on efficiency over understanding.\nBut data from OpenAI’s report, How People Use ChatGPT, challenges this mindset. Analyzing over a million conversations, the study reveals that “Asking” interactions (seeking advice, clarification, or guidance) account for 49% of messages, outpacing “Doing” (task execution) at 40%, with “Expressing” (sharing views or feelings) at 11%. Notably, Asking is growing faster, and these conversations consistently earn higher satisfaction ratings from users—both via automated classifiers and direct feedback. This shift suggests AI’s true value lies not in replacing human effort, but in enhancing it through mentorship."
+  },
+  {
+    "objectID": "posts/Blog25-Tool and mentor mode/tool&mentor.html#tool-mode-vs.-mentor-mode-why-the-distinction-matters",
+    "href": "posts/Blog25-Tool and mentor mode/tool&mentor.html#tool-mode-vs.-mentor-mode-why-the-distinction-matters",
+    "title": "Stop Asking AI to ‘Do Things’ — Ask It to Teach You Instead",
+    "section": "Tool-Mode vs. Mentor-Mode: Why the Distinction Matters",
+    "text": "Tool-Mode vs. Mentor-Mode: Why the Distinction Matters\nAt its core, the difference boils down to intent and outcome. Consider these paired prompts: Tool-mode:”Write an email to my boss requesting a project extension.”\nMentor-mode: “How should I structure an email to my boss requesting a project extension? What key elements—like tone, evidence, and timing—should I consider to make it persuasive?”\nFrom the report, about 10% of all messages involve tutoring or teaching, a subset of Practical Guidance (the top category at 29%). This indicates users are intuitively seeking AI as a coach for skill-building, not just output generation.\n\n\n\nMore Asking than Doing"
+  },
+  {
+    "objectID": "posts/Blog25-Tool and mentor mode/tool&mentor.html#the-psychological-edge-of-mentor-mode",
+    "href": "posts/Blog25-Tool and mentor mode/tool&mentor.html#the-psychological-edge-of-mentor-mode",
+    "title": "Stop Asking AI to ‘Do Things’ — Ask It to Teach You Instead",
+    "section": "The Psychological Edge of Mentor-Mode",
+    "text": "The Psychological Edge of Mentor-Mode\nWhy do users report greater satisfaction with advisory interactions? Drawing from learning science:\n\nBoosted Agency and Ownership: Tool-mode entirely outsources cognitive labor. Mentor-mode, conversely, supports the user’s decision-making, shifting the user’s role from passive “operator” to active “author” who maintains control over the final outcome.\nReducing Cognitive Uncertainty: Many queries stem from ambiguity, not laziness. Mentor-mode provides mental models for navigating complexity, like decision trees or pros/cons lists, which reduce anxiety and build confidence.\nSupporting Judgment in Real-World Skills: Expertise in areas like communication or problem-solving requires adaptive thinking under constraints. Mentor-mode trains this by explaining trade-offs, mirroring apprenticeship models where novices learn through guided practice.\n\nEmpirically, the report shows Asking messages have a higher “good-to-bad” quality ratio, likely because they create iterative, engaging dialogues that feel more collaborative."
+  },
+  {
+    "objectID": "posts/Blog25-Tool and mentor mode/tool&mentor.html#edtechs-call-to-action-design-for-coaching-not-just-completion",
+    "href": "posts/Blog25-Tool and mentor mode/tool&mentor.html#edtechs-call-to-action-design-for-coaching-not-just-completion",
+    "title": "Stop Asking AI to ‘Do Things’ — Ask It to Teach You Instead",
+    "section": "EdTech’s Call to Action: Design for Coaching, Not Just Completion",
+    "text": "EdTech’s Call to Action: Design for Coaching, Not Just Completion\nFor EdTech developers, this data demands a pivot from automation tools to adaptive mentors. The goal? Shift users from consumers of content to builders of competence.\nCore Design Principle: Prioritize processes that generate thinking, not just artifacts.\nHere are some practical applications, grounded in the report’s findings on education-related use (e.g., tutoring at 10% of messages) and higher-educated users’ preference for Asking:\n\nQuestion-first UX: before drafting, the system asks 3 clarifying questions that a good teacher would ask.\nReasoning transparency: short “why this works” bullets.\nPractice loops: “Want to try a version in your voice? I’ll help refine.” Metacognitive prompts: “What outcome matters most: speed, relationship, credibility, or accuracy?”"
   },
   {
     "objectID": "posts/Blog1-book recommendation/A_new_post.html",
@@ -238,46 +301,74 @@
     "text": "Final thoughts - the societal impact\nOn one hand, AI’s transformation of the labor force presents economic opportunities, allowing companies to automate routine, entry-level tasks, which is a hallmark of technological progress. However, it’s worth remembering that all of today’s seniors started as juniors. They built their sophisticated judgment through the hands-on, real-world training that entry-level roles have always provided, and grew to become senior leaders who can effectively manage and leverage AI in their domain of expertise.\nThis surge in AI could become a significant barrier to young people’s growth and future development. What happens if an “experience gap” develops, where few young workers get the chance to be trained within their industry and grow into professionals capable of critically adopting and being empowered by AI? This societal challenge demands a fundamental rethinking of how we design the education system, cultivate expertise, and transmit knowledge in an era where the traditional path from novice to expert is being somehow disrupted."
   },
   {
-    "objectID": "posts/Blog7-Creativity/blog7-creativity.html",
-    "href": "posts/Blog7-Creativity/blog7-creativity.html",
-    "title": "Is there an incompatibility of token prediction and creativity?",
+    "objectID": "posts/Blog12-data justice league/Data justice League.html",
+    "href": "posts/Blog12-data justice league/Data justice League.html",
+    "title": "Why We Need a ‘Data Justice League’ for Kids",
     "section": "",
-    "text": "![AI exercising their creativity](painting.png)"
+    "text": "Biases toward the color of skin"
   },
   {
-    "objectID": "posts/Blog7-Creativity/blog7-creativity.html#the-affective-component-of-creativity---ai-lacks-this-faculty",
-    "href": "posts/Blog7-Creativity/blog7-creativity.html#the-affective-component-of-creativity---ai-lacks-this-faculty",
-    "title": "Is there an incompatibility of token prediction and creativity?",
-    "section": "The affective component of creativity - AI lacks this faculty?",
-    "text": "The affective component of creativity - AI lacks this faculty?\nThe paper Next Token Prediction Is a Dead End for Creativity: Why It’s Impossible to Lose Yourself in the Moment was interesting to read. While many studies in creativity focus on the mere cognitive aspects of creativity such as convergent and divergent thinking, it emphasizes the importance of an essential affective component of creative generation, describing it as a “flow to lose oneself”.\n\n\n\nThe state of “flow”\n\n\nI found this perspective inspiring, as it suggests that instantaneous creativity requires tangible experience, a unique subjective viewpoint, and even a particular physiological state. Language, at its core, is just an expression of our feelings and thoughts. Since LLMs lack physical faculties and a sense of “self,” they can only mimic a representation of creative products in the form of language without drawing from these true, internal sources.\n\n\n\nIf AI can subjectively experiencing emotions"
+    "objectID": "posts/Blog12-data justice league/Data justice League.html#a-book-im-reading",
+    "href": "posts/Blog12-data justice league/Data justice League.html#a-book-im-reading",
+    "title": "Why We Need a ‘Data Justice League’ for Kids",
+    "section": "A Book I’m Reading",
+    "text": "A Book I’m Reading\nI’ve been immersed in my “Living with a book” assignment recently, and the book I’m reading, Unmasking AI by Dr. Joy Buolamwini, is really interesting. The author at some point discusses the term “Justice League” and its deep roots in social equity campaigns, then recounts how a poster for the “Algorithmic Justice League” at an academic event deeply resonated with her. This reminds me of a curriculum project I designed at Penn GSE: The Data Justice League. The core idea was similar: how do we make the abstract dangers of AI bias concrete, urgent, and understandable for young people?\n\n\n\nDr. Joy Buolamwini and her book"
   },
   {
-    "objectID": "posts/Blog7-Creativity/blog7-creativity.html#big-data-and-the-concept-of-average",
-    "href": "posts/Blog7-Creativity/blog7-creativity.html#big-data-and-the-concept-of-average",
-    "title": "Is there an incompatibility of token prediction and creativity?",
-    "section": "Big data and the concept of “Average”",
-    "text": "Big data and the concept of “Average”\nThis idea reminded me of the concept of “Average” in the book The End of Average: How We Succeed in a World That Values Sameness by Todd Rose. Influenced by the Industrial Revolution, various fields once sought to define an “average person”—educators designing standardized tests for comprehensive intelligence, medical institutions determining average health measurements, and even the Air Force attempting to design a cockpit for an average-sized pilot. However, they eventually realized that no real individual ever fit these average indices; the concept of an “average person” proved largely meaningless.\n\n\n\n“An Average American”"
+    "objectID": "posts/Blog12-data justice league/Data justice League.html#youth-as-vulnerable-ai-users",
+    "href": "posts/Blog12-data justice league/Data justice League.html#youth-as-vulnerable-ai-users",
+    "title": "Why We Need a ‘Data Justice League’ for Kids",
+    "section": "Youth as Vulnerable AI Users",
+    "text": "Youth as Vulnerable AI Users\nAs an educator, I’m increasingly concerned about the younger generation—the “AI natives.” They are growing up intensively using these tools, but often lack the critical perspective to perceive the potential harm beneath the surface. Dr. Buolamwini’s book describes many vivid, real-world examples of how algorithmic bias causes serious harm, and it highlights a critical point: people who aren’t personally affected by a specific bias often have no awareness that the issue even exists."
   },
   {
-    "objectID": "posts/Blog7-Creativity/blog7-creativity.html#an-analogy-are-llms-just-averaging-human-thoughts",
-    "href": "posts/Blog7-Creativity/blog7-creativity.html#an-analogy-are-llms-just-averaging-human-thoughts",
-    "title": "Is there an incompatibility of token prediction and creativity?",
-    "section": "An analogy: Are LLMs just “averaging” human thoughts?",
-    "text": "An analogy: Are LLMs just “averaging” human thoughts?\nThe LLM’s logic of predicting the probabilities of each token is conceptually analogous to this idea of “averaging.” Instead of carrying an individual’s unique perspective, experience, and emotional state, LLMs seem to “average” human linguistic productions by predicting the next statistically plausible tokens. Given the inherent randomness within these subjective human factors, how can such an “averaged” output ever be truly creative?"
+    "objectID": "posts/Blog12-data justice league/Data justice League.html#real-world-problems",
+    "href": "posts/Blog12-data justice league/Data justice League.html#real-world-problems",
+    "title": "Why We Need a ‘Data Justice League’ for Kids",
+    "section": "Real-world Problems",
+    "text": "Real-world Problems\nThis isn’t a hypothetical problem. We’re already seeing its consequences. A Stanford study, for example, found that automated systems often falsely flag essays written by non-native English speakers as AI-generated, creating a high-stakes risk of false cheating accusations. We also see Harmful Algorithmic Pathways on Social Media: Lawsuits filed against platforms like Instagram and TikTok have provided evidence of how algorithms, unaware of a user’s vulnerability, can create harmful feedback loops. In one case, a young student who initially searched for fitness content was gradually shown more and more posts about eating disorders. The algorithm’s “engagement” bias contributed to the student developing anorexia and needing psychiatric treatment."
   },
   {
-    "objectID": "posts/Blog7-Creativity/blog7-creativity.html#using-llms-for-creative-process-facilitation",
-    "href": "posts/Blog7-Creativity/blog7-creativity.html#using-llms-for-creative-process-facilitation",
-    "title": "Is there an incompatibility of token prediction and creativity?",
-    "section": "Using LLMs for creative process facilitation",
-    "text": "Using LLMs for creative process facilitation\nYet, arguably, we can still utilize LLMs for creative production, or at least for facilitation. The instantaneous creativity discussed in the paper represents only one form of improvised creativity. Other important creative processes, such as continuous iterations and development on creative ideas, can certainly lead to highly novel outputs. These can often be achieved through strategic prompting. As the paper suggests, we should view LLMs as a co-creative infrastructure designed to support and enhance human ingenuity.\n\n\n\nLet AI spark human creativity"
+    "objectID": "posts/Blog12-data justice league/Data justice League.html#my-project",
+    "href": "posts/Blog12-data justice league/Data justice League.html#my-project",
+    "title": "Why We Need a ‘Data Justice League’ for Kids",
+    "section": "My project",
+    "text": "My project\nSimilar news shows why it is so pressing to unravel the underlying logic of AI. We cannot let children interact with these systems as if they are magical, all-knowing black boxes. This conviction drove my “Data Justice League” curriculum project. My goal was to make bias tangible for high schoolers using a hands-on activity with Teachable Machine. For instance, I had students train a model to identify “stray cats” using only data of clean, healthy house cats. Naturally, the model failed to recognize the injured, dirty stray cats it was tested on. This failure aims to provide a concrete “aha!” moment, sparking discussion on how biased data can lead AI to exclude or harm marginalized groups—the very ones most in need of help.\n\n\n\nLearning Goals of My Design\n\n\nMoving from abstract warnings to hands-on learning is the key. By providing tangible projects and real-world examples, we can empower children to interact with AI not just as passive consumers, but as critical, aware, and engaged citizens. Right now, fostering this AI literacy isn’t just an add-on to our curriculum. It should be an essential educational goal in the era of AI."
   },
   {
-    "objectID": "posts/Blog7-Creativity/blog7-creativity.html#final-thoughts",
-    "href": "posts/Blog7-Creativity/blog7-creativity.html#final-thoughts",
-    "title": "Is there an incompatibility of token prediction and creativity?",
-    "section": "Final thoughts",
-    "text": "Final thoughts\nSo, if that’s the case, perhaps role-playing prompts could be effective in promoting LLM’s creative production, as they attempt to inject a unique perspective and simulate an “experience”?"
+    "objectID": "posts/Blog20-medical bill/information tax.html",
+    "href": "posts/Blog20-medical bill/information tax.html",
+    "title": "AI as a Weapon Against the Information Tax",
+    "section": "",
+    "text": "AI as a helpful auditor\nWe often view AI as a productivity tool, but a recent viral story reveals its true potential as weapon to combat information asymmetry. An American user known as nthmonkey faced a nightmare scenario: grieving his brother-in-law’s sudden death while staring down a $195,000 hospital bill for just four hours of emergency care. The invoice was a wall of indecipherable CPT codes—a complex billing language of the US healthcare system. These codes are essentially “Medical Morse Code,” designed to be unintelligible to the average patient."
+  },
+  {
+    "objectID": "posts/Blog20-medical bill/information tax.html#the-ai-auditor",
+    "href": "posts/Blog20-medical bill/information tax.html#the-ai-auditor",
+    "title": "AI as a Weapon Against the Information Tax",
+    "section": "The AI Auditor",
+    "text": "The AI Auditor\nInstead of accepting the debt, he treated the $20/month AI tool Claude as a forensic auditor. He fed the confusing codes into the model, asking it to cross-reference every charge against federal regulations. The AI instantly flagged duplicate billings, impossible charges (like billing for a ventilator and ICU admission on the same day), and 2,000% markups on basic supplies. Armed with this AI-verified data, he forced the hospital to correct the bill, reducing the debt to $33,000 and saving $162,000 simply by understanding the fine print."
+  },
+  {
+    "objectID": "posts/Blog20-medical bill/information tax.html#the-information-tax",
+    "href": "posts/Blog20-medical bill/information tax.html#the-information-tax",
+    "title": "AI as a Weapon Against the Information Tax",
+    "section": "The “Information Tax”",
+    "text": "The “Information Tax”\nThere is a saying that most expensive thing in the world isn’t a product or a service; it’s what you don’t understand. Hospitals, insurance companies, and landlords often rely on a business model built on friction. They create contracts, bills, and terms so dense and jargon-heavy that the average person pays out of fear or exhaustion. They are betting that you won’t hire a lawyer for a $2,000 dispute, or that you won’t spend 40 hours learning medical coding.This is where AI shifts the power dynamic.\n\n\n\nKnowledge/Information Equity"
+  },
+  {
+    "objectID": "posts/Blog20-medical bill/information tax.html#the-new-role-of-ai-knowledge-equity",
+    "href": "posts/Blog20-medical bill/information tax.html#the-new-role-of-ai-knowledge-equity",
+    "title": "AI as a Weapon Against the Information Tax",
+    "section": "The New Role of AI: Knowledge Equity",
+    "text": "The New Role of AI: Knowledge Equity\nAI changes the calculus because it possesses two things human consumers lack: infinite patience and instant access to the rules. A lawyer might charge $500 an hour to review a document. An AI will review 500 pages for pennies, flagging every inconsistency, every predatory clause, and every violation of local statutes. It democratizes the kind of expert analysis that was previously reserved for corporations or the wealthy."
+  },
+  {
+    "objectID": "posts/Blog20-medical bill/information tax.html#practical-implications-how-to-use-this",
+    "href": "posts/Blog20-medical bill/information tax.html#practical-implications-how-to-use-this",
+    "title": "AI as a Weapon Against the Information Tax",
+    "section": "Practical Implications: How to Use This",
+    "text": "Practical Implications: How to Use This\nWe can apply nthmonkey’s strategy to everyday life. The goal isn’t to let AI make decisions, but to let it decode the “fine print” so we can make decisions.\n\nThe “Lease Auditor”: Before signing a rental agreement, upload the PDF to an LLM. Ask: “Identify any clauses that allow the landlord to retain my deposit unreasonably or raise rent without standard notice.”\nThe “Insurance Translator”: When a claim is denied, feed the denial letter and your policy policy into an AI. Ask: “Explain why this was denied in simple language, and identifying any logic that contradicts the policy coverage.”\nThe “Contract Shield”: For freelance work or service subscriptions, ask AI to find the “gotchas.” Ask: “Are there any auto-renewal or termination fees hidden in this text?”\n\nAs we move forward in the AI era, we should look beyond just “content creation.” The highest value of these tools might be advocacy—giving ordinary people the ability to read, understand, and challenge the systems that govern our lives."
   },
   {
     "objectID": "posts/Blog8-Cindi/CinDi.html",
@@ -319,7 +410,7 @@
     "href": "index.html",
     "title": "Fun time with my LLMs",
     "section": "",
-    "text": "AI as a Weapon Against the Information Tax\n\n\n\nCommunication\n\n\n\nHow Claude Defeated a $195,000 Hospital Bill\n\n\n\n\n\nNov 18, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nThe Engineer and the Strategist: How GPT and Gemini Coached Me Differently for Interview Preparation\n\n\n\nHCI\n\nCommunication\n\n\n\nDifferent models, different personalities, different use cases\n\n\n\n\n\nNov 14, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\n“We need technicians with aims and passions”\n\n\n\nBook\n\nEducation\n\n\n\nWhy should engineers learn Humanities?\n\n\n\n\n\nNov 10, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nA wrong answer is better than no answer?\n\n\n\nCognitive Sciences\n\nResearch\n\nPrompting\n\n\n\nVerification first increases LLM’s logical reasoning performance\n\n\n\n\n\nNov 8, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nLLM explaining terms to audiences of different age groups\n\n\n\nEducation\n\nCommunication\n\nHCI\n\n\n\nHow does it tailor its strategies?\n\n\n\n\n\nNov 3, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nTailor the prompt to your boss’s MBTI\n\n\n\nRole-playing\n\nPrompting\n\n\n\nHow adopting different personas changes an LLM’s focus and performance\n\n\n\n\n\nNov 3, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nAre Machine Learning Models Fundamentally Biased?\n\n\n\nBook\n\nLogic\n\n\n\nA Philosophical Look at ’Truth‘\n\n\n\n\n\nNov 1, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nBeyond the ‘Overall’ Score: AI’s Intersectional Blind Spot\n\n\n\nBook\n\nEducation\n\n\n\nThe Caveats of AI-driven decision systems\n\n\n\n\n\nOct 30, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nWhy We Need a ‘Data Justice League’ for Kids\n\n\n\nLogic\n\nEducation\n\nBook\n\n\n\nAn educator’s takeaway from the book Unmasking AI\n\n\n\n\n\nOct 10, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nIs GPT more empathetic when speaking Chinese?\n\n\n\nCulture\n\nCommunication\n\n\n\nCultural differences embedded in the training data influence the LLM’s communicative style\n\n\n\n\n\nOct 4, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nWho is AI Replacing in the Job Market?\n\n\n\nResearch\n\nGenAI\n\nLogic\n\n\n\nThe Answer May Have Profound Social Impacts\n\n\n\n\n\nOct 2, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Gutenberg to GPT: Tracing Communication’s Evolution to the AI Age\n\n\n\nCommunication\n\n\n\nHow do LLMs master the art of presentation?\n\n\n\n\n\nSep 27, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nHow do LLMs collaborate with children to generate creative ideas?\n\n\n\nResearch\n\nCreativity\n\nCommunication\n\n\n\nDifferent LLMs, different approaches\n\n\n\n\n\nSep 26, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nIs there an incompatibility of token prediction and creativity?\n\n\n\nResearch\n\nCreativity\n\nLogic\n\n\n\nCreativity is an anomaly, not statistical plausibility\n\n\n\n\n\nSep 25, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nWhen should we consider using role-playing prompting?\n\n\n\nRole-playing\n\nPrompting\n\n\n\nIs role-playing prompting really effective? A little dig into the research papers\n\n\n\n\n\nSep 19, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nThe LLM as a Drama Queen\n\n\n\nRole-playing\n\n\n\nInterviewing Gemini is more fun than I expected\n\n\n\n\n\nSep 18, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nCan AI Appreciate Art? A Photo Editing Experiment with GPT\n\n\n\nGenAI\n\nCognitive Sciences\n\n\n\nMaybe he just has a unique taste\n\n\n\n\n\nSep 16, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nBeing polite to AI is a form anthropomorphism — what else is?\n\n\n\nGenAI\n\nResearch\n\nLogic\n\n\n\nWe anthropomorphize AI more than we think\n\n\n\n\n\nSep 12, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nAre you being overly polite to your LLMs?\n\n\n\nHCI\n\nCommunication\n\n\n\nDoes politeness actually promote genAI’s performance?\n\n\n\n\n\nSep 10, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nPersonalized but excessively long suggestions from LLMs\n\n\n\nHCI\n\nCognitive Sciences\n\n\n\nWhat you might not encounter in conversations with a human\n\n\n\n\n\nSep 4, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nPrompting\n\nLogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
+    "text": "The Gender Flip: When AI Stops Being a Tech Toy\n\n\n\nBook\n\n\n\nWhat it means for product design when a tool shifts from early adopters to everyday advisors\n\n\n\n\n\nDec 3, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nStop Asking AI to ‘Do Things’ — Ask It to Teach You Instead\n\n\n\nEducation\n\nCommunication\n\n\n\nInsights from OpenAI’s report\n\n\n\n\n\nDec 1, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nThe Myth of the ‘11% Emotional Chat’\n\n\n\nEducation\n\nLogic\n\n\n\nWhy confusing analytical categories breaks conclusions (and misdirects EdTech design).\n\n\n\n\n\nNov 30, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nDecoding the Bias in Beauty\n\n\n\nBook\n\n\n\nWhen Corporate Branding Meets Algorithmic Justice\n\n\n\n\n\nNov 25, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Human Fade to AI Compression\n\n\n\ngenAI\n\nNews\n\nCognitive Sciences\n\n\n\nDeepSeek-OCR on Memory Layers\n\n\n\n\n\nNov 20, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nA Picture Worth 10x Fewer Tokens?\n\n\n\ngenAI\n\nNews\n\n\n\nExploring DeepSeek-OCR’s Breakthrough #1\n\n\n\n\n\nNov 20, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nAI as a Weapon Against the Information Tax\n\n\n\nCommunication\n\nNews\n\n\n\nHow Claude Defeated a $195,000 Hospital Bill\n\n\n\n\n\nNov 18, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nThe Engineer and the Strategist: How GPT and Gemini Coached Me Differently for Interview Preparation\n\n\n\nHCI\n\nCommunication\n\n\n\nDifferent models, different personalities, different use cases\n\n\n\n\n\nNov 14, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\n“We need technicians with aims and passions”\n\n\n\nBook\n\nEducation\n\n\n\nWhy should engineers learn Humanities?\n\n\n\n\n\nNov 10, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nA wrong answer is better than no answer?\n\n\n\nCognitive Sciences\n\nResearch\n\nPrompting\n\n\n\nVerification first increases LLM’s logical reasoning performance\n\n\n\n\n\nNov 8, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nLLM explaining terms to audiences of different age groups\n\n\n\nEducation\n\nCommunication\n\nHCI\n\n\n\nHow does it tailor its strategies?\n\n\n\n\n\nNov 3, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nTailor the prompt to your boss’s MBTI\n\n\n\nRole-playing\n\nPrompting\n\n\n\nHow adopting different personas changes an LLM’s focus and performance\n\n\n\n\n\nNov 3, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nAre Machine Learning Models Fundamentally Biased?\n\n\n\nBook\n\nLogic\n\n\n\nA Philosophical Look at ’Truth‘\n\n\n\n\n\nNov 1, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nBeyond the ‘Overall’ Score: AI’s Intersectional Blind Spot\n\n\n\nBook\n\nEducation\n\n\n\nThe Caveats of AI-driven decision systems\n\n\n\n\n\nOct 30, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nWhy We Need a ‘Data Justice League’ for Kids\n\n\n\nLogic\n\nEducation\n\nBook\n\n\n\nAn educator’s takeaway from the book Unmasking AI\n\n\n\n\n\nOct 10, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nIs GPT more empathetic when speaking Chinese?\n\n\n\nCulture\n\nCommunication\n\n\n\nCultural differences embedded in the training data influence the LLM’s communicative style\n\n\n\n\n\nOct 4, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nWho is AI Replacing in the Job Market?\n\n\n\nResearch\n\nGenAI\n\nLogic\n\n\n\nThe Answer May Have Profound Social Impacts\n\n\n\n\n\nOct 2, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Gutenberg to GPT: Tracing Communication’s Evolution to the AI Age\n\n\n\nCommunication\n\n\n\nHow do LLMs master the art of presentation?\n\n\n\n\n\nSep 27, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nHow do LLMs collaborate with children to generate creative ideas?\n\n\n\nResearch\n\nCreativity\n\nCommunication\n\n\n\nDifferent LLMs, different approaches\n\n\n\n\n\nSep 26, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nIs there an incompatibility of token prediction and creativity?\n\n\n\nResearch\n\nCreativity\n\nLogic\n\n\n\nCreativity is an anomaly, not statistical plausibility\n\n\n\n\n\nSep 25, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nWhen should we consider using role-playing prompting?\n\n\n\nRole-playing\n\nPrompting\n\n\n\nIs role-playing prompting really effective? A little dig into the research papers\n\n\n\n\n\nSep 19, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nThe LLM as a Drama Queen\n\n\n\nRole-playing\n\n\n\nInterviewing Gemini is more fun than I expected\n\n\n\n\n\nSep 18, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nCan AI Appreciate Art? A Photo Editing Experiment with GPT\n\n\n\nGenAI\n\nCognitive Sciences\n\n\n\nMaybe he just has a unique taste\n\n\n\n\n\nSep 16, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nBeing polite to AI is a form anthropomorphism — what else is?\n\n\n\nGenAI\n\nResearch\n\nLogic\n\n\n\nWe anthropomorphize AI more than we think\n\n\n\n\n\nSep 12, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nAre you being overly polite to your LLMs?\n\n\n\nHCI\n\nCommunication\n\n\n\nDoes politeness actually promote genAI’s performance?\n\n\n\n\n\nSep 10, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nPersonalized but excessively long suggestions from LLMs\n\n\n\nHCI\n\nCognitive Sciences\n\n\n\nWhat you might not encounter in conversations with a human\n\n\n\n\n\nSep 4, 2025\n\n\nFlorrie\n\n\n\n\n\n\n\n\n\n\n\n\nA test post\n\n\n\nLLMs\n\nPrompting\n\nLogic\n\n\n\nAn example post from a Jupyter notebook\n\n\n\n\n\nFeb 2, 2024\n\n\nAn LLM User\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/000_test_post/index.html",
@@ -336,74 +427,74 @@
     "text": "Read the following and see if you can answer the question:\n\n\nThere are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?\n\nMost likely you answered purple…\nBut it is possible you first said green (don’t worry if you did it is quite a common response!)\n\n\nIt’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.\nNotice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.\nNotice 1. The use of anaphor or reference. - Three BOXES -&gt; a pink/purple/green ONE as opposed to a pink box, a purple box and a green box. - The PINK ONE is in the middle ... the purple {BOX} below IT {the pink box}\nWe tend to try and avoid this kind of repetition to make our speech more coherent.\n\nAlthough the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |\n\n\n\n\nGPT3.5 Turbo\n\nHad some difficulties and answered green\nLlama2 (chat 7B version)\n\n\nAnswered correctly (purple) and used some so-called chain-of-thought reasoning\n\nBing Chat (MS Co-pilot)\nThis LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.\nIt get’s it correct:\n\nThe color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪\n\nBut when you follow up and ask it to create visual representation of the box arrangement\n\nPROMPT: Can you create a visual representation of how the boxes are arranged?\n\nIt responds\n\nRESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:\n\nAnd uses DALL-E3 to create 4 different attempts at a visual representation:\n\nNONE OF WHICH ARE CORRECT!!!"
   },
   {
-    "objectID": "posts/Blog20-medical bill/information tax.html",
-    "href": "posts/Blog20-medical bill/information tax.html",
-    "title": "AI as a Weapon Against the Information Tax",
+    "objectID": "posts/Blog22-OCR2/OCR2.html",
+    "href": "posts/Blog22-OCR2/OCR2.html",
+    "title": "From Human Fade to AI Compression",
     "section": "",
-    "text": "AI as a helpful auditor\nWe often view AI as a productivity tool, but a recent viral story reveals its true potential as weapon to combat information asymmetry. An American user known as nthmonkey faced a nightmare scenario: grieving his brother-in-law’s sudden death while staring down a $195,000 hospital bill for just four hours of emergency care. The invoice was a wall of indecipherable CPT codes—a complex billing language of the US healthcare system. These codes are essentially “Medical Morse Code,” designed to be unintelligible to the average patient."
+    "text": "Layred Memory\nIn exploring recent developments in AI models, I came across DeepSeek’s DeepSeek-OCR, a small model focused on optical character recognition. What stood out wasn’t just its technical specs, but how its design touches on ideas about memory and forgetting in both machines and humans. The paper highlights an interesting aspect of information compression that parallels human cognitive processes.\nThe researchers observed that at higher compression ratios, like 20x, the text in images becomes blurry, reducing recognition accuracy. Rather than seeing this as a limitation, they drew a connection to how humans forget over time. This sparked my interest in whether AI could benefit from similar mechanisms."
   },
   {
-    "objectID": "posts/Blog20-medical bill/information tax.html#the-ai-auditor",
-    "href": "posts/Blog20-medical bill/information tax.html#the-ai-auditor",
-    "title": "AI as a Weapon Against the Information Tax",
-    "section": "The AI Auditor",
-    "text": "The AI Auditor\nInstead of accepting the debt, he treated the $20/month AI tool Claude as a forensic auditor. He fed the confusing codes into the model, asking it to cross-reference every charge against federal regulations. The AI instantly flagged duplicate billings, impossible charges (like billing for a ventilator and ICU admission on the same day), and 2,000% markups on basic supplies. Armed with this AI-verified data, he forced the hospital to correct the bill, reducing the debt to $33,000 and saving $162,000 simply by understanding the fine print."
+    "objectID": "posts/Blog22-OCR2/OCR2.html#comparing-human-memory-and-visual-compression",
+    "href": "posts/Blog22-OCR2/OCR2.html#comparing-human-memory-and-visual-compression",
+    "title": "From Human Fade to AI Compression",
+    "section": "Comparing Human Memory and Visual Compression",
+    "text": "Comparing Human Memory and Visual Compression\nHuman memory fades gradually: recent events are vivid, while older ones retain only key details or impressions. This is akin to how image resolution decreases with distance: Recent events (like something that just happened) are crystal clear, similar to viewing text up close; Events from weeks ago start to blur, much like text at a moderate distance; Events from years ago may nearly vanish, comparable to low-resolution views from afar.\nThis analogy between time in memory and spatial resolution in images suggests a way to model AI memory more efficiently."
   },
   {
-    "objectID": "posts/Blog20-medical bill/information tax.html#the-information-tax",
-    "href": "posts/Blog20-medical bill/information tax.html#the-information-tax",
-    "title": "AI as a Weapon Against the Information Tax",
-    "section": "The “Information Tax”",
-    "text": "The “Information Tax”\nThere is a saying that most expensive thing in the world isn’t a product or a service; it’s what you don’t understand. Hospitals, insurance companies, and landlords often rely on a business model built on friction. They create contracts, bills, and terms so dense and jargon-heavy that the average person pays out of fear or exhaustion. They are betting that you won’t hire a lawyer for a $2,000 dispute, or that you won’t spend 40 hours learning medical coding.This is where AI shifts the power dynamic.\n\n\n\nKnowledge/Information Equity"
+    "objectID": "posts/Blog22-OCR2/OCR2.html#a-layered-memory-system-for-ai",
+    "href": "posts/Blog22-OCR2/OCR2.html#a-layered-memory-system-for-ai",
+    "title": "From Human Fade to AI Compression",
+    "section": "A Layered Memory System for AI",
+    "text": "A Layered Memory System for AI\nOne practical idea is to store conversation history in varying “resolutions” using visual tokens:\n\nRecent dialogue: High resolution to keep all details for quick, accurate recall.\nIntermediate dialogue: Medium resolution, compressing data while preserving main ideas and flow.\nDistant dialogue: Low resolution, focusing only on core principles or overall impressions.\n\nThis setup could mimic human recall, saving resources by not reloading full histories each time. It also fits how we often use AI—for short-term tasks where recent context matters most, with older info providing general guidance.\n\n![AI compressing meanings](compression.png)"
   },
   {
-    "objectID": "posts/Blog20-medical bill/information tax.html#the-new-role-of-ai-knowledge-equity",
-    "href": "posts/Blog20-medical bill/information tax.html#the-new-role-of-ai-knowledge-equity",
-    "title": "AI as a Weapon Against the Information Tax",
-    "section": "The New Role of AI: Knowledge Equity",
-    "text": "The New Role of AI: Knowledge Equity\nAI changes the calculus because it possesses two things human consumers lack: infinite patience and instant access to the rules. A lawyer might charge $500 an hour to review a document. An AI will review 500 pages for pennies, flagging every inconsistency, every predatory clause, and every violation of local statutes. It democratizes the kind of expert analysis that was previously reserved for corporations or the wealthy."
+    "objectID": "posts/Blog22-OCR2/OCR2.html#forgetting-as-an-efficiency-tool",
+    "href": "posts/Blog22-OCR2/OCR2.html#forgetting-as-an-efficiency-tool",
+    "title": "From Human Fade to AI Compression",
+    "section": "Forgetting as an Efficiency Tool",
+    "text": "Forgetting as an Efficiency Tool\nReflecting on this, I see forgetting not as a flaw, but as a useful filter in cognition. Humans don’t store every detail indefinitely; instead, we prioritize essentials to avoid overload. This echoes techniques like the Feynman method, where simplifying complex ideas helps distill them to their core.\nDeepSeek-OCR’s compression approach points toward AI designs that emphasize intelligent filtering over exhaustive storage. It shifts the focus from raw capacity to smarter ways of handling information, which could make models more practical and aligned with cognitive principles. As someone interested in how AI intersects with learning and memory, this feels like a promising direction for future experiments in prompting or model interactions."
   },
   {
-    "objectID": "posts/Blog20-medical bill/information tax.html#practical-implications-how-to-use-this",
-    "href": "posts/Blog20-medical bill/information tax.html#practical-implications-how-to-use-this",
-    "title": "AI as a Weapon Against the Information Tax",
-    "section": "Practical Implications: How to Use This",
-    "text": "Practical Implications: How to Use This\nWe can apply nthmonkey’s strategy to everyday life. The goal isn’t to let AI make decisions, but to let it decode the “fine print” so we can make decisions.\n\nThe “Lease Auditor”: Before signing a rental agreement, upload the PDF to an LLM. Ask: “Identify any clauses that allow the landlord to retain my deposit unreasonably or raise rent without standard notice.”\nThe “Insurance Translator”: When a claim is denied, feed the denial letter and your policy policy into an AI. Ask: “Explain why this was denied in simple language, and identifying any logic that contradicts the policy coverage.”\nThe “Contract Shield”: For freelance work or service subscriptions, ask AI to find the “gotchas.” Ask: “Are there any auto-renewal or termination fees hidden in this text?”\n\nAs we move forward in the AI era, we should look beyond just “content creation.” The highest value of these tools might be advocacy—giving ordinary people the ability to read, understand, and challenge the systems that govern our lives."
-  },
-  {
-    "objectID": "posts/Blog12-data justice league/Data justice League.html",
-    "href": "posts/Blog12-data justice league/Data justice League.html",
-    "title": "Why We Need a ‘Data Justice League’ for Kids",
+    "objectID": "posts/Blog7-Creativity/blog7-creativity.html",
+    "href": "posts/Blog7-Creativity/blog7-creativity.html",
+    "title": "Is there an incompatibility of token prediction and creativity?",
     "section": "",
-    "text": "Biases toward the color of skin"
+    "text": "![AI exercising their creativity](painting.png)"
   },
   {
-    "objectID": "posts/Blog12-data justice league/Data justice League.html#a-book-im-reading",
-    "href": "posts/Blog12-data justice league/Data justice League.html#a-book-im-reading",
-    "title": "Why We Need a ‘Data Justice League’ for Kids",
-    "section": "A Book I’m Reading",
-    "text": "A Book I’m Reading\nI’ve been immersed in my “Living with a book” assignment recently, and the book I’m reading, Unmasking AI by Dr. Joy Buolamwini, is really interesting. The author at some point discusses the term “Justice League” and its deep roots in social equity campaigns, then recounts how a poster for the “Algorithmic Justice League” at an academic event deeply resonated with her. This reminds me of a curriculum project I designed at Penn GSE: The Data Justice League. The core idea was similar: how do we make the abstract dangers of AI bias concrete, urgent, and understandable for young people?\n\n\n\nDr. Joy Buolamwini and her book"
+    "objectID": "posts/Blog7-Creativity/blog7-creativity.html#the-affective-component-of-creativity---ai-lacks-this-faculty",
+    "href": "posts/Blog7-Creativity/blog7-creativity.html#the-affective-component-of-creativity---ai-lacks-this-faculty",
+    "title": "Is there an incompatibility of token prediction and creativity?",
+    "section": "The affective component of creativity - AI lacks this faculty?",
+    "text": "The affective component of creativity - AI lacks this faculty?\nThe paper Next Token Prediction Is a Dead End for Creativity: Why It’s Impossible to Lose Yourself in the Moment was interesting to read. While many studies in creativity focus on the mere cognitive aspects of creativity such as convergent and divergent thinking, it emphasizes the importance of an essential affective component of creative generation, describing it as a “flow to lose oneself”.\n\n\n\nThe state of “flow”\n\n\nI found this perspective inspiring, as it suggests that instantaneous creativity requires tangible experience, a unique subjective viewpoint, and even a particular physiological state. Language, at its core, is just an expression of our feelings and thoughts. Since LLMs lack physical faculties and a sense of “self,” they can only mimic a representation of creative products in the form of language without drawing from these true, internal sources.\n\n\n\nIf AI can subjectively experiencing emotions"
   },
   {
-    "objectID": "posts/Blog12-data justice league/Data justice League.html#youth-as-vulnerable-ai-users",
-    "href": "posts/Blog12-data justice league/Data justice League.html#youth-as-vulnerable-ai-users",
-    "title": "Why We Need a ‘Data Justice League’ for Kids",
-    "section": "Youth as Vulnerable AI Users",
-    "text": "Youth as Vulnerable AI Users\nAs an educator, I’m increasingly concerned about the younger generation—the “AI natives.” They are growing up intensively using these tools, but often lack the critical perspective to perceive the potential harm beneath the surface. Dr. Buolamwini’s book describes many vivid, real-world examples of how algorithmic bias causes serious harm, and it highlights a critical point: people who aren’t personally affected by a specific bias often have no awareness that the issue even exists."
+    "objectID": "posts/Blog7-Creativity/blog7-creativity.html#big-data-and-the-concept-of-average",
+    "href": "posts/Blog7-Creativity/blog7-creativity.html#big-data-and-the-concept-of-average",
+    "title": "Is there an incompatibility of token prediction and creativity?",
+    "section": "Big data and the concept of “Average”",
+    "text": "Big data and the concept of “Average”\nThis idea reminded me of the concept of “Average” in the book The End of Average: How We Succeed in a World That Values Sameness by Todd Rose. Influenced by the Industrial Revolution, various fields once sought to define an “average person”—educators designing standardized tests for comprehensive intelligence, medical institutions determining average health measurements, and even the Air Force attempting to design a cockpit for an average-sized pilot. However, they eventually realized that no real individual ever fit these average indices; the concept of an “average person” proved largely meaningless.\n\n\n\n“An Average American”"
   },
   {
-    "objectID": "posts/Blog12-data justice league/Data justice League.html#real-world-problems",
-    "href": "posts/Blog12-data justice league/Data justice League.html#real-world-problems",
-    "title": "Why We Need a ‘Data Justice League’ for Kids",
-    "section": "Real-world Problems",
-    "text": "Real-world Problems\nThis isn’t a hypothetical problem. We’re already seeing its consequences. A Stanford study, for example, found that automated systems often falsely flag essays written by non-native English speakers as AI-generated, creating a high-stakes risk of false cheating accusations. We also see Harmful Algorithmic Pathways on Social Media: Lawsuits filed against platforms like Instagram and TikTok have provided evidence of how algorithms, unaware of a user’s vulnerability, can create harmful feedback loops. In one case, a young student who initially searched for fitness content was gradually shown more and more posts about eating disorders. The algorithm’s “engagement” bias contributed to the student developing anorexia and needing psychiatric treatment."
+    "objectID": "posts/Blog7-Creativity/blog7-creativity.html#an-analogy-are-llms-just-averaging-human-thoughts",
+    "href": "posts/Blog7-Creativity/blog7-creativity.html#an-analogy-are-llms-just-averaging-human-thoughts",
+    "title": "Is there an incompatibility of token prediction and creativity?",
+    "section": "An analogy: Are LLMs just “averaging” human thoughts?",
+    "text": "An analogy: Are LLMs just “averaging” human thoughts?\nThe LLM’s logic of predicting the probabilities of each token is conceptually analogous to this idea of “averaging.” Instead of carrying an individual’s unique perspective, experience, and emotional state, LLMs seem to “average” human linguistic productions by predicting the next statistically plausible tokens. Given the inherent randomness within these subjective human factors, how can such an “averaged” output ever be truly creative?"
   },
   {
-    "objectID": "posts/Blog12-data justice league/Data justice League.html#my-project",
-    "href": "posts/Blog12-data justice league/Data justice League.html#my-project",
-    "title": "Why We Need a ‘Data Justice League’ for Kids",
-    "section": "My project",
-    "text": "My project\nSimilar news shows why it is so pressing to unravel the underlying logic of AI. We cannot let children interact with these systems as if they are magical, all-knowing black boxes. This conviction drove my “Data Justice League” curriculum project. My goal was to make bias tangible for high schoolers using a hands-on activity with Teachable Machine. For instance, I had students train a model to identify “stray cats” using only data of clean, healthy house cats. Naturally, the model failed to recognize the injured, dirty stray cats it was tested on. This failure aims to provide a concrete “aha!” moment, sparking discussion on how biased data can lead AI to exclude or harm marginalized groups—the very ones most in need of help.\n\n\n\nLearning Goals of My Design\n\n\nMoving from abstract warnings to hands-on learning is the key. By providing tangible projects and real-world examples, we can empower children to interact with AI not just as passive consumers, but as critical, aware, and engaged citizens. Right now, fostering this AI literacy isn’t just an add-on to our curriculum. It should be an essential educational goal in the era of AI."
+    "objectID": "posts/Blog7-Creativity/blog7-creativity.html#using-llms-for-creative-process-facilitation",
+    "href": "posts/Blog7-Creativity/blog7-creativity.html#using-llms-for-creative-process-facilitation",
+    "title": "Is there an incompatibility of token prediction and creativity?",
+    "section": "Using LLMs for creative process facilitation",
+    "text": "Using LLMs for creative process facilitation\nYet, arguably, we can still utilize LLMs for creative production, or at least for facilitation. The instantaneous creativity discussed in the paper represents only one form of improvised creativity. Other important creative processes, such as continuous iterations and development on creative ideas, can certainly lead to highly novel outputs. These can often be achieved through strategic prompting. As the paper suggests, we should view LLMs as a co-creative infrastructure designed to support and enhance human ingenuity.\n\n\n\nLet AI spark human creativity"
+  },
+  {
+    "objectID": "posts/Blog7-Creativity/blog7-creativity.html#final-thoughts",
+    "href": "posts/Blog7-Creativity/blog7-creativity.html#final-thoughts",
+    "title": "Is there an incompatibility of token prediction and creativity?",
+    "section": "Final thoughts",
+    "text": "Final thoughts\nSo, if that’s the case, perhaps role-playing prompts could be effective in promoting LLM’s creative production, as they attempt to inject a unique perspective and simulate an “experience”?"
   },
   {
     "objectID": "posts/Blog3-Anthormorphism/Anthropomorphism.html",
@@ -495,6 +586,34 @@
     "title": "Tailor the prompt to your boss’s MBTI",
     "section": "How it could matter to your prompts",
     "text": "How it could matter to your prompts\nThis experiment proves that “persona prompting” isn’t just a gimmick —- it effectively changes the cognitive priority of the model.\n\nStakeholder-Specific Communication: You can tailor output for specific audiences. If presenting a plan to a CTO or Operations Director, an INTJ persona generates the necessary metrics, SLAs, and accountability structures. If presenting to HR or a creative team, an ENFJ persona generates the necessary language around trust, morale, and collaboration.\nBlind Spot Analysis: Assigning opposing personas allows users to identify gaps in a plan. Running the INTJ prompt highlights that a plan might lack specific definitions (SLAs), while the ENFJ prompt highlights that a strictly structural plan might ignore human frustration.\nReframing “Hard” vs. “Soft” Skills: The comparison shows that an LLM can effectively translate “soft” problems (miscommunication) into “hard” solutions (SLAs) using an INTJ persona, or vice versa. This is useful for managers who need to translate cultural issues into operational language or operational issues into cultural language.\n\n\n\n\nAI as Communication Translator"
+  },
+  {
+    "objectID": "posts/Blog23-olay/OLAY.html",
+    "href": "posts/Blog23-olay/OLAY.html",
+    "title": "Decoding the Bias in Beauty",
+    "section": "",
+    "text": "Beauty x AI\nIn the book Unmasking AI, Dr. Joy Buolamwini shares how, as her work in exposing algorithmic bias became more socially recognized, companies started reaching out. One of the most interesting collaborations was with OLAY, which approached her for a partnership involving an algorithm audit on their AI identification and recommendation system.\nIt is good to see big companies, even as part of their branding strategies, get involved in such campaigns. It effectively raises social awareness, making the public realize that algorithmic bias isn’t an abstract concept—it’s in their everyday skincare routine. We need more research work to go public, and we certainly need more companies to move beyond lip service and show concrete action."
+  },
+  {
+    "objectID": "posts/Blog23-olay/OLAY.html#the-problem-bias-is-more-than-skin-deep",
+    "href": "posts/Blog23-olay/OLAY.html#the-problem-bias-is-more-than-skin-deep",
+    "title": "Decoding the Bias in Beauty",
+    "section": "The Problem: Bias is More Than Skin Deep",
+    "text": "The Problem: Bias is More Than Skin Deep\nThe collaboration, aptly named “Decode the Bias in Beauty,” was necessary because Buolamwini’s previous research demonstrated that many AI systems struggle with accuracy when encountering darker skin tones, often due to dataset deficiencies. The target of the audit was OLAY’s Skin Advisor tool, which uses AI to analyze a user’s facial image and recommend personalized products.\nThe question wasn’t if the system was biased, but how and where.\nThe audit, conducted by Buolamwini’s consultancy ORCAA, confirmed the critique: the AI model produced significantly lower confidence scores for darker skin tones compared to lighter ones. In the language of AI, this means the model was less certain and, therefore, less reliable when advising consumers of color. This finding perfectly validates the core thesis of algorithmic justice: a system can perform “well enough” overall while failing miserably at the intersection of race and technology."
+  },
+  {
+    "objectID": "posts/Blog23-olay/OLAY.html#the-insight-from-good-enough-to-accountable",
+    "href": "posts/Blog23-olay/OLAY.html#the-insight-from-good-enough-to-accountable",
+    "title": "Decoding the Bias in Beauty",
+    "section": "The Insight: From “Good Enough” to Accountable",
+    "text": "The Insight: From “Good Enough” to Accountable\nThe true insight here is not just that bias was found—that was predictable. The breakthrough lies in the company’s response. OLAY didn’t just quietly fix the problem; they publicly released the audit results and committed to fixing the underlying data disparity.\nThis led to Project D.A.T.A. (Driving Accurate Representation in Testing and Analysis), a commitment to dramatically increase the diversity of their training datasets. This moves the discussion from ethical theory to data accountability. For a brand rooted in mass-market consumer confidence, admitting that their digital cornerstone was unreliable for a significant segment of their customers is a powerful step. It forces them to look beyond the superficial “overall accuracy” metric and confront the ethical implications of their “ground truth.”"
+  },
+  {
+    "objectID": "posts/Blog23-olay/OLAY.html#the-call-to-action-making-change-structural",
+    "href": "posts/Blog23-olay/OLAY.html#the-call-to-action-making-change-structural",
+    "title": "Decoding the Bias in Beauty",
+    "section": "The Call to Action: Making Change Structural",
+    "text": "The Call to Action: Making Change Structural\nWhile the public nature of the partnership is great for branding, the real impact lies in whether this moment catalyzes structural change across the industry. The OLAY partnership offers a hopeful vision: a world where corporate self-interest in good branding aligns with the ethical imperative of algorithmic justice. It is a necessary first step towards ensuring that the tools we build—whether they recommend skincare or determine job eligibility—do not leave anyone behind."
   },
   {
     "objectID": "posts/Blog2-Being polite/Being polite.html",
@@ -593,6 +712,27 @@
     "title": "A wrong answer is better than no answer?",
     "section": "Practical Implications",
     "text": "Practical Implications\nIf you are building AI applications or prompting models for complex tasks, this paper suggests several immediate actions:\n\nModify Your Prompts using the “One-Step” Fix: For logic or math tasks, you can likely improve performance instantly by injecting a dummy answer into your prompt.\n\nStandard: “Solve this math problem, think step by step.”\nVF Strategy: “I have a guess that the answer is 1. Please verify if this guess is correct, and then find the actual correct answer.”\n\nCost-Effective Agent Loops: If you are building an autonomous agent (e.g., for coding), do not feed the agent its entire history of failed attempts. Instead, simply feed its last output back to it as a “proposed solution” and ask it to verify that specific solution. This saves token costs and improves accuracy."
+  },
+  {
+    "objectID": "posts/Blog24-blurred categories/layers.html",
+    "href": "posts/Blog24-blurred categories/layers.html",
+    "title": "The Myth of the ‘11% Emotional Chat’",
+    "section": "",
+    "text": "Blurred Categories\nIn casual summaries of the recent OpenAI report, a neat, quantifiable line often emerges: “Most people ask for advice, some do tasks, and ~11% is emotional chatting.”\nThis narrative is compelling because it suggests a satisfying role for AI: the “therapist-lite.”\nBut here is the subtle and critical research-methods flaw: The 11% figure represents the Expressing intent category, which is a functional classification, not the topic of “Relationships/Personal Reflection,” which is much smaller (around 1.9%).\nThis confusion—mixing labels that live at fundamentally different levels of analysis—compromises both interpretation and application."
+  },
+  {
+    "objectID": "posts/Blog24-blurred categories/layers.html#why-this-matters-for-education-research",
+    "href": "posts/Blog24-blurred categories/layers.html#why-this-matters-for-education-research",
+    "title": "The Myth of the ‘11% Emotional Chat’",
+    "section": "Why This Matters for Education Research",
+    "text": "Why This Matters for Education Research\nIn education and cognitive science, rigorous analysis demands clear separation of layers:\n\nContent Layer (The What): Topic (e.g., historical dates, friendship conflict).\nAction Layer (The Why/How): Intent (e.g., seeking advice, executing a task, venting).\nEvaluation Layer (The Outcome): Quality (e.g., user satisfaction, task success).\n\nMixing these layers generates methodologically false insights.\nFor instance: A student might use the Topic “Relationships/Personal Reflection.” If their Intent is classified as Doing (requesting a formal apology letter draft), the system is being used for writing practice, not emotional catharsis. If you collapse that interaction into “emotional chat,” you fundamentally misdiagnose the student’s learning goal and the tool’s effectiveness.\n\n![Three-layered Model in Education](layer.png)"
+  },
+  {
+    "objectID": "posts/Blog24-blurred categories/layers.html#a-practical-framework-three-layer-labeling-for-integrity",
+    "href": "posts/Blog24-blurred categories/layers.html#a-practical-framework-three-layer-labeling-for-integrity",
+    "title": "The Myth of the ‘11% Emotional Chat’",
+    "section": "A Practical Framework: Three-Layer Labeling for Integrity",
+    "text": "A Practical Framework: Three-Layer Labeling for Integrity\nTo ensure methodological integrity in learning product design, every interaction must be logged across three critical, non-redundant layers:\n\nIntent (Functional Goal): What is the user attempting to achieve? Captures the overarching user aim, independent of topic. Examples: Seeking Advice (Asking), Performing a Task (Doing), Sharing Thoughts (Expressing).\nTopic (Domain Context): What domain is the conversation about? (Writing, Math, Relationships, Career).\nLearning Move (Cognitive Action): What specific cognitive operation is being requested? (Generate, Critique, Compare, Explain, Test, Reflect).\n\nThe Learning Move layer—focused on the cognitive process—is the most educationally significant and often the least captured by current product metrics.\nDebunking myths like the “11% emotional chat” underscores the need for layered analysis in AI research. As the OpenAI report illustrates, precision in data interpretation is key to harnessing AI’s transformative power for education."
   },
   {
     "objectID": "posts/Blog9-Common press/Common Press.html",
