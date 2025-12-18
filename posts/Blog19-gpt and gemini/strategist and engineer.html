@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florrie">
-<meta name="dcterms.date" content="2025-11-10">
-<meta name="description" content="Why should engineers learn Humanities?">
+<meta name="dcterms.date" content="2025-11-14">
+<meta name="description" content="Different models, different personalities, different use cases">
 
-<title>“We need technicians with aims and passions” – Fun time with my LLMs</title>
+<title>The Engineer and the Strategist: How GPT and Gemini Coached Me Differently for Interview Preparation – Fun time with my LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -118,15 +147,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">“We need technicians with aims and passions”</h1>
+      <h1 class="title">The Engineer and the Strategist: How GPT and Gemini Coached Me Differently for Interview Preparation</h1>
                   <div>
         <div class="description">
-          Why should engineers learn Humanities?
+          Different models, different personalities, different use cases
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Book</div>
-                <div class="quarto-category">Education</div>
+                <div class="quarto-category">HCI</div>
+                <div class="quarto-category">Communication</div>
               </div>
                   </div>
   </div>
@@ -144,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 10, 2025</p>
+        <p class="date">November 14, 2025</p>
       </div>
     </div>
     
@@ -165,26 +194,33 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Humanity.png" class="img-fluid figure-img"></p>
-<figcaption>Maintaining a Humanity Perspective</figcaption>
+<p><img src="persona.png" class="img-fluid figure-img"></p>
+<figcaption>The engineer and the strategist</figcaption>
 </figure>
 </div>
-<p>The author of Unmasking AI, Dr.&nbsp;Joy Buolamwini, is far more than just a computer scientist. While she possesses a deep technical background, her work is profoundly shaped by the reflections of her lived experience. It was a specific failure of technology—an AI tool that could not detect her face until she put on a white mask—that forced her to reflect on the implications of her own dark skin in a digital world. This moment motivated her to investigate deeper into the algorithmic biases, such as race and gender, that exist within the machine learning world.</p>
-<p>These experiences and humanities-driven perspectives gave her a clear aim: to utilize her technical skills for real-world impact. She has since presented her work to tech giants like IBM, pushed for policy changes in academia and government, delivered a TED Talk, and even wrote poems to convey her findings in an artistic, compelling way. She demonstrates that technical skill, when guided by deep human conviction, becomes a tool for justice.</p>
-<section id="an-innovative-educationinternship-program-to-cultivate-technicians-with-purposes" class="level2">
-<h2 class="anchored" data-anchor-id="an-innovative-educationinternship-program-to-cultivate-technicians-with-purposes">An Innovative Education/Internship Program to Cultivate Technicians with Purposes</h2>
-<p>Interestingly, a recent news story resonates with this idea. The data analytics company Palantir recently launched a “Meritocracy Fellowship,” offering high-school graduates with exceptional coding talent the chance to skip college and work at the company. The program is incredibly competitive, with an admission rate of just 4.4%. However, follow-up reports revealed a surprising twist: these interns spent their first month not writing code, but studying Plato’s Republic, the leadership styles of Lincoln and Churchill, and the foundations of Western civilization.</p>
-<p>This curriculum exists because Palantir works primarily with high-stakes clients like the US Department of Defense and various intelligence agencies. Their rationale is that engineers cannot simply understand how to write code; they must also understand why they are writing it and who they are serving. They are effectively criticizing an undergraduate education system that often produces technically proficient but “aimless” engineers who lack a grasp of the values they are vouching for.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="touch.png" class="img-fluid figure-img"></p>
-<figcaption>A mingle of humanity and technologies</figcaption>
-</figure>
-</div>
+<p>If you ask GPT-4o how to prep for a job, it tries to help you build the product. If you ask Gemini 2.0 Pro, it tries to help you sell the product.</p>
+<p>I learned this distinction while preparing for an AI Education product position. I fed both LLMs the same vague job description and asked for a prediction of the potential performance task and how to prepare for it. The results were fascinatingly distinct, offering a perfect case study on how to leverage different AI tools for different parts of the job hunt.</p>
+<section id="ai-1-gpt-5.1-the-ruthless-engineer" class="level2">
+<h2 class="anchored" data-anchor-id="ai-1-gpt-5.1-the-ruthless-engineer">AI #1 (GPT-5.1): The Ruthless Engineer</h2>
+<p>GPT-4o immediately adopted the persona of a rigorous Technical Lead. Its advice was “surgical”. This model viewed the interview strictly as an engineering optimization problem. It advised me to define a clear “success bar” (e.g., accuracy <span class="math inline">\(\ge 0.75\)</span>) and calculate technical metrics like “confusion matrices” and precision/recall. It focused heavily on process rigor, outlining a V1 <span class="math inline">\(\rightarrow\)</span> V5 iteration plan that included “seed-stability checks” and “multilingual probes” to test for failure modes.</p>
+<p><strong>The Vibe:</strong> <em>“Here is the code, the data, and the math. Let’s build it.”</em></p>
 </section>
-<section id="the-why-is-the-new-syntax" class="level2">
-<h2 class="anchored" data-anchor-id="the-why-is-the-new-syntax">The “Why” is the New Syntax</h2>
-<p>This convergence of stories—one from an algorithmic justice activist and one from a defense contractor—signals a shift in what defines a “skilled” engineer. In an era where AI tools like GitHub Copilot and ChatGPT can increasingly handle the “how” of coding (syntax, boilerplate, and optimization), the human value-add is shifting entirely to the “why.” The ability to write an efficient algorithm is becoming a commodity; the ability to discern whether that algorithm should be written, or to predict its downstream societal impacts, is becoming a luxury skill. We are moving toward a future where the most valuable engineers will not be the ones who code the fastest, but the ones who can anchor their code in a robust moral and historical framework.</p>
+<section id="ai-2-gemini-2.0-pro-the-strategic-mentor" class="level2">
+<h2 class="anchored" data-anchor-id="ai-2-gemini-2.0-pro-the-strategic-mentor">AI #2 (Gemini 2.0 Pro): The Strategic Mentor</h2>
+<p>Gemini took a completely different approach. It read the job description and saw a Product challenge. Instead of jumping to statistics, it focused on the user. It predicted the task would center on a specific “student persona”—for example, a “5th-grade multilingual learner” —and warned me about the specific trap of educational AI products: giving the student the answer instead of being pedagogical.</p>
+<p>Crucially, Gemini <strong>advised against the heavy engineering approach GPT championed</strong>. It explicitly warned me that “broken Python code” is worse than a clean spreadsheet, urging me to use a “Spreadsheet Lab Notebook” to make my thinking legible. It even coached me on executive communication, suggesting I use the “Bottom Line Up Front” method to present my recommendations to the CEO.</p>
+<p><strong>The Vibe:</strong> <em>“Here is the user, the risk, and the pitch. Let’s sell it (or you, as a candidate).”</em></p>
+<p>The difference between the two models wasn’t just about tone. For tools, GPT suggested I show off my “behavioral coding rigor” and familiarity with workflow tools like Dify. Gemini argued that I should prove I can “take the chaos of LLM outputs” and turn them into structured decisions using simple tools like Google Sheets. It is the focus on <strong>Metrics v.s. Mindsets.</strong></p>
+</section>
+<section id="the-verdict-you-need-both" class="level2">
+<h2 class="anchored" data-anchor-id="the-verdict-you-need-both">The Verdict: You Need Both</h2>
+<p>If I had only listened to GPT, I might have overwhelmed the interviewers with technical jargon about confusion matrices while missing the pedagogical nuance of the product. If I had only listened to Gemini, I might have nailed the strategy but appeared less technically rigorous on the actual evaluation methodology.</p>
+<p>The “Super Candidate” is the one who can bridge these worlds, so treat your AI tools like a diverse team of consultants:</p>
+<ul>
+<li><p><strong><em>Hire the Engineer (GPT)</em></strong> when you need to define the “success bar,” structure your data evaluation, and ensure your testing is statistically valid.</p></li>
+<li><p><strong><em>Hire the Strategist (Gemini)</em></strong> when you need to understand the user persona, anticipate product risks, and refine your executive pitch.</p></li>
+</ul>
+<p>In the end, the best preparation didn’t come from choosing one model over the other—it came from letting them debate the problem, and taking the best from both.</p>
 
 
 </section>
