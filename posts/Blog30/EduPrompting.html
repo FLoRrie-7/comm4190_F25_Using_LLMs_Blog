@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florrie">
-<meta name="dcterms.date" content="2025-12-05">
-<meta name="description" content="Analysis of the latest OpenRouter study reveals that roleplay is the dominant AI use case">
+<meta name="dcterms.date" content="2025-12-15">
+<meta name="description" content="What’s the way forward?">
 
-<title>Why We’re All Roleplaying with AI – Fun time with my LLMs</title>
+<title>Prompting Can’t Make GPT-4 More Pedagogically Aligned – Fun time with my LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,17 +118,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Why We’re All Roleplaying with AI</h1>
+      <h1 class="title">Prompting Can’t Make GPT-4 More Pedagogically Aligned</h1>
                   <div>
         <div class="description">
-          Analysis of the latest OpenRouter study reveals that roleplay is the dominant AI use case
+          What’s the way forward?
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">HCI</div>
+                <div class="quarto-category">Education</div>
                 <div class="quarto-category">Communication</div>
                 <div class="quarto-category">Research</div>
-                <div class="quarto-category">Education</div>
+                <div class="quarto-category">Prompting</div>
               </div>
                   </div>
   </div>
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 5, 2025</p>
+        <p class="date">December 15, 2025</p>
       </div>
     </div>
     
@@ -167,33 +167,38 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="roleplay.png" class="img-fluid figure-img"></p>
-<figcaption>Role-playing with LLM</figcaption>
+<p><img src="tutor.png" class="img-fluid figure-img"></p>
+<figcaption>Pedagogical LLM</figcaption>
 </figure>
 </div>
-<p>For the past two years, the narrative around AI has been dominated by “productivity.” We talk about LLMs as efficient clerks—tools to summarize long threads, debug messy code, or ghostwrite professional emails. But a massive new report from OpenRouter, which analyzed a staggering 100 trillion tokens of real-world usage, just pulled back the curtain on what we’re actually doing with these models.</p>
-<p>It turns out, we aren’t just looking for an assistant; we’re looking for a scene partner.</p>
-<p>OpenRouter, a platform that lets developers toggle between dozens of different AI models, found that “Roleplay” isn’t just a niche hobby for the internet’s fringes—it is a massive, dominant force. It accounts for <strong>over 50% of all open-source model usage as a structured, repeatable genre</strong>. People aren’t just asking for facts, we are simulating scenarios and interacting with personas.</p>
-<section id="the-instinct-to-simulate" class="level2">
-<h2 class="anchored" data-anchor-id="the-instinct-to-simulate">The Instinct to Simulate</h2>
-<p>This dominance of roleplay shouldn’t be dismissed as mere escapism; it aligns with a fundamental human instinct. Developmental psychology tells us that children learn to navigate the world through spontaneous role-play games—“playing house” or “cops and robbers” are essentially low-tech simulations of complex social dynamics.</p>
-<p>The OpenRouter report confirms that this behavior doesn’t disappear in adulthood; it just migrates to digital mediums. The data shows that users are treating these models less like chatbots and more like “character engines.” In fact, nearly 60% of roleplay tokens are categorized specifically as “Games/Roleplaying Games,” indicating that users are actively seeking rules, scenarios, and consistent personas rather than just casual conversation. We are seeing a massive, decentralized experiment in “situated learning,” where users are voluntarily engaging in complex simulations to practice social interaction, explore narratives, or experience a different perspective.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pretend.png" class="img-fluid figure-img"></p>
-<figcaption>Children’s pretend play</figcaption>
-</figure>
-</div>
+<p>After reading Study 1, my first instinct was: Maybe we can just prompt it better. Give GPT-4 explicit instructions: “Use active learning. Ask questions. Encourage collaboration. Use Socratic principles to guide the students.”</p>
+<p>Study 2 in the same paper is essentially a large-scale test of that instinct. And the results are slightly unsettling. The authors ask a second question: If we provide more educationally specific inputs, can we improve GPT-4’s pedagogical alignment?</p>
+<p>Their resutls showed that: <strong>You can make the model more controllable and predictable—but alignment quality may still resist change, especially for complex pedagogies.</strong></p>
+<section id="study-2-teaching-design-at-scale-a-metric-called-pad" class="level2">
+<h2 class="anchored" data-anchor-id="study-2-teaching-design-at-scale-a-metric-called-pad">Study 2: “Teaching design” at scale + a metric called PAD</h2>
+<p>In Study 2, the researchers use the OpenAI API to generate thousands of course designs in two stages:</p>
+<p><strong>Stage 1 (baseline):</strong> course attributes like topic, class size, engagement methods.</p>
+<p><strong>Stage 2 (enriched):</strong> add a “skills list” explicitly tied to learning theories (e.g., memory vs analysis vs collaboration).</p>
+<p>They quantify alignment using Pedagogical Alignment Distance (PAD), ranging from -1 (misaligned) to +1 (aligned).</p>
+<p><strong>The surprising part: “more guidance” didn’t fix overall alignment</strong></p>
+<p>Even with enriched, theory-linked inputs, the paper reports that although Behaviorism improved in Stage 2 (ΔPAD = +0.11), Active learning and Social learning remained negative, with reported values like PAD = -0.17 (Active) and PAD = -0.29 (Social)</p>
+<p>So the model became <strong>more responsive to the instruction variable, but not necessarily more capable of executing the deeper pedagogy</strong>. The authors also show that the added “skills” variable becomes the most influential predictor.</p>
 </section>
-<section id="from-chatbot-to-simulator-the-future-of-edtech" class="level2">
-<h2 class="anchored" data-anchor-id="from-chatbot-to-simulator-the-future-of-edtech">From “Chatbot” to “Simulator”: The Future of EdTech</h2>
-<p>This insight offers a powerful roadmap for the next generation of educational tools. If the market is naturally gravitating toward roleplay, educators should pivot from using AI as an “Oracle” (that simply answers questions) to using AI as a “Simulator.” We can power shifts toward:</p>
+<section id="what-this-means-for-product-builders-controllability-pedagogy" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-means-for-product-builders-controllability-pedagogy">What this means for product builders: controllability ≠ pedagogy</h2>
+<p>This is where the paper shifts from “research result” to “product warning.” If you build an education app and your solution to pedagogical quality is “just prompt it with better instructions,” you may get more consistent outputs, easier-to-debug behavior, cleaner A/B results, but still fail at: social learning facilitation, inquiry-driven scaffolding, knowing when not to give the answer. In other words, the paper suggests that prompting can increase predictability without increasing pedagogical intelligence.</p>
+<p>This paper reframes “alignment in education” as something more concrete than values or safety: it’s alignment to teaching theories—and that alignment appears to have stubborn defaults.</p>
+<p><strong><em>Fine-tuning for pedagogical intent as a path forward?</em></strong></p>
+<p>The paper suggests that fine-tuning is the <em>“change the defaults”</em> route —but it depends on high-quality teaching dialogue data.</p>
+<p>Two related directions in the literature are worth watching:</p>
 <ul>
-<li><p><strong><em>Historical Personas</em></strong>: Instead of reading about Lincoln, students could negotiate with a model “locked” into the political constraints of 1862.</p></li>
-<li><p><strong><em>Scientific Inquiry</em></strong>: Models could act as “unreliable narrators” or specific scientific phenomena that students must diagnose or debug through conversation.</p></li>
-<li><p><strong><em>Career Exploration</em></strong>: High-stakes simulations of job interviews or difficult client negotiations, allowing students to “fail safely” before entering the workforce.</p></li>
+<li><p><em>Pedagogical alignment via preference learning (LHP)</em>, which argues fine-tuning can push models away from “give the answer” behavior.</p></li>
+<li><p><em>Fine-grained pedagogical intent annotation</em>, which shows that more detailed intent labels can improve tutoring response quality.</p></li>
 </ul>
-<p>However, the report notes that roleplay currently thrives on open-source models partly because they are “less constrained by content filters.” To make this pedagogically meaningful, we need to design deliberate “scaffolded sandboxes” rather than unconstrained “wild west” environments.</p>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
+<p>Education is broad. Over-specializing a model is risky because teachers constantly shift across domains, goals, and student needs. A “perfect Socratic tutor” that becomes brittle or forgets general skills is not a win.</p>
 
 
 </section>
